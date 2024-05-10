@@ -103,9 +103,9 @@ fixtures = ["Custom HTML Block"]
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+	"Beneficiary Profiling": "rt_bij.rt_bij.doctype.beneficiary_profiling.query.list_query"
+}
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",

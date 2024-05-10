@@ -47,10 +47,11 @@ function checkApprover(frm) {
 }
 
 function updateStateStatus(frm) {
-    console.log('frm.doc.district_level_status', frm.doc.district_level_status);
-    if (frm.doc.district_level_status === "Accepted") {
-        frm.set_value('state_level_status', 'Pending From State Level');
-    } else if (frm.doc.district_level_status === "Rejected" || "Pending") {
-        frm.set_value('state_level_status', 'Pending');
+    if (frappe.user.has_role('District User')) {
+        if (frm.doc.district_level_status === "Accepted") {
+            frm.set_value('state_level_status', 'Pending From State Level');
+        } else if (frm.doc.district_level_status === "Rejected" || "Pending") {
+            frm.set_value('state_level_status', 'Pending');
+        }
     }
 }
