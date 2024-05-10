@@ -5,6 +5,7 @@ app_description = "a project of reliance foundation"
 app_email = "tech@suvaidyam.com"
 app_license = "mit"
 # required_apps = []
+fixtures = ["Custom HTML Block"]
 
 # Includes in <head>
 # ------------------
