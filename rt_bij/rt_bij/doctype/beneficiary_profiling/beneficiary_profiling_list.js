@@ -2,9 +2,14 @@ frappe.listview_settings['Beneficiary Profiling'] = {
     onload: function (listview) {
         if (!frappe.user.has_role("Surveyor")) {
             listview?.page?.add_inner_button('Accepted All', function (e) {
-                console.log('Accepted All', listview);
+                // console.log('Accepted All', listview);
                 listview?.data?.forEach(function (row) {
-                    frappe.db.set_value('Beneficiary Profiling', row.name, 'state_lable_status', 'Accepted');
+                    if (frappe.user.has_role("State User")) {
+                        frappe.db.set_value('Beneficiary Profiling', row.name, 'state_level_status', 'Accepted');
+                    }
+                    if (frappe.user.has_role("District User")) {
+                        frappe.db.set_value('Beneficiary Profiling', row.name, 'district_level_status', 'Accepted');
+                    }
                 });
                 listview.refresh();
 
@@ -20,7 +25,12 @@ frappe.listview_settings['Beneficiary Profiling'] = {
             listview?.page?.add_inner_button('Rejected All', function () {
                 console.log('Rejected All', listview);
                 listview?.data?.forEach(function (row) {
-                    frappe.db.set_value('Beneficiary Profiling', row.name, 'state_lable_status', 'Rejected');
+                    if (frappe.user.has_role("State User")) {
+                        frappe.db.set_value('Beneficiary Profiling', row.name, 'state_level_status', 'Rejected');
+                    }
+                    if (frappe.user.has_role("District User")) {
+                        frappe.db.set_value('Beneficiary Profiling', row.name, 'district_level_status', 'Rejected');
+                    }
                 });
                 listview.refresh();
             }).css({
