@@ -12,14 +12,14 @@
   "gender",
   "date_of_birth",
   "contact_number",
-  "state_lable_status",
+  "state_level_status",
+  "district_level_status",
   "column_break_soni",
   "alternate_contact_number",
   "state",
   "district",
   "block",
-  "village",
-  "district_lable_status"
+  "village"
  ],
  "fields": [
   {
@@ -95,22 +95,22 @@
   },
   {
    "default": "Pending",
-   "fieldname": "state_lable_status",
+   "fieldname": "state_level_status",
    "fieldtype": "Select",
-   "label": "State lable status",
+   "label": "State level status",
    "options": "Pending\nAccepted\nRejected\nPanding From State Lable"
   },
   {
    "default": "Pending",
-   "fieldname": "district_lable_status",
+   "fieldname": "district_level_status",
    "fieldtype": "Select",
-   "label": "District lable status ",
+   "label": "District level status ",
    "options": "Pending\nAccepted\nRejected\nPanding From State Lable"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-09 17:47:07.451050",
+ "modified": "2024-05-10 09:56:59.599651",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Beneficiary Profiling",

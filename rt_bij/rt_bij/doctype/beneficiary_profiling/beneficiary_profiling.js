@@ -2,8 +2,17 @@ frappe.ui.form.on("Beneficiary Profiling", {
     refresh(frm) {
         if (!frappe.user.has_role("Surveyor")) {
             frm.add_custom_button(__('Accept'), () => {
-                frm.set_value('state_lable_status', 'Accepted');
-                frm.save();
+                // console.log('Accepted', frappe.user.has_role("State User"));
+                if (frappe.user.has_role("State User")) {
+                    frm.set_value('state_level_status', 'Accepted');
+                    frm.save();
+                }
+                if (frappe.user.has_role("District User")) {
+                    frm.set_value('district_level_status', 'Accepted');
+                    frm.save();
+                }
+                
+                
             }).css({
                 'background-color': 'green',
                 'color': 'white',
@@ -14,8 +23,17 @@ frappe.ui.form.on("Beneficiary Profiling", {
             });
 
             frm.add_custom_button(__('Reject'), () => {
-                frm.set_value('state_lable_status', 'Rejected');
-                frm.save();
+
+                // console.log('Rejected', frappe.user.has_role("State User"));
+                if (frappe.user.has_role("State User")) {
+                    frm.set_value('state_level_status', 'Rejected');
+                    frm.save();
+                }
+                if (frappe.user.has_role("District User")) {
+                    frm.set_value('district_level_status', 'Rejected');
+                    frm.save();
+                }
+               
                 
             }).css({
                 'background-color': 'red',
