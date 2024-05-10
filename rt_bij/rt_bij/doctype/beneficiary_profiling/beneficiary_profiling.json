@@ -98,19 +98,21 @@
    "fieldname": "state_level_status",
    "fieldtype": "Select",
    "label": "State level status",
-   "options": "Pending\nAccepted\nRejected\nPanding From State Lable"
+   "options": "Pending\nAccepted\nRejected\nPending From State Level",
+   "read_only": 1
   },
   {
    "default": "Pending",
    "fieldname": "district_level_status",
    "fieldtype": "Select",
    "label": "District level status ",
-   "options": "Pending\nAccepted\nRejected\nPanding From State Lable"
+   "options": "Pending\nAccepted\nRejected",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-10 09:56:59.599651",
+ "modified": "2024-05-10 11:16:41.425353",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Beneficiary Profiling",
