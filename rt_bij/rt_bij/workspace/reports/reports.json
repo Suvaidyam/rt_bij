@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"iJ4qz5lBur\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"iJ4qz5lBur\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"1kTCRcafFo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District Level Status\",\"col\":3}},{\"id\":\"DHr61xSdD-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State Level Status\",\"col\":3}}]",
  "creation": "2024-05-08 10:54:27.779747",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Reports",
  "links": [],
- "modified": "2024-05-11 17:52:57.890170",
+ "modified": "2024-05-11 17:58:43.515539",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Reports",
@@ -23,6 +23,21 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 4.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "District Level Status",
+   "link_to": "District Level Status",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "State Level Status",
+   "link_to": "State Level Status",
+   "type": "Report"
+  }
+ ],
  "title": "Reports"
 }

@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-05-11 17:02:52.031112",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-05-11 17:02:52.031112",
+ "modified_by": "Administrator",
+ "module": "Rt Bij",
+ "name": "District Level Status",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT 'Pending' AS `District Level Status`,\n       COUNT(*) AS `Count`\nFROM `tabBeneficiary Profiling`\nWHERE district_level_status = 'Pending'\nUNION ALL\nSELECT 'Accepted' AS `District Level Status`,\n       COUNT(*) AS `Accepted Count`\nFROM `tabBeneficiary Profiling`\nWHERE district_level_status = 'Accepted'\nUNION ALL\nSELECT 'Rejected' AS `District Level Status`,\n       COUNT(*) AS `Rejected Count`\nFROM `tabBeneficiary Profiling`\nWHERE district_level_status = 'Rejected';\n",
+ "ref_doctype": "Beneficiary Profiling",
+ "report_name": "District Level Status",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "State User"
+  },
+  {
+   "role": "District User"
+  },
+  {
+   "role": "Surveyor"
+  }
+ ]
+}
