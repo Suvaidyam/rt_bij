@@ -2,29 +2,38 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:state_code",
- "creation": "2024-05-07 14:40:40.041618",
+ "autoname": "field:district_code",
+ "creation": "2024-05-07 14:41:50.374740",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "state_name",
-  "state_code"
+  "state",
+  "district_name",
+  "district_code"
  ],
  "fields": [
   {
-   "fieldname": "state_name",
-   "fieldtype": "Data",
+   "fieldname": "state",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "State Name",
+   "label": "State",
+   "options": "State",
    "reqd": 1
   },
   {
-   "fieldname": "state_code",
+   "fieldname": "district_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "State Code",
+   "label": "District Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District Code",
    "no_copy": 1,
    "reqd": 1,
    "unique": 1
@@ -32,10 +41,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-07 18:14:32.480489",
+ "modified": "2024-05-07 18:13:48.252676",
  "modified_by": "Administrator",
- "module": "Master",
- "name": "State",
+ "module": "Rt Bij Master",
+ "name": "District",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -61,7 +70,6 @@
    "share": 1
   },
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -75,5 +83,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "state_name"
+ "title_field": "district_name"
 }
