@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-12 12:31:17.015694",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "output",
+  "column_break_tcnm",
+  "activity",
+  "location_section",
+  "geographical_level_of_the_event_organised",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "output",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Output",
+   "options": "\nVillages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan\nVillages conducted participatory assessment of common resources and creating management plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tcnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "geographical_level_of_the_event_organised",
+   "fieldtype": "Data",
+   "label": "Geographical level of the event organised"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-12 12:48:50.414882",
+ "modified_by": "Administrator",
+ "module": "Rt Bij",
+ "name": "Activity   ICVD",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

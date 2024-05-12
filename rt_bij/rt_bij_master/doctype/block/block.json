@@ -2,38 +2,51 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:district_code",
- "creation": "2024-05-07 14:41:50.374740",
+ "autoname": "field:block_code",
+ "creation": "2024-05-07 14:42:33.432508",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "state",
-  "district_name",
-  "district_code"
+  "district",
+  "column_break_gqrn",
+  "block_name",
+  "block_code"
  ],
  "fields": [
   {
    "fieldname": "state",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "State",
    "options": "State",
    "reqd": 1
   },
   {
-   "fieldname": "district_name",
-   "fieldtype": "Data",
+   "fieldname": "district",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "District Name",
+   "label": "District",
+   "options": "District",
    "reqd": 1
   },
   {
-   "fieldname": "district_code",
+   "fieldname": "column_break_gqrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "block_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "District Code",
+   "label": "Block Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "block_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Block Code",
    "no_copy": 1,
    "reqd": 1,
    "unique": 1
@@ -41,10 +54,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-07 18:13:48.252676",
+ "modified": "2024-05-07 14:42:33.432508",
  "modified_by": "Administrator",
- "module": "Master",
- "name": "District",
+ "module": "Rt Bij Master",
+ "name": "Block",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -59,29 +72,11 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "District User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "State User",
-   "share": 1
   }
  ],
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "district_name"
+ "title_field": "block_name"
 }
