@@ -22,6 +22,11 @@ const truncate_field_values = (frm, fields) => {
         frm.set_value(field, '');
     });
 }
+const integer_length_validator = (value, reqd_length, label) => {
+    if (value && String(value).length > reqd_length) {
+        frappe.throw(`Count of ${label} can't be more than ${reqd_length} digits!`)
+    }
+}
 frappe.ui.form.on("Activity CR4SD", {
     refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
@@ -29,6 +34,10 @@ frappe.ui.form.on("Activity CR4SD", {
         apply_filter("gram_panchayat", "block", frm, frm.doc.talukatehsil)
         apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
         apply_filter("villages", "grampanchayat", frm, frm.doc.gram_panchayat)
+    },
+    validate(frm) {
+        integer_length_validator(frm.doc.total_male, 7, 'Total male');
+        integer_length_validator(frm.doc.total_female, 7, 'Total female');
     },
     geographical_level_of_the_event_organised: function (frm) {
         truncate_field_values(frm, ['district', 'talukatehsil', 'gram_panchayat', 'activity_conducted_at', 'village', 'villages']);
@@ -48,5 +57,11 @@ frappe.ui.form.on("Activity CR4SD", {
         apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
         apply_filter("villages", "grampanchayat", frm, frm.doc.gram_panchayat)
         truncate_field_values(frm, ['village', 'villages']);
+    },
+    total_male: function (frm) {
+        integer_length_validator(frm.doc.total_male, 7, 'Total male');
+    },
+    total_female: function (frm) {
+        integer_length_validator(frm.doc.total_female, 7, 'Total female');
     },
 });
