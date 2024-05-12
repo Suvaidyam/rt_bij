@@ -36,7 +36,31 @@
   "name_of_the_collaborating_agenciesdepartment",
   "input_provided",
   "specify_others",
-  "please_upload_individual_participant_details"
+  "please_upload_individual_participant_details",
+  "training_photos_section",
+  "image",
+  "column_break_abcl",
+  "image_description",
+  "crop_water_budgeting_tool_section",
+  "water_budgeting_completed",
+  "data_uploaded_on_cwb_tool",
+  "column_break_cnfj",
+  "crop_water_budgeting_result",
+  "crop_water_budgeting_report",
+  "water_harvesting_structure_details_section",
+  "type_of_water_harvesting_structure",
+  "condition",
+  "present_surface_water_storage_capacity",
+  "increased_surface_water_storage_capacity",
+  "increased_underground_recharge_capacity",
+  "total_water_harvesting_capacity",
+  "column_break_ygjm",
+  "area_brought_under_improved_access_to_critical_irrigation",
+  "no_of_farmers_benefitted",
+  "departmentorganisation_collaboratedleverage_resources",
+  "leverage_amount",
+  "upload_water_harvesting_structure_picture",
+  "gps_coordinates"
  ],
  "fields": [
   {
@@ -164,27 +188,33 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "training_details_section",
    "fieldtype": "Section Break",
-   "label": "Training Details"
+   "label": "Training Details",
+   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
   },
   {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "training_topic_purpose",
    "fieldtype": "Small Text",
    "label": "Training Topic/ Purpose",
-   "reqd": 1
+   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
   },
   {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "participations_section",
    "fieldtype": "Section Break",
-   "label": "Participations"
+   "label": "Participations",
+   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
   },
   {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "type_of_participants_involved_in_the_event",
    "fieldtype": "Table MultiSelect",
    "label": "Type of participants involved in the event",
-   "options": "Participant Type Child",
-   "reqd": 1
+   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+   "options": "Participant Type Child"
   },
   {
    "fieldname": "details_of_section",
@@ -248,11 +278,172 @@
   {
    "fieldname": "column_break_hzpu",
    "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+   "fieldname": "training_photos_section",
+   "fieldtype": "Section Break",
+   "label": "Training Photos"
+  },
+  {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+   "fieldname": "image_description",
+   "fieldtype": "Data",
+   "label": "Image Description"
+  },
+  {
+   "fieldname": "column_break_abcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "fieldname": "crop_water_budgeting_tool_section",
+   "fieldtype": "Section Break",
+   "label": "Crop Water Budgeting Tool"
+  },
+  {
+   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "fieldname": "water_budgeting_completed",
+   "fieldtype": "Select",
+   "label": "Water budgeting completed",
+   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "fieldname": "data_uploaded_on_cwb_tool",
+   "fieldtype": "Select",
+   "label": "Data uploaded on CWB tool",
+   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "fieldname": "crop_water_budgeting_result",
+   "fieldtype": "Select",
+   "label": "Crop Water Budgeting Result",
+   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+   "options": "\nSurplus\nDeficit"
+  },
+  {
+   "fieldname": "crop_water_budgeting_report",
+   "fieldtype": "Attach",
+   "label": "Crop Water Budgeting Report"
+  },
+  {
+   "fieldname": "column_break_cnfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "water_harvesting_structure_details_section",
+   "fieldtype": "Section Break",
+   "label": "Water Harvesting Structure Details"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "type_of_water_harvesting_structure",
+   "fieldtype": "Select",
+   "label": "Type of Water Harvesting Structure",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "options": "\nConcrete Check dam\nDesilting-check dam\nDesilting-Pond\nDug well\nEarthen check dam\nFarm pond\nFerrocement check dam\nPond deepening\nPond renovation\nRecharge well\nReparing of check dam\nStone Masonry check dam\nOther"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "label": "Condition",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "options": "\nNew\nRenovation"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "present_surface_water_storage_capacity",
+   "fieldtype": "Int",
+   "label": "Present surface water storage capacity",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "increased_surface_water_storage_capacity",
+   "fieldtype": "Int",
+   "label": "Increased surface water storage capacity",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "increased_underground_recharge_capacity",
+   "fieldtype": "Int",
+   "label": "Increased underground Recharge Capacity",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "total_water_harvesting_capacity",
+   "fieldtype": "Int",
+   "label": "Total water harvesting capacity",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "area_brought_under_improved_access_to_critical_irrigation",
+   "fieldtype": "Int",
+   "label": "Area brought under improved access to critical irrigation",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "no_of_farmers_benefitted",
+   "fieldtype": "Int",
+   "label": "No. of Farmers benefitted",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "departmentorganisation_collaboratedleverage_resources",
+   "fieldtype": "Select",
+   "label": "Department/organisation collaborated/leverage resources",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "options": "\nOption 1\nOption 2"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "leverage_amount",
+   "fieldtype": "Int",
+   "label": "Leverage Amount",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "upload_water_harvesting_structure_picture",
+   "fieldtype": "Attach",
+   "label": "Upload Water harvesting structure picture"
+  },
+  {
+   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+   "fieldname": "gps_coordinates",
+   "fieldtype": "Data",
+   "label": "GPS Coordinates",
+   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+  },
+  {
+   "fieldname": "column_break_ygjm",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 15:02:03.036472",
+ "modified": "2024-05-12 15:57:17.949383",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
