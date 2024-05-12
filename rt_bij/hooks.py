@@ -5,7 +5,11 @@ app_description = "a project of reliance foundation"
 app_email = "tech@suvaidyam.com"
 app_license = "mit"
 # required_apps = []
-fixtures = ["Custom HTML Block"]
+fixtures = [
+    		"Custom HTML Block",
+        	"Participant Type",
+         "Options"
+            ]
 
 # Includes in <head>
 # ------------------

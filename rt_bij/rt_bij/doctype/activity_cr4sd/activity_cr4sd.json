@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-12 12:23:31.832205",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "output",
+  "activity",
+  "location_section",
+  "geographical_level_of_the_event_organised",
+  "state",
+  "district",
+  "talukatehsil",
+  "column_break_vysh",
+  "gram_panchayat",
+  "activity_conducted_at",
+  "village",
+  "villages",
+  "date_of_activity_section",
+  "date_of_conducting_the_event",
+  "financial_year",
+  "column_break_elio",
+  "month",
+  "week",
+  "training_details_section",
+  "training_topic_purpose",
+  "participations_section",
+  "type_of_participants_involved_in_the_event",
+  "details_of_section",
+  "total_male",
+  "total_female",
+  "total_participants",
+  "grand_total_of_participants",
+  "column_break_hzpu",
+  "name_of_the_collaborating_agenciesdepartment",
+  "input_provided",
+  "specify_others",
+  "please_upload_individual_participant_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "output",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Output",
+   "options": "\nVillages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan\nVillages conducted participatory assessment of common resources and creating management plan\nAdditional water harvesting capacity created\nVillages with improved access to drinking water 2.6 Households engaged in grey water management\nHouseholds with diversified food production and consumption\nArea covered under nutrition rich and bio fortified crops\nHousehold engaged in grey water management\nHousehold engaged in grey water management",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "label": "Activity",
+   "options": "\nMass Awareness generation events on village level planning, display of planning process, Climate resilience; Campaign on Nation priority programs\nTraining/workshops of stakeholders on climate adaptation at village & GP level\nDigital outreach programs\nHands on training and participatory exercises with community\nDisplay of Water resource management plan\nStakeholder Trainings/Workshops and other capacity building events\nRenovations & construction of water harvesting/recharge structures\nCritical activities for improving access to drinking water\nAwareness programs on Drinking Water Quality and Grey Water Management\nCritical activities for promotion of grey water management\nAwareness generation events on Nutrition management\nHands on trainings on Diversify food baskets\nFacilitating Propagation of nutrition initiatives at household level\nDemonstration support for promoting nutrition initiatives",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "geographical_level_of_the_event_organised",
+   "fieldtype": "Select",
+   "label": "Geographical level of the event organised",
+   "options": "\nDistrict Level\nTaluka/Tehsil Level\nGram Panchayat Level\nVillage Level",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "mandatory_depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "options": "District"
+  },
+  {
+   "depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "fieldname": "talukatehsil",
+   "fieldtype": "Link",
+   "label": "Taluka/Tehsil",
+   "mandatory_depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "options": "Block"
+  },
+  {
+   "fieldname": "column_break_vysh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "fieldname": "gram_panchayat",
+   "fieldtype": "Link",
+   "label": "Gram Panchayat",
+   "mandatory_depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "options": "Grampanchayat"
+  },
+  {
+   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "fieldname": "activity_conducted_at",
+   "fieldtype": "Select",
+   "label": "Activity Conducted at",
+   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+   "options": "\nSingle Village\nMultiple Villages"
+  },
+  {
+   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
+   "options": "Village"
+  },
+  {
+   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
+   "fieldname": "villages",
+   "fieldtype": "Table MultiSelect",
+   "label": "Villages",
+   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
+   "options": "Village Child"
+  },
+  {
+   "fieldname": "date_of_activity_section",
+   "fieldtype": "Section Break",
+   "label": "Date of Activity"
+  },
+  {
+   "fieldname": "date_of_conducting_the_event",
+   "fieldtype": "Date",
+   "label": "Date of conducting the event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_year",
+   "fieldtype": "Select",
+   "label": "Financial Year",
+   "options": "\n2023-24\n2024-25",
+   "reqd": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
+   "reqd": 1
+  },
+  {
+   "fieldname": "week",
+   "fieldtype": "Select",
+   "label": "Week",
+   "options": "\n1\n2\n3\n4",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_elio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "training_details_section",
+   "fieldtype": "Section Break",
+   "label": "Training Details"
+  },
+  {
+   "fieldname": "training_topic_purpose",
+   "fieldtype": "Small Text",
+   "label": "Training Topic/ Purpose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participations_section",
+   "fieldtype": "Section Break",
+   "label": "Participations"
+  },
+  {
+   "fieldname": "type_of_participants_involved_in_the_event",
+   "fieldtype": "Table MultiSelect",
+   "label": "Type of participants involved in the event",
+   "options": "Participant Type Child",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details_of_section",
+   "fieldtype": "Section Break",
+   "label": "Details of"
+  },
+  {
+   "fieldname": "total_male",
+   "fieldtype": "Int",
+   "label": "Total Male",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_female",
+   "fieldtype": "Int",
+   "label": "Total Female",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_participants",
+   "fieldtype": "Int",
+   "label": "Total Participants",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total_of_participants",
+   "fieldtype": "Int",
+   "label": "Grand Total of Participants",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "name_of_the_collaborating_agenciesdepartment",
+   "fieldtype": "Select",
+   "label": "Name of the Collaborating agencies/department",
+   "options": "\nAgency 1\nAgency 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "input_provided",
+   "fieldtype": "Select",
+   "label": "Input Provided",
+   "options": "\nAwareness/Orientation\nTraining / Capacity building\nDemonstration\nCommunity Exercise\nVillage Development Plan\nResource Mapping\nOther",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.input_provided === \"Other\"",
+   "fieldname": "specify_others",
+   "fieldtype": "Data",
+   "label": "Specify Other's",
+   "mandatory_depends_on": "eval:doc.input_provided === \"Other\""
+  },
+  {
+   "fieldname": "please_upload_individual_participant_details",
+   "fieldtype": "Attach",
+   "label": "Please upload Individual participant details who participated in the activity"
+  },
+  {
+   "fieldname": "column_break_hzpu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-12 14:03:48.988224",
+ "modified_by": "Administrator",
+ "module": "Rt Bij",
+ "name": "Activity CR4SD",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
