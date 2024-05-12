@@ -60,7 +60,52 @@
   "departmentorganisation_collaboratedleverage_resources",
   "leverage_amount",
   "upload_water_harvesting_structure_picture",
-  "gps_coordinates"
+  "gps_coordinates",
+  "drinking_water_section",
+  "type_of_initiative",
+  "no_of_drinking_water_system",
+  "total_length_of_pipeline_provisions",
+  "drinking_water_system_capacity_created",
+  "total_households_benefitted",
+  "column_break_zhvd",
+  "leverage_amount2",
+  "department__organization_collaboratedleveraged_resources",
+  "drinking_water_activity_photo",
+  "gps_coordinates2",
+  "grey_water_treatment_section",
+  "structure_name",
+  "site_condition",
+  "water_recycle_capacity",
+  "noof_households_taken_up_measures",
+  "column_break_aztp",
+  "leverage_amount3",
+  "name_of_the_departments_and_organizations_converge",
+  "grey_water_treatment_photo",
+  "gps_coordinates3",
+  "diversified_food_basket_section",
+  "diversification_of_food_basket_category",
+  "individuals_diversification_of_food_basket_detail_section",
+  "number_of_farmers",
+  "details_of_farmer_section",
+  "name_of_the_farmer",
+  "phone",
+  "awareness_training_provided",
+  "date",
+  "demo_support_given",
+  "type_of_food_diversification_taken_up_by_the_household",
+  "the_details_of_type_of_crop",
+  "column_break_izmg",
+  "area",
+  "gps",
+  "no_of_hhs_diversified_food_basket_individual",
+  "no_of_diversification_food_basketcommon",
+  "total_diversification_of_food_basket",
+  "total_area",
+  "remarks_anything_about_activity",
+  "rng_photos_section",
+  "image2",
+  "column_break_xcic",
+  "image_description2"
  ],
  "fields": [
   {
@@ -439,11 +484,311 @@
   {
    "fieldname": "column_break_ygjm",
    "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "drinking_water_section",
+   "fieldtype": "Section Break",
+   "label": "Drinking Water"
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "type_of_initiative",
+   "fieldtype": "Select",
+   "label": "Type of initiative",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "options": "\nDrinking water tank\nPipe line connection\nBore Well Repair\nHand Pump reparing work\nCistern connection & repair\nBore well recharge\nIncreased drinking water availability due to renovation of existing water harvesting structures\nOther"
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "no_of_drinking_water_system",
+   "fieldtype": "Int",
+   "label": "No. of Drinking water system",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "total_length_of_pipeline_provisions",
+   "fieldtype": "Int",
+   "label": "Total length of pipeline provisions",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "drinking_water_system_capacity_created",
+   "fieldtype": "Int",
+   "label": "Drinking water system capacity created",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "total_households_benefitted",
+   "fieldtype": "Int",
+   "label": "Total Households Benefitted",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "leverage_amount2",
+   "fieldtype": "Int",
+   "label": "Leverage Amount",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "department__organization_collaboratedleveraged_resources",
+   "fieldtype": "Select",
+   "label": "Department / organization collaborated/leveraged resources",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "options": "\nOption 1\nOption 2"
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "drinking_water_activity_photo",
+   "fieldtype": "Attach",
+   "label": "Drinking Water Activity Photo"
+  },
+  {
+   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+   "fieldname": "gps_coordinates2",
+   "fieldtype": "Data",
+   "label": "GPS Coordinates",
+   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)"
+  },
+  {
+   "fieldname": "column_break_zhvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "grey_water_treatment_section",
+   "fieldtype": "Section Break",
+   "label": "Grey Water Treatment"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "structure_name",
+   "fieldtype": "Select",
+   "label": "Structure Name",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "options": "\nSoak pit\nSoak well\nMagic pit\nDiversion channel to backyard plant flowers or kitchen garden\nDiversion channel for live fencing\nCommon drinking water source - water tank hand pump community well etc\nOther"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "site_condition",
+   "fieldtype": "Select",
+   "label": "Site condition",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "options": "\nNew\nExisting"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "water_recycle_capacity",
+   "fieldtype": "Int",
+   "label": "Water Recycle Capacity",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "noof_households_taken_up_measures",
+   "fieldtype": "Int",
+   "label": "No.of Households taken up measures",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "leverage_amount3",
+   "fieldtype": "Int",
+   "label": "Leverage Amount",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "name_of_the_departments_and_organizations_converge",
+   "fieldtype": "Select",
+   "label": "Name of the departments and organizations converge",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "options": "\nDepartment 1\nDepartment 2"
+  },
+  {
+   "fieldname": "grey_water_treatment_photo",
+   "fieldtype": "Attach",
+   "label": "Grey Water Treatment Photo"
+  },
+  {
+   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+   "fieldname": "gps_coordinates3",
+   "fieldtype": "Data",
+   "label": "GPS Coordinates",
+   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+  },
+  {
+   "fieldname": "column_break_aztp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+   "fieldname": "diversified_food_basket_section",
+   "fieldtype": "Section Break",
+   "label": "Diversified Food Basket"
+  },
+  {
+   "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+   "fieldname": "diversification_of_food_basket_category",
+   "fieldtype": "Select",
+   "label": "Diversification of Food Basket Category",
+   "mandatory_depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+   "options": "\nIndividual\nCommon\nBoth"
+  },
+  {
+   "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "individuals_diversification_of_food_basket_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Individuals Diversification of Food Basket Detail"
+  },
+  {
+   "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "number_of_farmers",
+   "fieldtype": "Select",
+   "label": "Number of Farmers",
+   "mandatory_depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "details_of_farmer_section",
+   "fieldtype": "Section Break",
+   "label": "Details of Farmer"
+  },
+  {
+   "fieldname": "name_of_the_farmer",
+   "fieldtype": "Data",
+   "label": "Name of the Farmer",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "awareness_training_provided",
+   "fieldtype": "Select",
+   "label": "Awareness/ Training provided",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "demo_support_given",
+   "fieldtype": "Select",
+   "label": "Demo support given",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_food_diversification_taken_up_by_the_household",
+   "fieldtype": "Select",
+   "label": "Type of Food Diversification taken up by the Household",
+   "options": "\nRNG\nMillets\nBiofortified crop\nFood crop as intercrop\nBack yard fruit Plantation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "the_details_of_type_of_crop",
+   "fieldtype": "Data",
+   "label": "If it is biofortified crop, millets, intercrop etc mention the details of Type of crop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Int",
+   "label": "Area",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "gps",
+   "fieldtype": "Data",
+   "label": "GPS",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "no_of_hhs_diversified_food_basket_individual",
+   "fieldtype": "Int",
+   "label": "No of HHs diversified food basket - Individual",
+   "mandatory_depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "no_of_diversification_food_basketcommon",
+   "fieldtype": "Int",
+   "label": "No of diversification food basket - Common",
+   "mandatory_depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "total_diversification_of_food_basket",
+   "fieldtype": "Int",
+   "label": "Total Diversification of food basket",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "total_area",
+   "fieldtype": "Int",
+   "label": "Total Area",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks_anything_about_activity",
+   "fieldtype": "Data",
+   "label": "Remarks anything about activity"
+  },
+  {
+   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "rng_photos_section",
+   "fieldtype": "Section Break",
+   "label": "RNG Photos"
+  },
+  {
+   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "image2",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+   "fieldname": "image_description2",
+   "fieldtype": "Data",
+   "label": "Image Description"
+  },
+  {
+   "fieldname": "column_break_xcic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_izmg",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 15:57:17.949383",
+ "modified": "2024-05-12 20:03:13.065623",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
