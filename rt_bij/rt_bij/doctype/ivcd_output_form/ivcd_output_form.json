@@ -84,10 +84,11 @@
  "fields": [
   {
    "fieldname": "output",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Output",
-   "options": "\n4.1 Area under improved production practices/new agriculture technologies\n4.2 Farmers adopting and benefitting with improved practices and/or new agriculture technologies\n5.1 Farmer collectives (FPOs/ SHG Federations/Co-op/ PACS/ Informal group of farmers) provided techno-managerial support and/or linkages\n5.2 Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives\n5.3 Values of produce marketed and inputs/services sourced through farmers collective",
+   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
+   "options": "Options",
    "reqd": 1
   },
   {
@@ -546,7 +547,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 15:28:43.433858",
+ "modified": "2024-05-12 17:03:38.473874",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",
