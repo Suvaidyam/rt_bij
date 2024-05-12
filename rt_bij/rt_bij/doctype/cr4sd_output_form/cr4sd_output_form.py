@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Output(Document):
+class CR4SDOutputForm(Document):
 	pass
