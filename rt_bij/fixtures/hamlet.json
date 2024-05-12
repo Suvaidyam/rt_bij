@@ -1,0 +1,15 @@
+[
+ {
+  "block": "S06D01B01",
+  "district": "S06D01",
+  "docstatus": 0,
+  "doctype": "Hamlet",
+  "hamlet_code": "S06D01B01G01V01H01",
+  "hamlet_name": "Test Hamlet",
+  "modified": "2024-05-12 20:31:56.427973",
+  "name": "S06D01B01G01V01H01",
+  "panchayat": "S06D01B01G01",
+  "state": "S06",
+  "village": "S06D01B01G01V01"
+ }
+]
