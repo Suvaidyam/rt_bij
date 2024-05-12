@@ -52,7 +52,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 12:21:00.497622",
+ "modified": "2024-05-12 20:30:35.769865",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Grampanchayat",
@@ -72,7 +72,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "grampanchayat_name"
 }
