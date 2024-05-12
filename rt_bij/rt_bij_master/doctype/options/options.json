@@ -37,7 +37,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 14:56:06.694032",
+ "modified": "2024-05-12 15:04:43.143070",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Options",
@@ -57,7 +57,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "option_name"
 }
