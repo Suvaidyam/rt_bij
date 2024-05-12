@@ -41,17 +41,19 @@
  "fields": [
   {
    "fieldname": "output",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Output",
-   "options": "\nVillages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan\nVillages conducted participatory assessment of common resources and creating management plan\nAdditional water harvesting capacity created\nVillages with improved access to drinking water 2.6 Households engaged in grey water management\nHouseholds with diversified food production and consumption\nArea covered under nutrition rich and bio fortified crops\nHousehold engaged in grey water management\nHousehold engaged in grey water management",
+   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
+   "options": "Options",
    "reqd": 1
   },
   {
    "fieldname": "activity",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Activity",
-   "options": "\nMass Awareness generation events on village level planning, display of planning process, Climate resilience; Campaign on Nation priority programs\nTraining/workshops of stakeholders on climate adaptation at village & GP level\nDigital outreach programs\nHands on training and participatory exercises with community\nDisplay of Water resource management plan\nStakeholder Trainings/Workshops and other capacity building events\nRenovations & construction of water harvesting/recharge structures\nCritical activities for improving access to drinking water\nAwareness programs on Drinking Water Quality and Grey Water Management\nCritical activities for promotion of grey water management\nAwareness generation events on Nutrition management\nHands on trainings on Diversify food baskets\nFacilitating Propagation of nutrition initiatives at household level\nDemonstration support for promoting nutrition initiatives",
+   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Activity\"]]",
+   "options": "Options",
    "reqd": 1
   },
   {
@@ -250,7 +252,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 14:03:48.988224",
+ "modified": "2024-05-12 15:02:03.036472",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
