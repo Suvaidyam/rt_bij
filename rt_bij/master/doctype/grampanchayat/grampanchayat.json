@@ -1,32 +1,30 @@
 {
  "actions": [],
- "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:village_code",
- "creation": "2024-05-07 14:43:08.337868",
+ "autoname": "field:grampanchayat_code",
+ "creation": "2024-05-12 12:21:00.497622",
  "default_view": "List",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "state",
   "district",
   "block",
-  "column_break_kgcu",
-  "grampanchayat",
-  "village_name",
-  "village_code"
+  "grampanchayat_name",
+  "grampanchayat_code"
  ],
  "fields": [
   {
    "fieldname": "state",
    "fieldtype": "Link",
    "label": "State",
-   "options": "State"
+   "options": "State",
+   "reqd": 1
   },
   {
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "options": "District",
    "reqd": 1
@@ -39,40 +37,25 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_kgcu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "village_name",
+   "fieldname": "grampanchayat_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Village Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "village_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Village Code",
-   "no_copy": 1,
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "grampanchayat",
-   "fieldtype": "Link",
-   "label": "Grampanchayat",
-   "options": "Grampanchayat",
+   "label": "Grampanchayat Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "grampanchayat_code",
+   "fieldtype": "Data",
+   "label": "Grampanchayat Code",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 12:22:01.229821",
+ "modified": "2024-05-12 12:21:00.497622",
  "modified_by": "Administrator",
  "module": "Master",
- "name": "Village",
+ "name": "Grampanchayat",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -89,9 +72,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "village_name"
+ "states": []
 }
