@@ -64,4 +64,66 @@ frappe.ui.form.on("Activity CR4SD", {
     total_female: function (frm) {
         integer_length_validator(frm.doc.total_female, 7, 'Total female');
     },
+    present_surface_water_storage_capacity: function (frm) {
+        integer_length_validator(frm.doc.present_surface_water_storage_capacity, 10, 'Present surface water storage capacity');
+    },
+    increased_surface_water_storage_capacity: function (frm) {
+        integer_length_validator(frm.doc.increased_surface_water_storage_capacity, 10, 'Increased surface water storage capacity');
+    },
+    increased_underground_recharge_capacity: function (frm) {
+        integer_length_validator(frm.doc.increased_underground_recharge_capacity, 10, 'Increased underground recharge capacity');
+    },
+    total_water_harvesting_capacity: function (frm) {
+        integer_length_validator(frm.doc.total_water_harvesting_capacity, 10, 'Total water harvesting capacity');
+    },
+    no_of_farmers_benefitted: function (frm) {
+        integer_length_validator(frm.doc.no_of_farmers_benefitted, 10, 'No. of farmers benefitted');
+    },
+    leverage_amount: function (frm) {
+        integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage amount');
+    },
+    no_of_drinking_water_system: function (frm) {
+        integer_length_validator(frm.doc.no_of_drinking_water_system, 10, 'No. of drinking water system');
+    },
+    total_length_of_pipeline_provisions: function (frm) {
+        integer_length_validator(frm.doc.total_length_of_pipeline_provisions, 10, 'Total length of pipeline provisions');
+    },
+    drinking_water_system_capacity_created: function (frm) {
+        integer_length_validator(frm.doc.drinking_water_system_capacity_created, 10, 'Drinking water system capacity created');
+    },
+    total_households_benefitted: function (frm) {
+        integer_length_validator(frm.doc.total_households_benefitted, 7, 'Total households benefitted');
+    },
+    leverage_amount2: function (frm) {
+        integer_length_validator(frm.doc.leverage_amount2, 10, 'Leverage amount');
+    },
+    water_recycle_capacity: function (frm) {
+        integer_length_validator(frm.doc.water_recycle_capacity, 10, 'Water recycle capacity');
+    },
+    noof_households_taken_up_measures: function (frm) {
+        integer_length_validator(frm.doc.noof_households_taken_up_measures, 7, 'No. of households taken up measures');
+    },
+    leverage_amount3: function (frm) {
+        integer_length_validator(frm.doc.leverage_amount3, 10, 'Leverage amount');
+    },
+    phone: function (frm) {
+        let arr;
+        if (frm.doc.phone) {
+            arr = frm.doc.phone.split('-')
+            if (arr && arr.length == 1) {
+                integer_length_validator(arr[0], 10, 'Phone');
+            } else if (arr && arr.length == 2) {
+                integer_length_validator(arr[1], 10, 'Phone');
+            }
+        }
+    },
+    area: function (frm) {
+        integer_length_validator(frm.doc.area, 10, 'Area');
+    },
+    no_of_hhs_diversified_food_basket_individual: function (frm) {
+        integer_length_validator(frm.doc.no_of_hhs_diversified_food_basket_individual, 10, 'No. of hhs diversified food basket individual');
+    },
+    no_of_diversification_food_basketcommon: function (frm) {
+        integer_length_validator(frm.doc.no_of_diversification_food_basketcommon, 10, 'No. of diversification food basketcommon');
+    },
 });
