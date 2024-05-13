@@ -114,6 +114,17 @@
    "reqd": 1
   },
   {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Taluka/Tehsil",
+   "options": "Block",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hmug",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "village",
    "fieldtype": "Link",
    "label": "Village",
@@ -132,13 +143,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "month",
-   "fieldtype": "Select",
-   "label": "Month",
-   "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
-   "reqd": 1
-  },
-  {
    "fieldname": "financial_year",
    "fieldtype": "Select",
    "label": "Financial Year",
@@ -146,15 +150,25 @@
    "reqd": 1
   },
   {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.output == 'Output IVCD-1';",
+   "description": "4.1 Area under improved production practices/new agriculture technologies",
+   "fieldname": "new_agriculture_technologies_section",
+   "fieldtype": "Section Break",
+   "label": "New agriculture technologies"
+  },
+  {
    "fieldname": "name_of_cropcommodity",
    "fieldtype": "Select",
    "label": "Name of Crop/Commodity",
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
    "options": "\nWheat\nRice\nBajara"
-  },
-  {
-   "fieldname": "column_break_hmug",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "name_of_the_farmers",
@@ -220,6 +234,10 @@
    "options": "\nYes\nNo"
   },
   {
+   "fieldname": "column_break_awdl",
+   "fieldtype": "Column Break"
+  },
+  {
    "depends_on": "eval:doc.subsidised_by_reliance_foundation == 'Yes';",
    "fieldname": "if_yes_what_age",
    "fieldtype": "Percent",
@@ -232,10 +250,6 @@
    "fieldtype": "Data",
    "label": "Who provided the balance funds",
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
-  },
-  {
-   "fieldname": "column_break_awdl",
-   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:doc.output == 'Output IVCD-1';",
@@ -251,12 +265,8 @@
    "options": "\nFPO 1\nFPO 2"
   },
   {
-   "depends_on": "eval:doc.output == 'Output IVCD-1';",
-   "description": "4.1 Area under improved production practices/new agriculture technologies",
-   "fieldname": "new_agriculture_technologies_section",
-   "fieldtype": "Section Break",
-   "label": "New agriculture technologies",
-   "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
+   "fieldname": "column_break_nlyr",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "collaborating_agenciesdepartment",
@@ -264,10 +274,6 @@
    "label": "Collaborating agencies/department",
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
    "options": "\nAgencies One"
-  },
-  {
-   "fieldname": "column_break_nlyr",
-   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:doc.output == 'Output IVCD-2';",
@@ -296,6 +302,10 @@
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-2';"
   },
   {
+   "fieldname": "column_break_zodx",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "no_of_farmers_adopting_the_techpractice",
    "fieldtype": "Int",
    "label": "No. of Farmers adopting the tech/practice",
@@ -305,10 +315,6 @@
    "fieldname": "remarks",
    "fieldtype": "Data",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "column_break_zodx",
-   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:doc.output == 'Output IVCD-3';",
@@ -343,6 +349,10 @@
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
   },
   {
+   "fieldname": "column_break_wpfh",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "no_of_nonbodsfarmers_participated",
    "fieldtype": "Int",
    "label": "No. of non-BoDs/farmers participated",
@@ -365,10 +375,6 @@
    "fieldname": "remarks_2",
    "fieldtype": "Data",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "column_break_wpfh",
-   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');",
@@ -415,6 +421,10 @@
    "fieldtype": "Int",
    "label": "Volumes",
    "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+  },
+  {
+   "fieldname": "column_break_hogr",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "price_offered_inrquintal",
@@ -498,6 +508,10 @@
    "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
   },
   {
+   "fieldname": "column_break_clpj",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "price_offered",
    "fieldtype": "Int",
    "label": "Price Offered (INR/Quintal)",
@@ -533,21 +547,6 @@
    "label": "Remarks (Explain the impact created)"
   },
   {
-   "fieldname": "column_break_clpj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_hogr",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "block",
-   "fieldtype": "Link",
-   "label": "Taluka/Tehsil",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
    "fieldname": "grampanchayat",
    "fieldtype": "Link",
    "label": "Gram Panchayat",
@@ -557,17 +556,14 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
-<<<<<<< HEAD
- "modified": "2024-05-13 11:46:42.034201",
-=======
- "modified": "2024-05-13 09:32:32.250749",
->>>>>>> 0d82400138aaedcdf52c36531a54ce424ad263fa
+ "modified": "2024-05-13 13:15:32.550436",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",
  "owner": "Administrator",
  "permissions": [
   {
+   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -575,39 +571,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "State User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "District User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Surveyor",
    "share": 1,
    "write": 1
   }
