@@ -1,604 +1,581 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2024-05-12 12:22:36.288121",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "output",
-  "location_section",
-  "state",
-  "district",
-  "talukatehsil",
-  "column_break_hmug",
-  "gram_panchayat",
-  "village",
-  "date_of_reporting_output_section",
-  "date",
-  "financial_year",
-  "month",
-  "new_agriculture_technologies_section",
-  "name_of_cropcommodity",
-  "name_of_the_farmers",
-  "phone_number",
-  "technology_details_section",
-  "technology_practice_demonstrated",
-  "specify_others",
-  "details_of_technology",
-  "outreach_section",
-  "area_covered",
-  "is_this_a_bij_1_or_bij_2_village",
-  "subsidised_by_reliance_foundation",
-  "column_break_awdl",
-  "if_yes_what_age",
-  "who_provided_the_balance_funds",
-  "partners_section",
-  "farmer_producer_organisation_fpo",
-  "column_break_nlyr",
-  "collaborating_agenciesdepartment",
-  "new_agriculture_technologies_2",
-  "name_of_the_crop",
-  "name_of_technology_practice_adopted",
-  "area_of_land_on_which_adopted_in_hectares",
-  "column_break_zodx",
-  "no_of_farmers_adopting_the_techpractice",
-  "remarks",
-  "farmer_collectives_section",
-  "topic_of_the_training_conducted",
-  "number_of_fposfarmer_collectives_participated",
-  "farmer_producer_organisation_2",
-  "no_of_bodsfarmers_participated",
-  "column_break_wpfh",
-  "no_of_nonbodsfarmers_participated",
-  "name_of_the_trainer",
-  "collaborating_agenciesdepartment_2",
-  "remarks_2",
-  "services_from_farmer_collectives_section",
-  "type",
-  "farmer_producer_organisation_3",
-  "name_of_the_commodity",
-  "no_of_farmers",
-  "value_of_transaction",
-  "volumes",
-  "price_offered_inrquintal",
-  "price_offered_in_the_local_market",
-  "savings_in_transport_inr_per_quintal",
-  "savings_in_arthiya_commission_inr_per_quintal",
-  "total_incremental_income_benefit_to_farmer",
-  "remarks_explain_the_impact_created",
-  "collectives_section",
-  "type_2",
-  "farmer_producer_organisation_4",
-  "name_of_the_commodity_2",
-  "no_of_farmers_2",
-  "value_of_transaction_2",
-  "volumes_2",
-  "column_break_clpj",
-  "price_offered",
-  "price_offered_in_the_local_market_2",
-  "savings_in_transport_2",
-  "savings_in_arthiya_commission_2",
-  "total_incremental_income_benefit_to_farmer_2",
-  "remarks_3"
- ],
- "fields": [
-  {
-   "fieldname": "output",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
-   "options": "Options",
-   "reqd": 1
-  },
-  {
-   "fieldname": "location_section",
-   "fieldtype": "Section Break",
-   "label": "Location"
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "State",
-   "options": "State",
-   "reqd": 1
-  },
-  {
-   "fieldname": "district",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "District",
-   "options": "District",
-   "reqd": 1
-  },
-  {
-   "fieldname": "talukatehsil",
-   "fieldtype": "Link",
-   "label": "Taluka/Tehsil",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
-   "fieldname": "gram_panchayat",
-   "fieldtype": "Data",
-   "label": "Gram Panchayat"
-  },
-  {
-   "fieldname": "village",
-   "fieldtype": "Link",
-   "label": "Village",
-   "options": "Village",
-   "reqd": 1
-  },
-  {
-   "fieldname": "date_of_reporting_output_section",
-   "fieldtype": "Section Break",
-   "label": "Date of Reporting Output"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "month",
-   "fieldtype": "Select",
-   "label": "Month",
-   "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
-   "reqd": 1
-  },
-  {
-   "fieldname": "financial_year",
-   "fieldtype": "Select",
-   "label": "Financial Year",
-   "options": "\n2023-24\n2024-25",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name_of_cropcommodity",
-   "fieldtype": "Select",
-   "label": "Name of Crop/Commodity",
-   "options": "\nWheat\nRice\nBajara",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_hmug",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "name_of_the_farmers",
-   "fieldtype": "Data",
-   "label": "Name of the Farmers",
-   "reqd": 1
-  },
-  {
-   "default": "+91-",
-   "fieldname": "phone_number",
-   "fieldtype": "Phone",
-   "label": "Phone Number",
-   "reqd": 1
-  },
-  {
-   "fieldname": "technology_details_section",
-   "fieldtype": "Section Break",
-   "label": "Technology Details"
-  },
-  {
-   "fieldname": "technology_practice_demonstrated",
-   "fieldtype": "Select",
-   "label": "Technology /Practice Demonstrated",
-   "options": "\nBio Decomposers\nBio-fortified seed\nBoom Sprayers\nBroad bed furrow\nCrop Insurance\nDead furrow\nDeep Ploughing\nDrip & Sprinklers\nDrones for Spraying\nImproved Seed\nLine sowing/Transplanting\nLow cost cold storages\nNano Urea\nNipping\nPaddy Transplanters\nPheromone Traps\nPower Sprayers\nPower Tillers\nPulse magic\nSagarika\nSatellite based advisory\nSeed Dibblers\nSeed Drills\nSeed Treatment\nSound & Light sensor for animals\nUse of Gypsum\nUse of Sulphur\nOther"
-  },
-  {
-   "depends_on": "eval:(doc.technology_practice_demonstrated == 'Bio-fortified seed' || doc.technology_practice_demonstrated == 'Drip & Sprinklers');",
-   "fieldname": "specify_others",
-   "fieldtype": "Data",
-   "label": "Specify Others",
-   "reqd": 1
-  },
-  {
-   "fieldname": "details_of_technology",
-   "fieldtype": "Data",
-   "label": "Details of Technology",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.output == '4.1 Area under improved production practices/new agriculture technologies';",
-   "fieldname": "outreach_section",
-   "fieldtype": "Section Break",
-   "label": "Outreach"
-  },
-  {
-   "fieldname": "area_covered",
-   "fieldtype": "Int",
-   "label": "Area Covered",
-   "reqd": 1
-  },
-  {
-   "fieldname": "is_this_a_bij_1_or_bij_2_village",
-   "fieldtype": "Select",
-   "label": "Is this a BIJ 1 or BIJ 2 Village?",
-   "options": "\nYes\nNo",
-   "reqd": 1
-  },
-  {
-   "fieldname": "subsidised_by_reliance_foundation",
-   "fieldtype": "Select",
-   "label": "Subsidised by Reliance Foundation?",
-   "options": "\nYes\nNo",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.subsidised_by_reliance_foundation == 'Yes';",
-   "fieldname": "if_yes_what_age",
-   "fieldtype": "Percent",
-   "label": "If Yes, what %age?",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "who_provided_the_balance_funds",
-   "fieldtype": "Data",
-   "label": "Who provided the balance funds",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_awdl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:doc.output == '4.1 Area under improved production practices/new agriculture technologies';",
-   "fieldname": "partners_section",
-   "fieldtype": "Section Break",
-   "label": "Partners"
-  },
-  {
-   "fieldname": "farmer_producer_organisation_fpo",
-   "fieldtype": "Select",
-   "label": "Farmer Producer Organisation (FPO)",
-   "options": "\nFPO 1\nFPO 2",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.output == '4.1 Area under improved production practices/new agriculture technologies';",
-   "description": "Area under improved production practices/new agriculture technologies",
-   "fieldname": "new_agriculture_technologies_section",
-   "fieldtype": "Section Break",
-   "label": "New agriculture technologies"
-  },
-  {
-   "fieldname": "collaborating_agenciesdepartment",
-   "fieldtype": "Select",
-   "label": "Collaborating agencies/department",
-   "options": "\nAgencies One",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_nlyr",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:doc.output == '4.2 Farmers adopting and benefitting with improved practices and/or new agriculture technologies';",
-   "description": "4.2 Farmers adopting and benefitting with improved practices and/or new agriculture technologies",
-   "fieldname": "new_agriculture_technologies_2",
-   "fieldtype": "Section Break",
-   "label": "New agriculture technologies"
-  },
-  {
-   "fieldname": "name_of_the_crop",
-   "fieldtype": "Select",
-   "label": "Name of the Crop",
-   "options": "\nWheat\nRice\nBajra",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name_of_technology_practice_adopted",
-   "fieldtype": "Data",
-   "label": "Name of Technology/ Practice Adopted",
-   "reqd": 1
-  },
-  {
-   "fieldname": "area_of_land_on_which_adopted_in_hectares",
-   "fieldtype": "Int",
-   "label": "Area of land on which adopted (In Hectares)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "no_of_farmers_adopting_the_techpractice",
-   "fieldtype": "Int",
-   "label": "No. of Farmers adopting the tech/practice",
-   "reqd": 1
-  },
-  {
-   "fieldname": "remarks",
-   "fieldtype": "Data",
-   "label": "Remarks"
-  },
-  {
-   "fieldname": "column_break_zodx",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:doc.output == '5.1 Farmer collectives (FPOs/ SHG Federations/Co-op/ PACS/ Informal group of farmers) provided techno-managerial support and/or linkages';",
-   "description": "5.1 Farmer collectives (FPOs/ SHG Federations/Co-op/ PACS/ Informal group of farmers) provided techno-managerial support and/or linkages",
-   "fieldname": "farmer_collectives_section",
-   "fieldtype": "Section Break",
-   "label": "Farmer collectives"
-  },
-  {
-   "fieldname": "topic_of_the_training_conducted",
-   "fieldtype": "Data",
-   "label": "Topic of the Training Conducted",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_fposfarmer_collectives_participated",
-   "fieldtype": "Int",
-   "label": "Number of FPOs/Farmer Collectives Participated",
-   "reqd": 1
-  },
-  {
-   "fieldname": "farmer_producer_organisation_2",
-   "fieldtype": "Select",
-   "label": "Farmer Producer Organisation (FPO)",
-   "options": "\nFPO 1\nFPO 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "no_of_bodsfarmers_participated",
-   "fieldtype": "Int",
-   "label": "No. of BoDs/Farmers participated",
-   "reqd": 1
-  },
-  {
-   "fieldname": "no_of_nonbodsfarmers_participated",
-   "fieldtype": "Int",
-   "label": "No. of non-BoDs/farmers participated",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name_of_the_trainer",
-   "fieldtype": "Data",
-   "label": "Name of the Trainer",
-   "reqd": 1
-  },
-  {
-   "fieldname": "collaborating_agenciesdepartment_2",
-   "fieldtype": "Select",
-   "label": "Collaborating agencies/department",
-   "options": "\nAgencies one",
-   "reqd": 1
-  },
-  {
-   "fieldname": "remarks_2",
-   "fieldtype": "Data",
-   "label": "Remarks"
-  },
-  {
-   "fieldname": "column_break_wpfh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "description": "5.2 Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives",
-   "fieldname": "services_from_farmer_collectives_section",
-   "fieldtype": "Section Break",
-   "label": "Services from Farmer Collectives"
-  },
-  {
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services",
-   "reqd": 1
-  },
-  {
-   "fieldname": "farmer_producer_organisation_3",
-   "fieldtype": "Select",
-   "label": "Farmer Producer Organisation (FPO)",
-   "options": "\nFPO 1\nFPO 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name_of_the_commodity",
-   "fieldtype": "Select",
-   "label": "Name of the Commodity",
-   "options": "\nCommodity 1\nCommodity 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "no_of_farmers",
-   "fieldtype": "Int",
-   "label": "No of Farmers",
-   "reqd": 1
-  },
-  {
-   "fieldname": "value_of_transaction",
-   "fieldtype": "Int",
-   "label": "Value of Transaction",
-   "reqd": 1
-  },
-  {
-   "fieldname": "volumes",
-   "fieldtype": "Int",
-   "label": "Volumes",
-   "reqd": 1
-  },
-  {
-   "fieldname": "price_offered_inrquintal",
-   "fieldtype": "Int",
-   "label": "Price Offered (INR/Quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "price_offered_in_the_local_market",
-   "fieldtype": "Int",
-   "label": "Price offered in the local market",
-   "reqd": 1
-  },
-  {
-   "fieldname": "savings_in_transport_inr_per_quintal",
-   "fieldtype": "Int",
-   "label": "Savings in Transport (INR per quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "savings_in_arthiya_commission_inr_per_quintal",
-   "fieldtype": "Int",
-   "label": "Savings in Arthiya Commission (INR per quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "total_incremental_income_benefit_to_farmer",
-   "fieldtype": "Int",
-   "label": "Total Incremental Income Benefit to Farmer",
-   "reqd": 1
-  },
-  {
-   "fieldname": "remarks_explain_the_impact_created",
-   "fieldtype": "Data",
-   "label": "Remarks (Explain the impact created)"
-  },
-  {
-   "depends_on": "eval:doc.output == '5.3 Values of produce marketed and inputs/services sourced through farmers collective';",
-   "description": "5.3 Value of produce marketed and inputs/services sourced through farmer collectives",
-   "fieldname": "collectives_section",
-   "fieldtype": "Section Break",
-   "label": "Collectives"
-  },
-  {
-   "fieldname": "type_2",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services",
-   "reqd": 1
-  },
-  {
-   "fieldname": "farmer_producer_organisation_4",
-   "fieldtype": "Select",
-   "label": "Farmer Producer Organisation (FPO)",
-   "options": "\nFPO 1\nFPO 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name_of_the_commodity_2",
-   "fieldtype": "Select",
-   "label": "Name of the Commodity",
-   "options": "\nCommodity 1\nCommodity 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "no_of_farmers_2",
-   "fieldtype": "Int",
-   "label": "No of Farmers",
-   "reqd": 1
-  },
-  {
-   "fieldname": "value_of_transaction_2",
-   "fieldtype": "Int",
-   "label": "Value of Transaction",
-   "reqd": 1
-  },
-  {
-   "fieldname": "volumes_2",
-   "fieldtype": "Int",
-   "label": "Volumes",
-   "reqd": 1
-  },
-  {
-   "fieldname": "price_offered",
-   "fieldtype": "Int",
-   "label": "Price Offered (INR/Quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "price_offered_in_the_local_market_2",
-   "fieldtype": "Int",
-   "label": "Price offered in the local market",
-   "reqd": 1
-  },
-  {
-   "fieldname": "savings_in_transport_2",
-   "fieldtype": "Int",
-   "label": "Savings in Transport (INR per quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "savings_in_arthiya_commission_2",
-   "fieldtype": "Int",
-   "label": "Savings in Arthiya Commission (INR per quintal)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "total_incremental_income_benefit_to_farmer_2",
-   "fieldtype": "Int",
-   "label": "Total Incremental Income Benefit to Farmer",
-   "reqd": 1
-  },
-  {
-   "fieldname": "remarks_3",
-   "fieldtype": "Data",
-   "label": "Remarks (Explain the impact created)"
-  },
-  {
-   "fieldname": "column_break_clpj",
-   "fieldtype": "Column Break"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-05-13 09:32:32.250749",
- "modified_by": "Administrator",
- "module": "Rt Bij",
- "name": "IVCD Output Form",
- "owner": "Administrator",
- "permissions": [
-  {
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "State User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "District User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Surveyor",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "creation",
- "sort_order": "DESC",
- "states": []
+   "actions": [],
+   "allow_rename": 1,
+   "creation": "2024-05-12 12:22:36.288121",
+   "doctype": "DocType",
+   "engine": "InnoDB",
+   "field_order": [
+      "output",
+      "location_section",
+      "state",
+      "district",
+      "block",
+      "column_break_hmug",
+      "grampanchayat",
+      "village",
+      "date_of_reporting_output_section",
+      "date",
+      "financial_year",
+      "month",
+      "new_agriculture_technologies_section",
+      "name_of_cropcommodity",
+      "name_of_the_farmers",
+      "phone_number",
+      "technology_details_section",
+      "technology_practice_demonstrated",
+      "specify_others",
+      "details_of_technology",
+      "outreach_section",
+      "area_covered",
+      "is_this_a_bij_1_or_bij_2_village",
+      "subsidised_by_reliance_foundation",
+      "column_break_awdl",
+      "if_yes_what_age",
+      "who_provided_the_balance_funds",
+      "partners_section",
+      "farmer_producer_organisation_fpo",
+      "column_break_nlyr",
+      "collaborating_agenciesdepartment",
+      "new_agriculture_technologies_2",
+      "name_of_the_crop",
+      "name_of_technology_practice_adopted",
+      "area_of_land_on_which_adopted_in_hectares",
+      "column_break_zodx",
+      "no_of_farmers_adopting_the_techpractice",
+      "remarks",
+      "farmer_collectives_section",
+      "topic_of_the_training_conducted",
+      "number_of_fposfarmer_collectives_participated",
+      "farmer_producer_organisation_2",
+      "no_of_bodsfarmers_participated",
+      "column_break_wpfh",
+      "no_of_nonbodsfarmers_participated",
+      "name_of_the_trainer",
+      "collaborating_agenciesdepartment_2",
+      "remarks_2",
+      "services_from_farmer_collectives_section",
+      "type",
+      "farmer_producer_organisation_3",
+      "name_of_the_commodity",
+      "no_of_farmers",
+      "value_of_transaction",
+      "volumes",
+      "column_break_hogr",
+      "price_offered_inrquintal",
+      "price_offered_in_the_local_market",
+      "savings_in_transport_inr_per_quintal",
+      "savings_in_arthiya_commission_inr_per_quintal",
+      "total_incremental_income_benefit_to_farmer",
+      "remarks_explain_the_impact_created",
+      "collectives_section",
+      "type_2",
+      "farmer_producer_organisation_4",
+      "name_of_the_commodity_2",
+      "no_of_farmers_2",
+      "value_of_transaction_2",
+      "volumes_2",
+      "column_break_clpj",
+      "price_offered",
+      "price_offered_in_the_local_market_2",
+      "savings_in_transport_2",
+      "savings_in_arthiya_commission_2",
+      "total_incremental_income_benefit_to_farmer_2",
+      "remarks_3"
+   ],
+   "fields": [
+      {
+         "fieldname": "output",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "Output",
+         "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output IVCD\"]]",
+         "options": "Options",
+         "reqd": 1
+      },
+      {
+         "fieldname": "location_section",
+         "fieldtype": "Section Break",
+         "label": "Location"
+      },
+      {
+         "fieldname": "state",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "State",
+         "options": "State",
+         "reqd": 1
+      },
+      {
+         "fieldname": "district",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "District",
+         "options": "District",
+         "reqd": 1
+      },
+      {
+         "fieldname": "block",
+         "fieldtype": "Link",
+         "label": "Taluka/Tehsil",
+         "options": "Block",
+         "reqd": 1
+      },
+      {
+         "fieldname": "column_break_hmug",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "village",
+         "fieldtype": "Link",
+         "label": "Village",
+         "options": "Village",
+         "reqd": 1
+      },
+      {
+         "fieldname": "date_of_reporting_output_section",
+         "fieldtype": "Section Break",
+         "label": "Date of Reporting Output"
+      },
+      {
+         "fieldname": "date",
+         "fieldtype": "Date",
+         "label": "Date",
+         "reqd": 1
+      },
+      {
+         "fieldname": "financial_year",
+         "fieldtype": "Select",
+         "label": "Financial Year",
+         "options": "\n2023-24\n2024-25",
+         "reqd": 1
+      },
+      {
+         "fieldname": "month",
+         "fieldtype": "Select",
+         "label": "Month",
+         "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
+         "reqd": 1
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "description": "4.1 Area under improved production practices/new agriculture technologies",
+         "fieldname": "new_agriculture_technologies_section",
+         "fieldtype": "Section Break",
+         "label": "New agriculture technologies"
+      },
+      {
+         "fieldname": "name_of_cropcommodity",
+         "fieldtype": "Select",
+         "label": "Name of Crop/Commodity",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "options": "\nWheat\nRice\nBajara"
+      },
+      {
+         "fieldname": "name_of_the_farmers",
+         "fieldtype": "Data",
+         "label": "Name of the Farmers",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
+      },
+      {
+         "default": "+91-",
+         "fieldname": "phone_number",
+         "fieldtype": "Phone",
+         "label": "Phone Number",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
+      },
+      {
+         "fieldname": "technology_details_section",
+         "fieldtype": "Section Break",
+         "label": "Technology Details"
+      },
+      {
+         "fieldname": "technology_practice_demonstrated",
+         "fieldtype": "Select",
+         "label": "Technology /Practice Demonstrated",
+         "options": "\nBio Decomposers\nBio-fortified seed\nBoom Sprayers\nBroad bed furrow\nCrop Insurance\nDead furrow\nDeep Ploughing\nDrip & Sprinklers\nDrones for Spraying\nImproved Seed\nLine sowing/Transplanting\nLow cost cold storages\nNano Urea\nNipping\nPaddy Transplanters\nPheromone Traps\nPower Sprayers\nPower Tillers\nPulse magic\nSagarika\nSatellite based advisory\nSeed Dibblers\nSeed Drills\nSeed Treatment\nSound & Light sensor for animals\nUse of Gypsum\nUse of Sulphur\nOther"
+      },
+      {
+         "depends_on": "eval:(doc.technology_practice_demonstrated == 'Bio-fortified seed' || doc.technology_practice_demonstrated == 'Drip & Sprinklers');",
+         "fieldname": "specify_others",
+         "fieldtype": "Data",
+         "label": "Specify Others",
+         "mandatory_depends_on": "eval:(doc.technology_practice_demonstrated == 'Bio-fortified seed' || doc.technology_practice_demonstrated == 'Drip & Sprinklers');"
+      },
+      {
+         "fieldname": "details_of_technology",
+         "fieldtype": "Data",
+         "label": "Details of Technology",
+         "reqd": 1
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "fieldname": "outreach_section",
+         "fieldtype": "Section Break",
+         "label": "Outreach"
+      },
+      {
+         "fieldname": "area_covered",
+         "fieldtype": "Int",
+         "label": "Area Covered",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
+      },
+      {
+         "fieldname": "is_this_a_bij_1_or_bij_2_village",
+         "fieldtype": "Select",
+         "label": "Is this a BIJ 1 or BIJ 2 Village?",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "options": "\nYes\nNo"
+      },
+      {
+         "fieldname": "subsidised_by_reliance_foundation",
+         "fieldtype": "Select",
+         "label": "Subsidised by Reliance Foundation?",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "options": "\nYes\nNo"
+      },
+      {
+         "fieldname": "column_break_awdl",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:doc.subsidised_by_reliance_foundation == 'Yes';",
+         "fieldname": "if_yes_what_age",
+         "fieldtype": "Percent",
+         "label": "If Yes, what %age?",
+         "mandatory_depends_on": "eval:doc.subsidised_by_reliance_foundation == 'Yes';",
+         "non_negative": 1
+      },
+      {
+         "fieldname": "who_provided_the_balance_funds",
+         "fieldtype": "Data",
+         "label": "Who provided the balance funds",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';"
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "fieldname": "partners_section",
+         "fieldtype": "Section Break",
+         "label": "Partners"
+      },
+      {
+         "fieldname": "farmer_producer_organisation_fpo",
+         "fieldtype": "Select",
+         "label": "Farmer Producer Organisation (FPO)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "options": "\nFPO 1\nFPO 2"
+      },
+      {
+         "fieldname": "column_break_nlyr",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "collaborating_agenciesdepartment",
+         "fieldtype": "Select",
+         "label": "Collaborating agencies/department",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-1';",
+         "options": "\nAgencies One"
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-2';",
+         "description": "4.2 Farmers adopting and benefitting with improved practices and/or new agriculture technologies",
+         "fieldname": "new_agriculture_technologies_2",
+         "fieldtype": "Section Break",
+         "label": "New agriculture technologies"
+      },
+      {
+         "fieldname": "name_of_the_crop",
+         "fieldtype": "Select",
+         "label": "Name of the Crop",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-2';",
+         "options": "\nWheat\nRice\nBajra"
+      },
+      {
+         "fieldname": "name_of_technology_practice_adopted",
+         "fieldtype": "Data",
+         "label": "Name of Technology/ Practice Adopted",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-2';"
+      },
+      {
+         "fieldname": "area_of_land_on_which_adopted_in_hectares",
+         "fieldtype": "Int",
+         "label": "Area of land on which adopted (In Hectares)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-2';"
+      },
+      {
+         "fieldname": "column_break_zodx",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "no_of_farmers_adopting_the_techpractice",
+         "fieldtype": "Int",
+         "label": "No. of Farmers adopting the tech/practice",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-2';"
+      },
+      {
+         "fieldname": "remarks",
+         "fieldtype": "Data",
+         "label": "Remarks"
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-3';",
+         "description": "5.1 Farmer collectives (FPOs/ SHG Federations/Co-op/ PACS/ Informal group of farmers) provided techno-managerial support and/or linkages",
+         "fieldname": "farmer_collectives_section",
+         "fieldtype": "Section Break",
+         "label": "Farmer collectives"
+      },
+      {
+         "fieldname": "topic_of_the_training_conducted",
+         "fieldtype": "Data",
+         "label": "Topic of the Training Conducted",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
+      },
+      {
+         "fieldname": "number_of_fposfarmer_collectives_participated",
+         "fieldtype": "Int",
+         "label": "Number of FPOs/Farmer Collectives Participated",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
+      },
+      {
+         "fieldname": "farmer_producer_organisation_2",
+         "fieldtype": "Select",
+         "label": "Farmer Producer Organisation (FPO)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';",
+         "options": "\nFPO 1\nFPO 2"
+      },
+      {
+         "fieldname": "no_of_bodsfarmers_participated",
+         "fieldtype": "Int",
+         "label": "No. of BoDs/Farmers participated",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
+      },
+      {
+         "fieldname": "column_break_wpfh",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "no_of_nonbodsfarmers_participated",
+         "fieldtype": "Int",
+         "label": "No. of non-BoDs/farmers participated",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
+      },
+      {
+         "fieldname": "name_of_the_trainer",
+         "fieldtype": "Data",
+         "label": "Name of the Trainer",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';"
+      },
+      {
+         "fieldname": "collaborating_agenciesdepartment_2",
+         "fieldtype": "Select",
+         "label": "Collaborating agencies/department",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-3';",
+         "options": "\nAgencies one"
+      },
+      {
+         "fieldname": "remarks_2",
+         "fieldtype": "Data",
+         "label": "Remarks"
+      },
+      {
+         "depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');",
+         "description": "5.2 Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives",
+         "fieldname": "services_from_farmer_collectives_section",
+         "fieldtype": "Section Break",
+         "label": "Services from Farmer Collectives"
+      },
+      {
+         "fieldname": "type",
+         "fieldtype": "Select",
+         "label": "Type",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');",
+         "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services"
+      },
+      {
+         "fieldname": "farmer_producer_organisation_3",
+         "fieldtype": "Select",
+         "label": "Farmer Producer Organisation (FPO)",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');",
+         "options": "\nFPO 1\nFPO 2"
+      },
+      {
+         "fieldname": "name_of_the_commodity",
+         "fieldtype": "Select",
+         "label": "Name of the Commodity",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');",
+         "options": "\nCommodity 1\nCommodity 2"
+      },
+      {
+         "fieldname": "no_of_farmers",
+         "fieldtype": "Int",
+         "label": "No of Farmers",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "value_of_transaction",
+         "fieldtype": "Int",
+         "label": "Value of Transaction",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "volumes",
+         "fieldtype": "Int",
+         "label": "Volumes",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "column_break_hogr",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "price_offered_inrquintal",
+         "fieldtype": "Int",
+         "label": "Price Offered (INR/Quintal)",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "price_offered_in_the_local_market",
+         "fieldtype": "Int",
+         "label": "Price offered in the local market",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "savings_in_transport_inr_per_quintal",
+         "fieldtype": "Int",
+         "label": "Savings in Transport (INR per quintal)",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "savings_in_arthiya_commission_inr_per_quintal",
+         "fieldtype": "Int",
+         "label": "Savings in Arthiya Commission (INR per quintal)",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "total_incremental_income_benefit_to_farmer",
+         "fieldtype": "Int",
+         "label": "Total Incremental Income Benefit to Farmer",
+         "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == 'Output IVCD-5');"
+      },
+      {
+         "fieldname": "remarks_explain_the_impact_created",
+         "fieldtype": "Data",
+         "label": "Remarks (Explain the impact created)"
+      },
+      {
+         "depends_on": "eval:doc.output == 'Output IVCD-5'",
+         "description": "5.3 Value of produce marketed and inputs/services sourced through farmer collectives",
+         "fieldname": "collectives_section",
+         "fieldtype": "Section Break",
+         "label": "Collectives"
+      },
+      {
+         "fieldname": "type_2",
+         "fieldtype": "Select",
+         "label": "Type",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'",
+         "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services"
+      },
+      {
+         "fieldname": "farmer_producer_organisation_4",
+         "fieldtype": "Select",
+         "label": "Farmer Producer Organisation (FPO)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'",
+         "options": "\nFPO 1\nFPO 2"
+      },
+      {
+         "fieldname": "name_of_the_commodity_2",
+         "fieldtype": "Select",
+         "label": "Name of the Commodity",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'",
+         "options": "\nCommodity 1\nCommodity 2"
+      },
+      {
+         "fieldname": "no_of_farmers_2",
+         "fieldtype": "Int",
+         "label": "No of Farmers",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "value_of_transaction_2",
+         "fieldtype": "Int",
+         "label": "Value of Transaction",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "volumes_2",
+         "fieldtype": "Int",
+         "label": "Volumes",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "column_break_clpj",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "price_offered",
+         "fieldtype": "Int",
+         "label": "Price Offered (INR/Quintal)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "price_offered_in_the_local_market_2",
+         "fieldtype": "Int",
+         "label": "Price offered in the local market",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "savings_in_transport_2",
+         "fieldtype": "Int",
+         "label": "Savings in Transport (INR per quintal)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "savings_in_arthiya_commission_2",
+         "fieldtype": "Int",
+         "label": "Savings in Arthiya Commission (INR per quintal)",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "total_incremental_income_benefit_to_farmer_2",
+         "fieldtype": "Int",
+         "label": "Total Incremental Income Benefit to Farmer",
+         "mandatory_depends_on": "eval:doc.output == 'Output IVCD-5'"
+      },
+      {
+         "fieldname": "remarks_3",
+         "fieldtype": "Data",
+         "label": "Remarks (Explain the impact created)"
+      },
+      {
+         "fieldname": "grampanchayat",
+         "fieldtype": "Link",
+         "label": "Gram Panchayat",
+         "options": "Grampanchayat",
+         "reqd": 1
+      }
+   ],
+   "index_web_pages_for_search": 1,
+   "links": [],
+   "modified": "2024-05-13 13:15:32.550436",
+   "modified_by": "Administrator",
+   "module": "Rt Bij",
+   "name": "IVCD Output Form",
+   "owner": "Administrator",
+   "permissions": [
+      {
+         "create": 1,
+         "delete": 1,
+         "email": 1,
+         "export": 1,
+         "print": 1,
+         "read": 1,
+         "report": 1,
+         "role": "System Manager",
+         "share": 1,
+         "write": 1
+      }
+   ],
+   "sort_field": "creation",
+   "sort_order": "DESC",
+   "states": []
 }
