@@ -131,21 +131,21 @@
    "fieldname": "talukatehsil",
    "fieldtype": "Link",
    "label": "Taluka/Tehsil",
-   "options": "Block",
+   "options": "Grampanchayat",
    "reqd": 1
   },
   {
    "fieldname": "gram_panchayat",
    "fieldtype": "Link",
    "label": "Gram Panchayat",
-   "options": "Grampanchayat",
+   "options": "Village",
    "reqd": 1
   },
   {
    "fieldname": "village",
    "fieldtype": "Link",
    "label": "Village",
-   "options": "Village",
+   "options": "Hamlet",
    "reqd": 1
   },
   {
@@ -259,10 +259,11 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.type_of_measures == \"Check dam\"",
    "fieldname": "specify_others",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.type_of_measures == \"Check dam\""
   },
   {
    "fieldname": "name_of_the_departments_and_organizations",
@@ -291,9 +292,10 @@
    "mandatory_depends_on": "eval:doc.output == \"Output-2\""
   },
   {
+   "default": "+91-",
    "depends_on": "eval:doc.output == \"Output-2\"",
    "fieldname": "phone_numbers_of_the_sarpanch2",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
    "label": "Phone numbers of the Sarpanch",
    "mandatory_depends_on": "eval:doc.output == \"Output-2\""
   },
@@ -392,8 +394,9 @@
    "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
+   "default": "+91-",
    "fieldname": "phone3",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
    "label": "Phone",
    "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
@@ -503,8 +506,9 @@
    "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
+   "default": "+91-",
    "fieldname": "phone4",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
    "label": "Phone",
    "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
@@ -613,7 +617,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 10:45:43.857386",
+ "modified": "2024-05-13 13:47:45.401290",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
