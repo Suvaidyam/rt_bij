@@ -6,7 +6,6 @@ app_email = "tech@suvaidyam.com"
 app_license = "mit"
 # required_apps = []
 fixtures = [
-<<<<<<< HEAD
 	"Custom HTML Block",
 	"Participant Type",
 	"Options",
@@ -17,12 +16,6 @@ fixtures = [
 	"Village",
 	"Hamlet"
     ]
-=======
-    		"Custom HTML Block",
-        	"Participant Type",
-         "Options"
-            ]
->>>>>>> e71528b1b9d463d76d6518134df264ec68e3f518
 
 # Includes in <head>
 # ------------------

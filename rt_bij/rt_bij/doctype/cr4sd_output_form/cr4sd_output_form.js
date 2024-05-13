@@ -19,7 +19,7 @@ function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = 
     }
 };
 frappe.ui.form.on("CR4SD Output Form", {
-	refresh(frm) {
+    refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("block", "district", frm, frm.doc.district)
         apply_filter("talukatehsil", "block", frm, frm.doc.block)
@@ -29,46 +29,47 @@ frappe.ui.form.on("CR4SD Output Form", {
         // console.log("refreshed",frm.doc)
     },
 
-    state: function(frm) {
+    state: function (frm) {
         apply_filter("district", "state", frm, frm.doc.state)
     },
-    district: function(frm) {
+    district: function (frm) {
         apply_filter("block", "district", frm, frm.doc.district)
     },
-    block: function(frm) {
+    block: function (frm) {
         apply_filter("talukatehsil", "block", frm, frm.doc.block)
     },
-    talukatehsil: function(frm) {
+    talukatehsil: function (frm) {
         apply_filter("gram_panchayat", "grampanchayat", frm, frm.doc.talukatehsil)
     },
-    gram_panchayat: function(frm) {
+    gram_panchayat: function (frm) {
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
     },
-    villages: function(frm) {
+    villages: function (frm) {
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
     },
+    // before_save(frm) {
+    //     if (frm.doc.phone_numbers_of_the_sarpanch == "+91-") {
+    //         frm.doc.phone_numbers_of_the_sarpanch = "";
+    //     }
+    //     if (frm.doc.phone_numbers_of_the_sarpanch2 == "+91-") {
+    //         frm.doc.phone_numbers_of_the_sarpanch2 = "";
+    //     }
+    //     if (frm.doc.phone2 == "+91-") {
+    //         frm.doc.phone2 = "";
+    //     }
+    //     if (frm.doc.phone3 == "+91-") {
+    //         frm.doc.phone3 = "";
+    //     }
+    //     if (frm.doc.phone4 == "+91-") {
+    //         frm.doc.phone4 = "";
+    //     }
+    // },
     before_save(frm) {
-        if (frm.doc.phone_numbers_of_the_sarpanch == "+91-") {
-            frm.doc.phone_numbers_of_the_sarpanch = "";
-        }
-        
-        if (frm.doc.phone_numbers_of_the_sarpanch2 == "+91-") {
-            frm.doc.phone_numbers_of_the_sarpanch2 = "";
-        }
-        if (frm.doc.phone2 == "+91-") {
-            frm.doc.phone2 = "";
-        }
-        if (frm.doc.phone3 == "+91-") {
-            frm.doc.phone3 = "";
-        }
-        if (frm.doc.phone4 == "+91-") {
-            frm.doc.phone4 = "";
-        }
-      
-
-
+        ["phone_numbers_of_the_sarpanch", "phone_numbers_of_the_sarpanch2", "phone2", "phone3", "phone4"].forEach(field => {
+            if (frm.doc[field] === "+91-") {
+                frm.doc[field] = "";
+            }
+        });
     }
-        
-            
-	
+
 });
