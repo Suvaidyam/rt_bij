@@ -36,8 +36,34 @@ frappe.ui.form.on("Activity CR4SD", {
         apply_filter("villages", "grampanchayat", frm, frm.doc.gram_panchayat)
     },
     validate(frm) {
+        let phone_arr;
+        if (frm.doc.phone) {
+            phone_arr = frm.doc.phone.split('-')
+            if (phone_arr && phone_arr.length == 1) {
+                integer_length_validator(phone_arr[0], 10, 'Phone');
+            } else if (phone_arr && phone_arr.length == 2) {
+                integer_length_validator(phone_arr[1], 10, 'Phone');
+            }
+        }
         integer_length_validator(frm.doc.total_male, 7, 'Total male');
         integer_length_validator(frm.doc.total_female, 7, 'Total female');
+        integer_length_validator(frm.doc.present_surface_water_storage_capacity, 10, 'Present surface water storage capacity');
+        integer_length_validator(frm.doc.increased_surface_water_storage_capacity, 10, 'Increased surface water storage capacity');
+        integer_length_validator(frm.doc.increased_underground_recharge_capacity, 10, 'Increased underground recharge capacity');
+        integer_length_validator(frm.doc.total_water_harvesting_capacity, 10, 'Total water harvesting capacity');
+        integer_length_validator(frm.doc.no_of_farmers_benefitted, 10, 'No. of farmers benefitted');
+        integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage amount');
+        integer_length_validator(frm.doc.no_of_drinking_water_system, 10, 'No. of drinking water system');
+        integer_length_validator(frm.doc.total_length_of_pipeline_provisions, 10, 'Total length of pipeline provisions');
+        integer_length_validator(frm.doc.drinking_water_system_capacity_created, 10, 'Drinking water system capacity created');
+        integer_length_validator(frm.doc.total_households_benefitted, 7, 'Total households benefitted');
+        integer_length_validator(frm.doc.leverage_amount2, 10, 'Leverage amount');
+        integer_length_validator(frm.doc.water_recycle_capacity, 10, 'Water recycle capacity');
+        integer_length_validator(frm.doc.noof_households_taken_up_measures, 7, 'No. of households taken up measures');
+        integer_length_validator(frm.doc.leverage_amount3, 10, 'Leverage amount');
+        integer_length_validator(frm.doc.area, 10, 'Area');
+        integer_length_validator(frm.doc.no_of_hhs_diversified_food_basket_individual, 10, 'No. of hhs diversified food basket individual');
+        integer_length_validator(frm.doc.no_of_diversification_food_basketcommon, 10, 'No. of diversification food basketcommon');
     },
     geographical_level_of_the_event_organised: function (frm) {
         truncate_field_values(frm, ['district', 'talukatehsil', 'gram_panchayat', 'activity_conducted_at', 'village', 'villages']);

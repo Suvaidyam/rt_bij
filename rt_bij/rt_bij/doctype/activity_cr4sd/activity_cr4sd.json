@@ -120,6 +120,7 @@
   {
    "fieldname": "activity",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Activity",
    "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Activity\"]]",
    "options": "Options",
@@ -140,6 +141,7 @@
   {
    "fieldname": "state",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "State",
    "options": "State",
    "reqd": 1
@@ -148,6 +150,7 @@
    "depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "mandatory_depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
    "options": "District"
@@ -788,7 +791,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 11:11:26.540375",
+ "modified": "2024-05-13 12:10:10.659615",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
