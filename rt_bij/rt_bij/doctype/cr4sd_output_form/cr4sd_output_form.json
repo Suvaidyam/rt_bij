@@ -274,7 +274,7 @@
   },
   {
    "fieldname": "leverage_amount",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Leverage Amount",
    "reqd": 1
   },
@@ -617,7 +617,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 13:47:45.401290",
+ "modified": "2024-05-13 17:44:58.607240",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
