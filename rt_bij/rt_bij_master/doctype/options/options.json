@@ -16,7 +16,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Option Type",
-   "options": "Output\nActivity",
+   "options": "Output\nActivity\nOutput IVCD",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -37,7 +37,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 15:04:43.143070",
+ "modified": "2024-05-12 18:35:33.060334",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Options",
