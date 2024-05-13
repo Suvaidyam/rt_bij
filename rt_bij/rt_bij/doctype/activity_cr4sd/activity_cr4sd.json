@@ -1,813 +1,848 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2024-05-12 12:23:31.832205",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "output",
-  "activity",
-  "location_section",
-  "geographical_level_of_the_event_organised",
-  "state",
-  "district",
-  "talukatehsil",
-  "column_break_vysh",
-  "gram_panchayat",
-  "activity_conducted_at",
-  "village",
-  "villages",
-  "date_of_activity_section",
-  "date_of_conducting_the_event",
-  "financial_year",
-  "column_break_elio",
-  "month",
-  "week",
-  "training_details_section",
-  "training_topic_purpose",
-  "participations_section",
-  "type_of_participants_involved_in_the_event",
-  "details_of_section",
-  "total_male",
-  "total_female",
-  "total_participants",
-  "grand_total_of_participants",
-  "column_break_hzpu",
-  "name_of_the_collaborating_agenciesdepartment",
-  "input_provided",
-  "specify_others",
-  "please_upload_individual_participant_details",
-  "training_photos_section",
-  "image",
-  "column_break_abcl",
-  "image_description",
-  "crop_water_budgeting_tool_section",
-  "water_budgeting_completed",
-  "data_uploaded_on_cwb_tool",
-  "column_break_cnfj",
-  "crop_water_budgeting_result",
-  "crop_water_budgeting_report",
-  "water_harvesting_structure_details_section",
-  "type_of_water_harvesting_structure",
-  "condition",
-  "present_surface_water_storage_capacity",
-  "increased_surface_water_storage_capacity",
-  "increased_underground_recharge_capacity",
-  "total_water_harvesting_capacity",
-  "column_break_ygjm",
-  "area_brought_under_improved_access_to_critical_irrigation",
-  "no_of_farmers_benefitted",
-  "departmentorganisation_collaboratedleverage_resources",
-  "leverage_amount",
-  "upload_water_harvesting_structure_picture",
-  "gps_coordinates",
-  "drinking_water_section",
-  "type_of_initiative",
-  "no_of_drinking_water_system",
-  "total_length_of_pipeline_provisions",
-  "drinking_water_system_capacity_created",
-  "total_households_benefitted",
-  "column_break_zhvd",
-  "leverage_amount2",
-  "department__organization_collaboratedleveraged_resources",
-  "drinking_water_activity_photo",
-  "gps_coordinates2",
-  "grey_water_treatment_section",
-  "structure_name",
-  "site_condition",
-  "water_recycle_capacity",
-  "noof_households_taken_up_measures",
-  "column_break_aztp",
-  "leverage_amount3",
-  "name_of_the_departments_and_organizations_converge",
-  "grey_water_treatment_photo",
-  "gps_coordinates3",
-  "diversified_food_basket_section",
-  "diversification_of_food_basket_category",
-  "individuals_diversification_of_food_basket_detail_section",
-  "number_of_farmers",
-  "details_of_farmer_section",
-  "name_of_the_farmer",
-  "phone",
-  "awareness_training_provided",
-  "date",
-  "demo_support_given",
-  "type_of_food_diversification_taken_up_by_the_household",
-  "the_details_of_type_of_crop",
-  "column_break_izmg",
-  "area",
-  "gps",
-  "no_of_hhs_diversified_food_basket_individual",
-  "no_of_diversification_food_basketcommon",
-  "total_diversification_of_food_basket",
-  "total_area",
-  "remarks_anything_about_activity",
-  "rng_photos_section",
-  "image2",
-  "column_break_xcic",
-  "image_description2"
- ],
- "fields": [
-  {
-   "fieldname": "output",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
-   "options": "Options",
-   "reqd": 1
-  },
-  {
-   "fieldname": "activity",
-   "fieldtype": "Link",
-   "label": "Activity",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Activity\"]]",
-   "options": "Options",
-   "reqd": 1
-  },
-  {
-   "fieldname": "location_section",
-   "fieldtype": "Section Break",
-   "label": "Location"
-  },
-  {
-   "fieldname": "geographical_level_of_the_event_organised",
-   "fieldtype": "Select",
-   "label": "Geographical level of the event organised",
-   "options": "\nDistrict Level\nTaluka/Tehsil Level\nGram Panchayat Level\nVillage Level",
-   "reqd": 1
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Link",
-   "label": "State",
-   "options": "State",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "fieldname": "district",
-   "fieldtype": "Link",
-   "label": "District",
-   "mandatory_depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "options": "District"
-  },
-  {
-   "depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "fieldname": "talukatehsil",
-   "fieldtype": "Link",
-   "label": "Taluka/Tehsil",
-   "mandatory_depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "options": "Block"
-  },
-  {
-   "fieldname": "column_break_vysh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "fieldname": "gram_panchayat",
-   "fieldtype": "Link",
-   "label": "Gram Panchayat",
-   "mandatory_depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "options": "Grampanchayat"
-  },
-  {
-   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "fieldname": "activity_conducted_at",
-   "fieldtype": "Select",
-   "label": "Activity Conducted at",
-   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
-   "options": "\nSingle Village\nMultiple Villages"
-  },
-  {
-   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
-   "fieldname": "village",
-   "fieldtype": "Link",
-   "label": "Village",
-   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
-   "options": "Village"
-  },
-  {
-   "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
-   "fieldname": "villages",
-   "fieldtype": "Table MultiSelect",
-   "label": "Villages",
-   "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
-   "options": "Village Child"
-  },
-  {
-   "fieldname": "date_of_activity_section",
-   "fieldtype": "Section Break",
-   "label": "Date of Activity"
-  },
-  {
-   "fieldname": "date_of_conducting_the_event",
-   "fieldtype": "Date",
-   "label": "Date of conducting the event",
-   "reqd": 1
-  },
-  {
-   "fieldname": "financial_year",
-   "fieldtype": "Select",
-   "label": "Financial Year",
-   "options": "\n2023-24\n2024-25",
-   "reqd": 1
-  },
-  {
-   "fieldname": "month",
-   "fieldtype": "Select",
-   "label": "Month",
-   "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
-   "reqd": 1
-  },
-  {
-   "fieldname": "week",
-   "fieldtype": "Select",
-   "label": "Week",
-   "options": "\n1\n2\n3\n4",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_elio",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "training_details_section",
-   "fieldtype": "Section Break",
-   "label": "Training Details",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "training_topic_purpose",
-   "fieldtype": "Small Text",
-   "label": "Training Topic/ Purpose",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "participations_section",
-   "fieldtype": "Section Break",
-   "label": "Participations",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "type_of_participants_involved_in_the_event",
-   "fieldtype": "Table MultiSelect",
-   "label": "Type of participants involved in the event",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "options": "Participant Type Child"
-  },
-  {
-   "fieldname": "details_of_section",
-   "fieldtype": "Section Break",
-   "label": "Details of"
-  },
-  {
-   "fieldname": "total_male",
-   "fieldtype": "Int",
-   "label": "Total Male",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "fieldname": "total_female",
-   "fieldtype": "Int",
-   "label": "Total Female",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "fieldname": "total_participants",
-   "fieldtype": "Int",
-   "label": "Total Participants",
-   "non_negative": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "grand_total_of_participants",
-   "fieldtype": "Int",
-   "label": "Grand Total of Participants",
-   "non_negative": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "name_of_the_collaborating_agenciesdepartment",
-   "fieldtype": "Select",
-   "label": "Name of the Collaborating agencies/department",
-   "options": "\nAgency 1\nAgency 2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "input_provided",
-   "fieldtype": "Select",
-   "label": "Input Provided",
-   "options": "\nAwareness/Orientation\nTraining / Capacity building\nDemonstration\nCommunity Exercise\nVillage Development Plan\nResource Mapping\nOther",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.input_provided === \"Other\"",
-   "fieldname": "specify_others",
-   "fieldtype": "Data",
-   "label": "Specify Other's",
-   "mandatory_depends_on": "eval:doc.input_provided === \"Other\""
-  },
-  {
-   "fieldname": "please_upload_individual_participant_details",
-   "fieldtype": "Attach",
-   "label": "Please upload Individual participant details who participated in the activity"
-  },
-  {
-   "fieldname": "column_break_hzpu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "training_photos_section",
-   "fieldtype": "Section Break",
-   "label": "Training Photos"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "image",
-   "fieldtype": "Attach Image",
-   "label": "Image"
-  },
-  {
-   "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
-   "fieldname": "image_description",
-   "fieldtype": "Data",
-   "label": "Image Description"
-  },
-  {
-   "fieldname": "column_break_abcl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "fieldname": "crop_water_budgeting_tool_section",
-   "fieldtype": "Section Break",
-   "label": "Crop Water Budgeting Tool"
-  },
-  {
-   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "fieldname": "water_budgeting_completed",
-   "fieldtype": "Select",
-   "label": "Water budgeting completed",
-   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "options": "\nYes\nNo"
-  },
-  {
-   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "fieldname": "data_uploaded_on_cwb_tool",
-   "fieldtype": "Select",
-   "label": "Data uploaded on CWB tool",
-   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "options": "\nYes\nNo"
-  },
-  {
-   "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "fieldname": "crop_water_budgeting_result",
-   "fieldtype": "Select",
-   "label": "Crop Water Budgeting Result",
-   "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
-   "options": "\nSurplus\nDeficit"
-  },
-  {
-   "fieldname": "crop_water_budgeting_report",
-   "fieldtype": "Attach",
-   "label": "Crop Water Budgeting Report"
-  },
-  {
-   "fieldname": "column_break_cnfj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "water_harvesting_structure_details_section",
-   "fieldtype": "Section Break",
-   "label": "Water Harvesting Structure Details"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "type_of_water_harvesting_structure",
-   "fieldtype": "Select",
-   "label": "Type of Water Harvesting Structure",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "options": "\nConcrete Check dam\nDesilting-check dam\nDesilting-Pond\nDug well\nEarthen check dam\nFarm pond\nFerrocement check dam\nPond deepening\nPond renovation\nRecharge well\nReparing of check dam\nStone Masonry check dam\nOther"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "condition",
-   "fieldtype": "Select",
-   "label": "Condition",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "options": "\nNew\nRenovation"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "present_surface_water_storage_capacity",
-   "fieldtype": "Int",
-   "label": "Present surface water storage capacity",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "increased_surface_water_storage_capacity",
-   "fieldtype": "Int",
-   "label": "Increased surface water storage capacity",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "increased_underground_recharge_capacity",
-   "fieldtype": "Int",
-   "label": "Increased underground Recharge Capacity",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "total_water_harvesting_capacity",
-   "fieldtype": "Int",
-   "label": "Total water harvesting capacity",
-   "non_negative": 1,
-   "read_only": 1
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "area_brought_under_improved_access_to_critical_irrigation",
-   "fieldtype": "Int",
-   "label": "Area brought under improved access to critical irrigation",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "no_of_farmers_benefitted",
-   "fieldtype": "Int",
-   "label": "No. of Farmers benefitted",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "departmentorganisation_collaboratedleverage_resources",
-   "fieldtype": "Select",
-   "label": "Department/organisation collaborated/leverage resources",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "options": "\nOption 1\nOption 2"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "leverage_amount",
-   "fieldtype": "Int",
-   "label": "Leverage Amount",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "upload_water_harvesting_structure_picture",
-   "fieldtype": "Attach",
-   "label": "Upload Water harvesting structure picture"
-  },
-  {
-   "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
-   "fieldname": "gps_coordinates",
-   "fieldtype": "Data",
-   "label": "GPS Coordinates",
-   "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
-  },
-  {
-   "fieldname": "column_break_ygjm",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "drinking_water_section",
-   "fieldtype": "Section Break",
-   "label": "Drinking Water"
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "type_of_initiative",
-   "fieldtype": "Select",
-   "label": "Type of initiative",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "options": "\nDrinking water tank\nPipe line connection\nBore Well Repair\nHand Pump reparing work\nCistern connection & repair\nBore well recharge\nIncreased drinking water availability due to renovation of existing water harvesting structures\nOther"
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "no_of_drinking_water_system",
-   "fieldtype": "Int",
-   "label": "No. of Drinking water system",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "total_length_of_pipeline_provisions",
-   "fieldtype": "Int",
-   "label": "Total length of pipeline provisions",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "drinking_water_system_capacity_created",
-   "fieldtype": "Int",
-   "label": "Drinking water system capacity created",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "total_households_benefitted",
-   "fieldtype": "Int",
-   "label": "Total Households Benefitted",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "leverage_amount2",
-   "fieldtype": "Int",
-   "label": "Leverage Amount",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "department__organization_collaboratedleveraged_resources",
-   "fieldtype": "Select",
-   "label": "Department / organization collaborated/leveraged resources",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "options": "\nOption 1\nOption 2"
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "drinking_water_activity_photo",
-   "fieldtype": "Attach",
-   "label": "Drinking Water Activity Photo"
-  },
-  {
-   "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
-   "fieldname": "gps_coordinates2",
-   "fieldtype": "Data",
-   "label": "GPS Coordinates",
-   "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)"
-  },
-  {
-   "fieldname": "column_break_zhvd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "grey_water_treatment_section",
-   "fieldtype": "Section Break",
-   "label": "Grey Water Treatment"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "structure_name",
-   "fieldtype": "Select",
-   "label": "Structure Name",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "options": "\nSoak pit\nSoak well\nMagic pit\nDiversion channel to backyard plant flowers or kitchen garden\nDiversion channel for live fencing\nCommon drinking water source - water tank hand pump community well etc\nOther"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "site_condition",
-   "fieldtype": "Select",
-   "label": "Site condition",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "options": "\nNew\nExisting"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "water_recycle_capacity",
-   "fieldtype": "Int",
-   "label": "Water Recycle Capacity",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "noof_households_taken_up_measures",
-   "fieldtype": "Int",
-   "label": "No.of Households taken up measures",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "leverage_amount3",
-   "fieldtype": "Int",
-   "label": "Leverage Amount",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "name_of_the_departments_and_organizations_converge",
-   "fieldtype": "Select",
-   "label": "Name of the departments and organizations converge",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "options": "\nDepartment 1\nDepartment 2"
-  },
-  {
-   "fieldname": "grey_water_treatment_photo",
-   "fieldtype": "Attach",
-   "label": "Grey Water Treatment Photo"
-  },
-  {
-   "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
-   "fieldname": "gps_coordinates3",
-   "fieldtype": "Data",
-   "label": "GPS Coordinates",
-   "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
-  },
-  {
-   "fieldname": "column_break_aztp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
-   "fieldname": "diversified_food_basket_section",
-   "fieldtype": "Section Break",
-   "label": "Diversified Food Basket"
-  },
-  {
-   "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
-   "fieldname": "diversification_of_food_basket_category",
-   "fieldtype": "Select",
-   "label": "Diversification of Food Basket Category",
-   "mandatory_depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
-   "options": "\nIndividual\nCommon\nBoth"
-  },
-  {
-   "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "individuals_diversification_of_food_basket_detail_section",
-   "fieldtype": "Section Break",
-   "label": "Individuals Diversification of Food Basket Detail"
-  },
-  {
-   "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "number_of_farmers",
-   "fieldtype": "Select",
-   "label": "Number of Farmers",
-   "mandatory_depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
-   "options": "\n1\n2\n3\n4\n5"
-  },
-  {
-   "fieldname": "details_of_farmer_section",
-   "fieldtype": "Section Break",
-   "label": "Details of Farmer"
-  },
-  {
-   "fieldname": "name_of_the_farmer",
-   "fieldtype": "Data",
-   "label": "Name of the Farmer",
-   "reqd": 1
-  },
-  {
-   "default": "+91-",
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone",
-   "reqd": 1
-  },
-  {
-   "fieldname": "awareness_training_provided",
-   "fieldtype": "Select",
-   "label": "Awareness/ Training provided",
-   "options": "\nYes\nNo",
-   "reqd": 1
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "demo_support_given",
-   "fieldtype": "Select",
-   "label": "Demo support given",
-   "options": "\nYes\nNo",
-   "reqd": 1
-  },
-  {
-   "fieldname": "type_of_food_diversification_taken_up_by_the_household",
-   "fieldtype": "Select",
-   "label": "Type of Food Diversification taken up by the Household",
-   "options": "\nRNG\nMillets\nBiofortified crop\nFood crop as intercrop\nBack yard fruit Plantation",
-   "reqd": 1
-  },
-  {
-   "fieldname": "the_details_of_type_of_crop",
-   "fieldtype": "Data",
-   "label": "If it is biofortified crop, millets, intercrop etc mention the details of Type of crop",
-   "reqd": 1
-  },
-  {
-   "fieldname": "area",
-   "fieldtype": "Int",
-   "label": "Area",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "fieldname": "gps",
-   "fieldtype": "Data",
-   "label": "GPS",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "no_of_hhs_diversified_food_basket_individual",
-   "fieldtype": "Int",
-   "label": "No of HHs diversified food basket - Individual",
-   "mandatory_depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "no_of_diversification_food_basketcommon",
-   "fieldtype": "Int",
-   "label": "No of diversification food basket - Common",
-   "mandatory_depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "total_diversification_of_food_basket",
-   "fieldtype": "Int",
-   "label": "Total Diversification of food basket",
-   "non_negative": 1
-  },
-  {
-   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "total_area",
-   "fieldtype": "Int",
-   "label": "Total Area",
-   "read_only": 1
-  },
-  {
-   "fieldname": "remarks_anything_about_activity",
-   "fieldtype": "Data",
-   "label": "Remarks anything about activity"
-  },
-  {
-   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "rng_photos_section",
-   "fieldtype": "Section Break",
-   "label": "RNG Photos"
-  },
-  {
-   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "image2",
-   "fieldtype": "Attach Image",
-   "label": "Image"
-  },
-  {
-   "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
-   "fieldname": "image_description2",
-   "fieldtype": "Data",
-   "label": "Image Description"
-  },
-  {
-   "fieldname": "column_break_xcic",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_izmg",
-   "fieldtype": "Column Break"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-05-12 20:03:13.065623",
- "modified_by": "Administrator",
- "module": "Rt Bij",
- "name": "Activity CR4SD",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "creation",
- "sort_order": "DESC",
- "states": []
+   "actions": [],
+   "allow_rename": 1,
+   "creation": "2024-05-12 12:23:31.832205",
+   "doctype": "DocType",
+   "engine": "InnoDB",
+   "field_order": [
+      "output",
+      "activity",
+      "location_section",
+      "geographical_level_of_the_event_organised",
+      "state",
+      "district",
+      "talukatehsil",
+      "column_break_vysh",
+      "gram_panchayat",
+      "activity_conducted_at",
+      "village",
+      "villages",
+      "date_of_activity_section",
+      "date_of_conducting_the_event",
+      "financial_year",
+      "column_break_elio",
+      "month",
+      "week",
+      "training_details_section",
+      "training_topic_purpose",
+      "participations_section",
+      "type_of_participants_involved_in_the_event",
+      "details_of_section",
+      "total_male",
+      "total_female",
+      "total_participants",
+      "grand_total_of_participants",
+      "column_break_hzpu",
+      "name_of_the_collaborating_agenciesdepartment",
+      "input_provided",
+      "specify_others",
+      "please_upload_individual_participant_details",
+      "training_photos_section",
+      "image",
+      "column_break_abcl",
+      "image_description",
+      "crop_water_budgeting_tool_section",
+      "water_budgeting_completed",
+      "data_uploaded_on_cwb_tool",
+      "column_break_cnfj",
+      "crop_water_budgeting_result",
+      "crop_water_budgeting_report",
+      "water_harvesting_structure_details_section",
+      "type_of_water_harvesting_structure",
+      "condition",
+      "present_surface_water_storage_capacity",
+      "increased_surface_water_storage_capacity",
+      "increased_underground_recharge_capacity",
+      "total_water_harvesting_capacity",
+      "column_break_ygjm",
+      "area_brought_under_improved_access_to_critical_irrigation",
+      "no_of_farmers_benefitted",
+      "departmentorganisation_collaboratedleverage_resources",
+      "leverage_amount",
+      "upload_water_harvesting_structure_picture",
+      "gps_coordinates",
+      "drinking_water_section",
+      "type_of_initiative",
+      "no_of_drinking_water_system",
+      "total_length_of_pipeline_provisions",
+      "drinking_water_system_capacity_created",
+      "total_households_benefitted",
+      "column_break_zhvd",
+      "leverage_amount2",
+      "department__organization_collaboratedleveraged_resources",
+      "drinking_water_activity_photo",
+      "gps_coordinates2",
+      "grey_water_treatment_section",
+      "structure_name",
+      "site_condition",
+      "water_recycle_capacity",
+      "noof_households_taken_up_measures",
+      "column_break_aztp",
+      "leverage_amount3",
+      "name_of_the_departments_and_organizations_converge",
+      "grey_water_treatment_photo",
+      "gps_coordinates3",
+      "diversified_food_basket_section",
+      "diversification_of_food_basket_category",
+      "individuals_diversification_of_food_basket_detail_section",
+      "number_of_farmers",
+      "details_of_farmer_section",
+      "name_of_the_farmer",
+      "phone",
+      "awareness_training_provided",
+      "date",
+      "demo_support_given",
+      "type_of_food_diversification_taken_up_by_the_household",
+      "the_details_of_type_of_crop",
+      "column_break_izmg",
+      "area",
+      "gps",
+      "no_of_hhs_diversified_food_basket_individual",
+      "no_of_diversification_food_basketcommon",
+      "total_diversification_of_food_basket",
+      "total_area",
+      "remarks_anything_about_activity",
+      "rng_photos_section",
+      "image2",
+      "column_break_xcic",
+      "image_description2"
+   ],
+   "fields": [
+      {
+         "fieldname": "output",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "Output",
+         "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
+         "options": "Options",
+         "reqd": 1
+      },
+      {
+         "fieldname": "activity",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "Activity",
+         "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Activity\"]]",
+         "options": "Options",
+         "reqd": 1
+      },
+      {
+         "fieldname": "location_section",
+         "fieldtype": "Section Break",
+         "label": "Location"
+      },
+      {
+         "fieldname": "geographical_level_of_the_event_organised",
+         "fieldtype": "Select",
+         "label": "Geographical level of the event organised",
+         "options": "\nDistrict Level\nTaluka/Tehsil Level\nGram Panchayat Level\nVillage Level",
+         "reqd": 1
+      },
+      {
+         "fieldname": "state",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "State",
+         "options": "State",
+         "reqd": 1
+      },
+      {
+         "depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "fieldname": "district",
+         "fieldtype": "Link",
+         "in_list_view": 1,
+         "label": "District",
+         "mandatory_depends_on": "eval:['District Level','Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "options": "District"
+      },
+      {
+         "depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "fieldname": "talukatehsil",
+         "fieldtype": "Link",
+         "label": "Taluka/Tehsil",
+         "mandatory_depends_on": "eval:['Taluka/Tehsil Level','Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "options": "Block"
+      },
+      {
+         "fieldname": "column_break_vysh",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "fieldname": "gram_panchayat",
+         "fieldtype": "Link",
+         "label": "Gram Panchayat",
+         "mandatory_depends_on": "eval:['Gram Panchayat Level','Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "options": "Grampanchayat"
+      },
+      {
+         "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "fieldname": "activity_conducted_at",
+         "fieldtype": "Select",
+         "label": "Activity Conducted at",
+         "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised)",
+         "options": "\nSingle Village\nMultiple Villages"
+      },
+      {
+         "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
+         "fieldname": "village",
+         "fieldtype": "Link",
+         "label": "Village",
+         "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Single Village\"",
+         "options": "Village"
+      },
+      {
+         "depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
+         "fieldname": "villages",
+         "fieldtype": "Table MultiSelect",
+         "label": "Villages",
+         "mandatory_depends_on": "eval:['Village Level'].includes(doc.geographical_level_of_the_event_organised) && doc.activity_conducted_at === \"Multiple Villages\"",
+         "options": "Village Child"
+      },
+      {
+         "fieldname": "date_of_activity_section",
+         "fieldtype": "Section Break",
+         "label": "Date of Activity"
+      },
+      {
+         "fieldname": "date_of_conducting_the_event",
+         "fieldtype": "Date",
+         "label": "Date of conducting the event",
+         "reqd": 1
+      },
+      {
+         "fieldname": "financial_year",
+         "fieldtype": "Select",
+         "label": "Financial Year",
+         "options": "\n2023-24\n2024-25",
+         "reqd": 1
+      },
+      {
+         "fieldname": "month",
+         "fieldtype": "Select",
+         "label": "Month",
+         "options": "\nJan\nFeb\nMar\nApril\nMay\nJune\nJuly\nAug\nSep\nOct\nNov\nDec",
+         "reqd": 1
+      },
+      {
+         "fieldname": "week",
+         "fieldtype": "Select",
+         "label": "Week",
+         "options": "\n1\n2\n3\n4",
+         "reqd": 1
+      },
+      {
+         "fieldname": "column_break_elio",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "training_details_section",
+         "fieldtype": "Section Break",
+         "label": "Training Details",
+         "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "training_topic_purpose",
+         "fieldtype": "Small Text",
+         "label": "Training Topic/ Purpose",
+         "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "participations_section",
+         "fieldtype": "Section Break",
+         "label": "Participations",
+         "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "type_of_participants_involved_in_the_event",
+         "fieldtype": "Table MultiSelect",
+         "label": "Type of participants involved in the event",
+         "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "options": "Participant Type Child"
+      },
+      {
+         "fieldname": "details_of_section",
+         "fieldtype": "Section Break",
+         "label": "Details of"
+      },
+      {
+         "fieldname": "total_male",
+         "fieldtype": "Int",
+         "label": "Total Male",
+         "non_negative": 1,
+         "reqd": 1
+      },
+      {
+         "fieldname": "total_female",
+         "fieldtype": "Int",
+         "label": "Total Female",
+         "non_negative": 1,
+         "reqd": 1
+      },
+      {
+         "fieldname": "total_participants",
+         "fieldtype": "Int",
+         "label": "Total Participants",
+         "non_negative": 1,
+         "read_only": 1
+      },
+      {
+         "fieldname": "grand_total_of_participants",
+         "fieldtype": "Int",
+         "label": "Grand Total of Participants",
+         "non_negative": 1,
+         "read_only": 1
+      },
+      {
+         "fieldname": "name_of_the_collaborating_agenciesdepartment",
+         "fieldtype": "Select",
+         "label": "Name of the Collaborating agencies/department",
+         "options": "\nAgency 1\nAgency 2",
+         "reqd": 1
+      },
+      {
+         "fieldname": "input_provided",
+         "fieldtype": "Select",
+         "label": "Input Provided",
+         "options": "\nAwareness/Orientation\nTraining / Capacity building\nDemonstration\nCommunity Exercise\nVillage Development Plan\nResource Mapping\nOther",
+         "reqd": 1
+      },
+      {
+         "depends_on": "eval:doc.input_provided === \"Other\"",
+         "fieldname": "specify_others",
+         "fieldtype": "Data",
+         "label": "Specify Other's",
+         "mandatory_depends_on": "eval:doc.input_provided === \"Other\""
+      },
+      {
+         "fieldname": "please_upload_individual_participant_details",
+         "fieldtype": "Attach",
+         "label": "Please upload Individual participant details who participated in the activity"
+      },
+      {
+         "fieldname": "column_break_hzpu",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "training_photos_section",
+         "fieldtype": "Section Break",
+         "label": "Training Photos"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "image",
+         "fieldtype": "Attach Image",
+         "label": "Image"
+      },
+      {
+         "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
+         "fieldname": "image_description",
+         "fieldtype": "Data",
+         "label": "Image Description"
+      },
+      {
+         "fieldname": "column_break_abcl",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "fieldname": "crop_water_budgeting_tool_section",
+         "fieldtype": "Section Break",
+         "label": "Crop Water Budgeting Tool"
+      },
+      {
+         "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "fieldname": "water_budgeting_completed",
+         "fieldtype": "Select",
+         "label": "Water budgeting completed",
+         "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "options": "\nYes\nNo"
+      },
+      {
+         "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "fieldname": "data_uploaded_on_cwb_tool",
+         "fieldtype": "Select",
+         "label": "Data uploaded on CWB tool",
+         "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "options": "\nYes\nNo"
+      },
+      {
+         "depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "fieldname": "crop_water_budgeting_result",
+         "fieldtype": "Select",
+         "label": "Crop Water Budgeting Result",
+         "mandatory_depends_on": "eval:['Output-2'].includes(doc.output) && ['Activity-5'].includes(doc.activity)",
+         "options": "\nSurplus\nDeficit"
+      },
+      {
+         "fieldname": "crop_water_budgeting_report",
+         "fieldtype": "Attach",
+         "label": "Crop Water Budgeting Report"
+      },
+      {
+         "fieldname": "column_break_cnfj",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "water_harvesting_structure_details_section",
+         "fieldtype": "Section Break",
+         "label": "Water Harvesting Structure Details"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "type_of_water_harvesting_structure",
+         "fieldtype": "Select",
+         "label": "Type of Water Harvesting Structure",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "options": "\nConcrete Check dam\nDesilting-check dam\nDesilting-Pond\nDug well\nEarthen check dam\nFarm pond\nFerrocement check dam\nPond deepening\nPond renovation\nRecharge well\nReparing of check dam\nStone Masonry check dam\nOther"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "condition",
+         "fieldtype": "Select",
+         "label": "Condition",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "options": "\nNew\nRenovation"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "present_surface_water_storage_capacity",
+         "fieldtype": "Int",
+         "label": "Present surface water storage capacity",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "increased_surface_water_storage_capacity",
+         "fieldtype": "Int",
+         "label": "Increased surface water storage capacity",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "increased_underground_recharge_capacity",
+         "fieldtype": "Int",
+         "label": "Increased underground Recharge Capacity",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "total_water_harvesting_capacity",
+         "fieldtype": "Int",
+         "label": "Total water harvesting capacity",
+         "non_negative": 1,
+         "read_only": 1
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "area_brought_under_improved_access_to_critical_irrigation",
+         "fieldtype": "Int",
+         "label": "Area brought under improved access to critical irrigation",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "no_of_farmers_benefitted",
+         "fieldtype": "Int",
+         "label": "No. of Farmers benefitted",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "departmentorganisation_collaboratedleverage_resources",
+         "fieldtype": "Select",
+         "label": "Department/organisation collaborated/leverage resources",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "options": "\nOption 1\nOption 2"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "leverage_amount",
+         "fieldtype": "Int",
+         "label": "Leverage Amount",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "fieldname": "upload_water_harvesting_structure_picture",
+         "fieldtype": "Attach",
+         "label": "Upload Water harvesting structure picture"
+      },
+      {
+         "depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)",
+         "fieldname": "gps_coordinates",
+         "fieldtype": "Data",
+         "label": "GPS Coordinates",
+         "mandatory_depends_on": "eval:['Output-3'].includes(doc.output) && ['Activity-7'].includes(doc.activity)"
+      },
+      {
+         "fieldname": "column_break_ygjm",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "drinking_water_section",
+         "fieldtype": "Section Break",
+         "label": "Drinking Water"
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "type_of_initiative",
+         "fieldtype": "Select",
+         "label": "Type of initiative",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "options": "\nDrinking water tank\nPipe line connection\nBore Well Repair\nHand Pump reparing work\nCistern connection & repair\nBore well recharge\nIncreased drinking water availability due to renovation of existing water harvesting structures\nOther"
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "no_of_drinking_water_system",
+         "fieldtype": "Int",
+         "label": "No. of Drinking water system",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "total_length_of_pipeline_provisions",
+         "fieldtype": "Int",
+         "label": "Total length of pipeline provisions",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "drinking_water_system_capacity_created",
+         "fieldtype": "Int",
+         "label": "Drinking water system capacity created",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "total_households_benefitted",
+         "fieldtype": "Int",
+         "label": "Total Households Benefitted",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "leverage_amount2",
+         "fieldtype": "Int",
+         "label": "Leverage Amount",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "department__organization_collaboratedleveraged_resources",
+         "fieldtype": "Select",
+         "label": "Department / organization collaborated/leveraged resources",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "options": "\nOption 1\nOption 2"
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "drinking_water_activity_photo",
+         "fieldtype": "Attach",
+         "label": "Drinking Water Activity Photo"
+      },
+      {
+         "depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)",
+         "fieldname": "gps_coordinates2",
+         "fieldtype": "Data",
+         "label": "GPS Coordinates",
+         "mandatory_depends_on": "eval:['Output-4'].includes(doc.output) && ['Activity-8'].includes(doc.activity)"
+      },
+      {
+         "fieldname": "column_break_zhvd",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "grey_water_treatment_section",
+         "fieldtype": "Section Break",
+         "label": "Grey Water Treatment"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "structure_name",
+         "fieldtype": "Select",
+         "label": "Structure Name",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "options": "\nSoak pit\nSoak well\nMagic pit\nDiversion channel to backyard plant flowers or kitchen garden\nDiversion channel for live fencing\nCommon drinking water source - water tank hand pump community well etc\nOther"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "site_condition",
+         "fieldtype": "Select",
+         "label": "Site condition",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "options": "\nNew\nExisting"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "water_recycle_capacity",
+         "fieldtype": "Int",
+         "label": "Water Recycle Capacity",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "noof_households_taken_up_measures",
+         "fieldtype": "Int",
+         "label": "No.of Households taken up measures",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "leverage_amount3",
+         "fieldtype": "Int",
+         "label": "Leverage Amount",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "name_of_the_departments_and_organizations_converge",
+         "fieldtype": "Select",
+         "label": "Name of the departments and organizations converge",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "options": "\nDepartment 1\nDepartment 2"
+      },
+      {
+         "fieldname": "grey_water_treatment_photo",
+         "fieldtype": "Attach",
+         "label": "Grey Water Treatment Photo"
+      },
+      {
+         "depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)",
+         "fieldname": "gps_coordinates3",
+         "fieldtype": "Data",
+         "label": "GPS Coordinates",
+         "mandatory_depends_on": "eval:['Output-7'].includes(doc.output) && ['Activity-10'].includes(doc.activity)"
+      },
+      {
+         "fieldname": "column_break_aztp",
+         "fieldtype": "Column Break"
+      },
+      {
+         "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+         "fieldname": "diversified_food_basket_section",
+         "fieldtype": "Section Break",
+         "label": "Diversified Food Basket"
+      },
+      {
+         "depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+         "fieldname": "diversification_of_food_basket_category",
+         "fieldtype": "Select",
+         "label": "Diversification of Food Basket Category",
+         "mandatory_depends_on": "eval:['Output-5'].includes(doc.output) && ['Activity-13'].includes(doc.activity)",
+         "options": "\nIndividual\nCommon\nBoth"
+      },
+      {
+         "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "individuals_diversification_of_food_basket_detail_section",
+         "fieldtype": "Section Break",
+         "label": "Individuals Diversification of Food Basket Detail"
+      },
+      {
+         "depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "number_of_farmers",
+         "fieldtype": "Select",
+         "label": "Number of Farmers",
+         "mandatory_depends_on": "eval:['Individual','Both'].includes(doc.diversification_of_food_basket_category)",
+         "options": "\n1\n2\n3\n4\n5"
+      },
+      {
+         "fieldname": "details_of_farmer_section",
+         "fieldtype": "Section Break",
+         "label": "Details of Farmer"
+      },
+      {
+         "fieldname": "name_of_the_farmer",
+         "fieldtype": "Data",
+         "label": "Name of the Farmer",
+         "reqd": 1
+      },
+      {
+         "default": "+91-",
+         "fieldname": "phone",
+         "fieldtype": "Phone",
+         "label": "Phone",
+         "reqd": 1
+      },
+      {
+         "fieldname": "awareness_training_provided",
+         "fieldtype": "Select",
+         "label": "Awareness/ Training provided",
+         "options": "\nYes\nNo",
+         "reqd": 1
+      },
+      {
+         "fieldname": "date",
+         "fieldtype": "Date",
+         "label": "Date",
+         "reqd": 1
+      },
+      {
+         "fieldname": "demo_support_given",
+         "fieldtype": "Select",
+         "label": "Demo support given",
+         "options": "\nYes\nNo",
+         "reqd": 1
+      },
+      {
+         "fieldname": "type_of_food_diversification_taken_up_by_the_household",
+         "fieldtype": "Select",
+         "label": "Type of Food Diversification taken up by the Household",
+         "options": "\nRNG\nMillets\nBiofortified crop\nFood crop as intercrop\nBack yard fruit Plantation",
+         "reqd": 1
+      },
+      {
+         "fieldname": "the_details_of_type_of_crop",
+         "fieldtype": "Data",
+         "label": "If it is biofortified crop, millets, intercrop etc mention the details of Type of crop",
+         "reqd": 1
+      },
+      {
+         "fieldname": "area",
+         "fieldtype": "Int",
+         "label": "Area",
+         "non_negative": 1,
+         "reqd": 1
+      },
+      {
+         "fieldname": "gps",
+         "fieldtype": "Data",
+         "label": "GPS",
+         "reqd": 1
+      },
+      {
+         "depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "no_of_hhs_diversified_food_basket_individual",
+         "fieldtype": "Int",
+         "label": "No of HHs diversified food basket - Individual",
+         "mandatory_depends_on": "eval:['Individual'].includes(doc.diversification_of_food_basket_category)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "no_of_diversification_food_basketcommon",
+         "fieldtype": "Int",
+         "label": "No of diversification food basket - Common",
+         "mandatory_depends_on": "eval:['Common'].includes(doc.diversification_of_food_basket_category)",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "total_diversification_of_food_basket",
+         "fieldtype": "Int",
+         "label": "Total Diversification of food basket",
+         "non_negative": 1
+      },
+      {
+         "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "total_area",
+         "fieldtype": "Int",
+         "label": "Total Area",
+         "read_only": 1
+      },
+      {
+         "fieldname": "remarks_anything_about_activity",
+         "fieldtype": "Data",
+         "label": "Remarks anything about activity"
+      },
+      {
+         "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "rng_photos_section",
+         "fieldtype": "Section Break",
+         "label": "RNG Photos"
+      },
+      {
+         "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "image2",
+         "fieldtype": "Attach Image",
+         "label": "Image"
+      },
+      {
+         "depends_on": "eval:['Individual','Common','Both'].includes(doc.diversification_of_food_basket_category)",
+         "fieldname": "image_description2",
+         "fieldtype": "Data",
+         "label": "Image Description"
+      },
+      {
+         "fieldname": "column_break_xcic",
+         "fieldtype": "Column Break"
+      },
+      {
+         "fieldname": "column_break_izmg",
+         "fieldtype": "Column Break"
+      }
+   ],
+   "index_web_pages_for_search": 1,
+   "links": [],
+   "modified": "2024-05-13 12:10:10.659615",
+   "modified_by": "Administrator",
+   "module": "Rt Bij",
+   "name": "Activity CR4SD",
+   "owner": "Administrator",
+   "permissions": [
+      {
+         "delete": 1,
+         "email": 1,
+         "export": 1,
+         "print": 1,
+         "read": 1,
+         "report": 1,
+         "role": "System Manager",
+         "share": 1,
+         "write": 1
+      },
+      {
+         "delete": 1,
+         "email": 1,
+         "export": 1,
+         "print": 1,
+         "read": 1,
+         "report": 1,
+         "role": "State User",
+         "share": 1,
+         "write": 1
+      },
+      {
+         "delete": 1,
+         "email": 1,
+         "export": 1,
+         "print": 1,
+         "read": 1,
+         "report": 1,
+         "role": "District User",
+         "share": 1,
+         "write": 1
+      },
+      {
+         "create": 1,
+         "email": 1,
+         "export": 1,
+         "print": 1,
+         "read": 1,
+         "report": 1,
+         "role": "Surveyor",
+         "share": 1,
+         "write": 1
+      }
+   ],
+   "sort_field": "creation",
+   "sort_order": "DESC",
+   "states": []
 }

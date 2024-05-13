@@ -1,0 +1,47 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-05-09 17:16:01.531167",
+  "name": "Surveyor",
+  "role_profile": "Surveyor",
+  "roles": [
+   {
+    "parent": "Surveyor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Surveyor"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-05-07 15:23:01.331296",
+  "name": "District User",
+  "role_profile": "District User",
+  "roles": [
+   {
+    "parent": "District User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "District User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-05-07 15:22:43.604453",
+  "name": "State User",
+  "role_profile": "State User",
+  "roles": [
+   {
+    "parent": "State User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "State User"
+   }
+  ]
+ }
+]
