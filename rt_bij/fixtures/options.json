@@ -187,5 +187,50 @@
   "option_code": 1,
   "option_name": "1.1 - Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
   "option_type": "Output"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-13 09:28:55.597037",
+  "name": "Output IVCD-3",
+  "option_code": 3,
+  "option_name": "5.1 Farmer collectives (FPOs/ SHG Federations/Co-op/ PACS/ Informal group of farmers) provided techno-managerial support and/or linkages",
+  "option_type": "Output IVCD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-13 09:29:29.089869",
+  "name": "Output IVCD-5",
+  "option_code": 5,
+  "option_name": "5.3 Values of produce marketed and inputs/services sourced through farmers collective",
+  "option_type": "Output IVCD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-13 09:29:17.300440",
+  "name": "Output IVCD-4",
+  "option_code": 4,
+  "option_name": "5.2 Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives",
+  "option_type": "Output IVCD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-13 09:28:41.690197",
+  "name": "Output IVCD-2",
+  "option_code": 2,
+  "option_name": "4.2 Farmers adopting and benefitting with improved practices and/or new agriculture technologies",
+  "option_type": "Output IVCD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-13 09:28:11.072013",
+  "name": "Output IVCD-1",
+  "option_code": 1,
+  "option_name": "4.1 Area under improved production practices/new agriculture technologies",
+  "option_type": "Output IVCD"
  }
 ]
