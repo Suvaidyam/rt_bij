@@ -13,29 +13,34 @@
   "state",
   "district",
   "talukatehsil",
+  "column_break_iras",
   "gram_panchayat",
   "activity_conducted_at",
   "village",
   "date_of_activity_section",
   "date_of_conducting_the_event",
   "financial_year",
+  "column_break_iemu",
   "month",
   "week",
   "capacity_building_of_collectives_section",
   "topic_of_the_training_conducted",
-  "farmer_producer_organisation_fpo",
+  "farmer_producer_organisation_fpo_1",
   "number_of_fposfarmer_collectives_participated",
   "no_of_bodsfarmers_participated",
+  "column_break_hjoq",
   "no_of_non_bodsfarmers_participated",
   "name_of_the_trainer",
   "collaborating_agenciesdepartment",
   "remarks",
   "consolidated_ivcd_section",
   "type",
+  "farmer_producer_organisation_fpo_2",
   "name_of_the_commodity",
   "no_of_farmers",
   "value_of_transaction",
   "volumes",
+  "column_break_rglp",
   "price_offered_inrquintal",
   "price_offered_in_the_local_market",
   "savings_in_transport_inr_per_quintal",
@@ -46,7 +51,9 @@
   "name_of_the_crop",
   "name_of_technology_practice_adopted",
   "area_of_land_on_which_adopted",
-  "no_of_farmers_adopting_the_techpractice"
+  "column_break_gucb",
+  "no_of_farmers_adopting_the_techpractice",
+  "remark"
  ],
  "fields": [
   {
@@ -54,13 +61,14 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Output",
-   "options": "\nVillages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan\nVillages conducted participatory assessment of common resources and creating management plan",
+   "options": "\n4.1 - Area under improved production practices/new agriculture technologies\n4.2 - Farmers adopting and benefitting with improved practices and/or new agriculture technologies\n5.1 - Farmer collectives(FPOS/SHG Federations/Co- op/PACS/Informal group of farmers) provided techno- managerial support and/or linkages\n5.2 - Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives\n5.3 - Value of produce marketed and input/services sourced through farmer collectives",
    "reqd": 1
   },
   {
    "fieldname": "activity",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Activity",
+   "options": "\n4.2.1 - Awareness generation program on Good agriculture practices\n5.1.1 - Awareness generation on importance of collectives\n5.1.2 - Network meeting / Linkage workshops for farmer collectives 4. - value chain MIS\n5.2.1 - Trainings/Exposure /workshops et on value chain development and farmers collectives\n5.2.2 - Awareness/campaigns on Farmer Collective services\n5.2.3 - Digital and technology solutions for increasing the Farmer's Collectives efficiency",
    "reqd": 1
   },
   {
@@ -74,8 +82,9 @@
   },
   {
    "fieldname": "geographical_level_of_the_event_organised",
-   "fieldtype": "Data",
-   "label": "Geographical level of the event organised"
+   "fieldtype": "Select",
+   "label": "Geographical level of the event organised",
+   "options": "\nDistrict Level\nTaluka/Tehsil Level\nGram Panchayat Level\nVillage Level"
   },
   {
    "fieldname": "state",
@@ -163,13 +172,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "farmer_producer_organisation_fpo",
-   "fieldtype": "Select",
-   "label": "Farmer Producer Organisation (FPO)",
-   "options": "\nFPO 1\nFPO 2",
-   "reqd": 1
-  },
-  {
    "fieldname": "number_of_fposfarmer_collectives_participated",
    "fieldtype": "Int",
    "label": "Number of FPOs/Farmer Collectives Participated",
@@ -208,13 +210,13 @@
   {
    "fieldname": "consolidated_ivcd_section",
    "fieldtype": "Section Break",
-   "label": "Consolidated IVCD",
-   "options": "\nProcurement of agri produce Procurement of Non-Agri Products \n3. Sale of inputs \n4. Sale of Non-Agri Products \n5. Sale of Processed Products \n6. Farm Mechanization Services "
+   "label": "Consolidated IVCD"
   },
   {
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
+   "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services",
    "reqd": 1
   },
   {
@@ -305,11 +307,50 @@
    "fieldtype": "Int",
    "label": "No. of Farmers adopting the tech/practice",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iras",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iemu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hjoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rglp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gucb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "farmer_producer_organisation_fpo_1",
+   "fieldtype": "Select",
+   "label": "Farmer Producer Organisation (FPO)",
+   "options": "\nFPO 1\nFPO 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farmer_producer_organisation_fpo_2",
+   "fieldtype": "Select",
+   "label": "Farmer Producer Organisation (FPO)",
+   "options": "\nFPO 1\nFPO 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 15:32:44.117465",
+ "modified": "2024-05-13 11:54:33.933908",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity   ICVD",
