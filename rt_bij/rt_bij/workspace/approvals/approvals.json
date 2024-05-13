@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"5AgARgbAPw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Approvals</span>\",\"col\":12}},{\"id\":\"xSHoOFr9Fp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Approvals\",\"col\":3}}]",
+ "content": "[{\"id\":\"5AgARgbAPw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Approvals</span>\",\"col\":12}}]",
  "creation": "2024-05-08 10:53:40.108248",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-11 17:52:41.540855",
+ "modified": "2024-05-13 13:07:52.072493",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
@@ -23,15 +23,6 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 3.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Approvals",
-   "link_to": "Approvals",
-   "stats_filter": "[]",
-   "type": "DocType"
-  }
- ],
+ "shortcuts": [],
  "title": "Approvals"
 }
