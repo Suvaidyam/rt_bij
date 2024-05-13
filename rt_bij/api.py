@@ -4,7 +4,7 @@ import frappe
 @frappe.whitelist(allow_guest=True)
 def get_meta():
     print(frappe.get_roles())
-    role = f"'Mobile User'"
+    role = f"'Surveyor'"
     sql = f"""
         select
             perm.parent as name,
