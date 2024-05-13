@@ -30,6 +30,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         apply_filter("talukatehsil", "block", frm, frm.doc.block)
         apply_filter("gram_panchayat", "grampanchayat", frm, frm.doc.talukatehsil)
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
+        apply_filter("output", "option_type", frm, "Output")
     },
     state: function (frm) {
         apply_filter("district", "state", frm, frm.doc.state)

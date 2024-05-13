@@ -94,7 +94,6 @@
    "fieldname": "output",
    "fieldtype": "Link",
    "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
    "options": "Options",
    "reqd": 1
   },
@@ -617,7 +616,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 17:44:58.607240",
+ "modified": "2024-05-13 22:52:07.748798",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
