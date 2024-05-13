@@ -185,7 +185,7 @@
    "fieldname": "name_of_the_sarpanch",
    "fieldtype": "Data",
    "label": "Name of the Sarpanch",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-1\""
   },
   {
    "fieldname": "column_break_lsoi",
@@ -196,9 +196,10 @@
    "fieldname": "phone_numbers_of_the_sarpanch",
    "fieldtype": "Phone",
    "label": "Phone numbers of the Sarpanch",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-1\""
   },
   {
+   "depends_on": "eval:doc.output == \"Output-1\"",
    "fieldname": "key_leader_details_section",
    "fieldtype": "Section Break",
    "label": "Key Leader Details"
@@ -207,8 +208,8 @@
    "fieldname": "key_leader_details_count",
    "fieldtype": "Select",
    "label": "Key Leader Details Count",
-   "options": "\n1\n2\n3",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-1\"",
+   "options": "\n1\n2\n3"
   },
   {
    "fieldname": "details_of_key_leader_section",
@@ -277,6 +278,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.output == \"Output-2\"",
    "description": "2.1 Villages conducted participatory assessment of common resources and creating management plan",
    "fieldname": "creating_management_plan_section",
    "fieldtype": "Section Break",
@@ -286,23 +288,24 @@
    "fieldname": "name_of_the_sarpanch2",
    "fieldtype": "Data",
    "label": "Name of the Sarpanch",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-2\""
   },
   {
-   "default": "+91-",
+   "depends_on": "eval:doc.output == \"Output-2\"",
    "fieldname": "phone_numbers_of_the_sarpanch2",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Phone numbers of the Sarpanch",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-2\""
   },
   {
-   "depends_on": "eval:doc.output == \"1.1 Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan\";",
+   "depends_on": "eval:doc.output == \"Output-1\"",
    "description": "1.1 Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
    "fieldname": "gram_panchayat_development_plan_section",
    "fieldtype": "Section Break",
    "label": "Gram Panchayat Development Plan"
   },
   {
+   "depends_on": "eval:doc.output == \"Output-2\"",
    "fieldname": "key_leader_details2_section",
    "fieldtype": "Section Break",
    "label": "Key Leader Details"
@@ -311,8 +314,8 @@
    "fieldname": "key_leader_details_section2",
    "fieldtype": "Select",
    "label": "Key Leader Details Count",
-   "options": "\n1\n2\n3",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-2\"",
+   "options": "\n1\n2\n3"
   },
   {
    "fieldname": "details_of_key_leader2_section",
@@ -376,6 +379,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.output == \"Output-3\"",
    "description": "2.3 Area brought under efficient management of water",
    "fieldname": "management_of_water_section",
    "fieldtype": "Section Break",
@@ -385,40 +389,39 @@
    "fieldname": "name_of_the_farmer",
    "fieldtype": "Data",
    "label": "Name of the Farmer",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
-   "default": "+91-",
    "fieldname": "phone3",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Phone",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
    "fieldname": "practices_adopted_for_efficient_management_of_water",
    "fieldtype": "Select",
    "label": "Practices adopted for efficient management of water",
-   "options": "\nBroad Bed Furrow\nDrip irrigation\nHydro gel\nMulching\nPipe irrigation\nPoly house\nShadenet\nShort duration crop varieties\nSprinkler system\nOther",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\"",
+   "options": "\nBroad Bed Furrow\nDrip irrigation\nHydro gel\nMulching\nPipe irrigation\nPoly house\nShadenet\nShort duration crop varieties\nSprinkler system\nOther"
   },
   {
    "fieldname": "extent_of_area_where_the_practices_adopted",
    "fieldtype": "Int",
    "label": "Extent of area where the practices adopted",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
    "fieldname": "leverage_amount_23",
    "fieldtype": "Int",
    "label": "Leverage Amount (2.3)",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
    "fieldname": "department__organization_colloboratedleveraged_resources_23",
    "fieldtype": "Select",
    "label": "Department / organization colloborated/leveraged resources (2.3)",
-   "options": "\nDeapartment 1\nDeapartment 2",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\"",
+   "options": "\nDeapartment 1\nDeapartment 2"
   },
   {
    "fieldname": "column_break_ektu",
@@ -428,9 +431,10 @@
    "fieldname": "gps_coordinate",
    "fieldtype": "Geolocation",
    "label": "GPS Coordinate",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-3\""
   },
   {
+   "depends_on": "eval:doc.output == \"Output-4\"",
    "description": "2.4 Area covered with conservation and restoration of common resources",
    "fieldname": "restoration_of_common_resources_section",
    "fieldtype": "Section Break",
@@ -440,51 +444,53 @@
    "fieldname": "measures_taken_for_common_resources_development",
    "fieldtype": "Select",
    "label": "Measures taken for common resources development",
-   "options": "\nControlled Grazing\nDrainage line treatment\nFarm bunding\nFencing (live fencing/\nCPT/mechanical fencing could be\none activity\nGrazing lands development\nIrrigation/water facility Natural regenration\nPlantation\nPond\nSoil and moisture conservation\nTrenches\nWater facility for livestock\nOther",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\"",
+   "options": "\nControlled Grazing\nDrainage line treatment\nFarm bunding\nFencing (live fencing/\nCPT/mechanical fencing could be\none activity\nGrazing lands development\nIrrigation/water facility Natural regenration\nPlantation\nPond\nSoil and moisture conservation\nTrenches\nWater facility for livestock\nOther"
   },
   {
+   "depends_on": "eval:(doc.measures_taken_for_common_resources_development == \"Controlled Grazing\" || doc.measures_taken_for_common_resources_development == \"Fencing (live fencing/\")",
    "fieldname": "specify_others2",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\""
   },
   {
    "fieldname": "increased_area",
    "fieldtype": "Int",
    "label": "Increased area",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\""
   },
   {
    "fieldname": "leverage_amount_24",
    "fieldtype": "Int",
    "label": "Leverage Amount (2.4)",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\""
   },
   {
    "fieldname": "name_of_the_departments_and_organizations_converge24",
    "fieldtype": "Select",
    "label": "Name of the departments and organizations converge(2.4)",
-   "options": "\nDeapartment 1\nDeapartment 2",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\"",
+   "options": "\nDeapartment 1\nDeapartment 2"
   },
   {
    "fieldname": "estimated_number_of_households_benefitted",
    "fieldtype": "Int",
    "label": "Estimated number of Households benefitted",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\""
   },
   {
    "fieldname": "gps_coordinate_2",
    "fieldtype": "Geolocation",
    "label": "GPS Coordinate ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-4\""
   },
   {
    "fieldname": "column_break_uldr",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.output == \"Output-5\"",
    "description": "2.7 Area brought under climate adaptive farming practices",
    "fieldname": "climate_adaptive_farming_practices_section",
    "fieldtype": "Section Break",
@@ -494,97 +500,101 @@
    "fieldname": "name_of_the_farmer2",
    "fieldtype": "Data",
    "label": "Name of the Farmer",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
-   "default": "+91-",
    "fieldname": "phone4",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Phone",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "area_of_extent_climate_adaptive_farming_practices_taken_up",
    "fieldtype": "Int",
    "label": "Area of Extent climate adaptive farming practices taken up",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "details_of_the_climate_adaptive_farming_taken_up__soil_health",
    "fieldtype": "Select",
    "label": "Details of the Climate Adaptive farming taken up  Soil Health",
-   "options": "Crop cover\nEnriched FYM through\nbiodecomposer\nGhanajeevamrutham/Drava\nJeevamrutham\nGreen menure\nIntercrop with legumes\nSheep penning\nSoil Testing\nTank silt application\nOther",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nCrop cover\nEnriched FYM through\nbiodecomposer\nGhanajeevamrutham/Drava\nJeevamrutham\nGreen menure\nIntercrop with legumes\nSheep penning\nSoil Testing\nTank silt application\nOther"
   },
   {
+   "depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Crop cover\" ",
    "fieldname": "specify_others3",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "details_of_the_climate_adaptive_farming_taken_up",
    "fieldtype": "Select",
    "label": "Details of the Climate Adaptive farming taken up Water management",
-   "options": "\nAutomatic rice transplantation\nDirect sowing of rice\nEfficient irrigation methods\nMulching\nPendal cultivation\nShade net\nSoil and moisture conservation\nOther",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nAutomatic rice transplantation\nDirect sowing of rice\nEfficient irrigation methods\nMulching\nPendal cultivation\nShade net\nSoil and moisture conservation\nOther"
   },
   {
+   "depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__crop == \"Other\" ",
    "fieldname": "specify_others4",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "no_of_initiatives",
    "fieldtype": "Int",
    "label": "No. of Initiatives",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "crop_insurance_covered",
    "fieldtype": "Select",
    "label": "Crop insurance covered",
-   "options": "\nYes\nNo",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nYes\nNo"
   },
   {
    "fieldname": "farmers_field_school_attended_or_now",
    "fieldtype": "Select",
    "label": "Farmers Field School Attended or now",
-   "options": "\nYes\nNo",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nYes\nNo"
   },
   {
    "fieldname": "leverage_money",
    "fieldtype": "Int",
    "label": "Leverage Money",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "name_of_the_departments_and_organizations_converge_27",
    "fieldtype": "Select",
    "label": "Name of the departments and organizations converge (2.7)",
-   "options": "\nDeapartment 1\nDeapartment 2",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nDeapartment 1\nDeapartment 2"
   },
   {
    "fieldname": "details_of_the_climate_adaptive_farming_taken_up__crop",
    "fieldtype": "Select",
    "label": "Details of the Climate Adaptive farming taken up Crop Management",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\"",
+   "options": "\nINM\nIntercrop\nIPM\nResistent and short duration seed\nvarities\nTrapcrop\nOther"
   },
   {
+   "depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up == \"Other\" ",
    "fieldname": "specify_others_5",
    "fieldtype": "Data",
    "label": "Specify Other's ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-5\""
   },
   {
    "fieldname": "column_break_dxkq",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.output == \"Output-6\"",
    "description": "3.2 Area covered under nutrition rich and bio fortified crops",
    "fieldname": "nutrition_rich_and_bio_fortified_crops_section",
    "fieldtype": "Section Break",
@@ -594,7 +604,7 @@
    "fieldname": "area",
    "fieldtype": "Int",
    "label": "Area",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.output == \"Output-6\""
   },
   {
    "fieldname": "column_break_dvda",
@@ -603,14 +613,13 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 16:56:29.879176",
+ "modified": "2024-05-13 10:45:43.857386",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -618,6 +627,39 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "State User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Surveyor",
    "share": 1,
    "write": 1
   }

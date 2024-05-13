@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"RDg_keojOU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Forms</span>\",\"col\":12}},{\"id\":\"2XuVACXPuV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity Cr4sd\",\"col\":3}},{\"id\":\"C-QPwbcutv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cr4sd Output Form\",\"col\":3}},{\"id\":\"tDMqJPuvMW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beneficiary Profiling\",\"col\":3}}]",
+ "content": "[{\"id\":\"RDg_keojOU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Forms</span>\",\"col\":12}},{\"id\":\"2XuVACXPuV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity Cr4sd\",\"col\":6}},{\"id\":\"C-QPwbcutv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cr4sd Output Form\",\"col\":6}},{\"id\":\"tDMqJPuvMW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity   Icvd\",\"col\":6}},{\"id\":\"guXbomA-zw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ivcd Output Form\",\"col\":6}}]",
  "creation": "2024-05-08 10:53:19.632986",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Forms",
  "links": [],
- "modified": "2024-05-12 16:01:35.861785",
+ "modified": "2024-05-12 18:19:43.778476",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Forms",
@@ -35,8 +35,8 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Beneficiary Profiling",
-   "link_to": "Beneficiary Profiling",
+   "label": "Activity   Icvd",
+   "link_to": "Activity   ICVD",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -45,6 +45,14 @@
    "doc_view": "List",
    "label": "Cr4sd Output Form",
    "link_to": "CR4SD Output Form",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ivcd Output Form",
+   "link_to": "IVCD Output Form",
    "stats_filter": "[]",
    "type": "DocType"
   }
