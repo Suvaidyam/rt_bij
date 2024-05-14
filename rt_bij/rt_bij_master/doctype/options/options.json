@@ -40,14 +40,13 @@
    "fieldname": "output",
    "fieldtype": "Link",
    "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
    "mandatory_depends_on": "eval:[\"Activity\",\"Activity ICVD\"].includes(doc.option_type)",
    "options": "Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 09:50:36.067226",
+ "modified": "2024-05-14 10:21:23.109711",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Options",

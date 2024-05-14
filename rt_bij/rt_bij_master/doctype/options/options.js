@@ -20,6 +20,13 @@ function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = 
 
 frappe.ui.form.on("Options", {
     refresh(frm) {
-
     },
+    option_type: function (frm) {
+        let ot = frm.doc.option_type;
+        if (ot == "Activity") {
+            apply_filter('output', 'option_type', frm, "Output")
+        } else if (ot == "Activity ICVD") {
+            apply_filter('output', 'option_type', frm, "Output ICVD")
+        }
+    }
 });
