@@ -1,107 +1,107 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "field:grampanchayat_code",
- "creation": "2024-05-12 12:21:00.497622",
- "default_view": "List",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "state",
-  "district",
-  "block",
-  "grampanchayat_name",
-  "grampanchayat_code"
- ],
- "fields": [
-  {
-   "fieldname": "state",
-   "fieldtype": "Link",
-   "label": "State",
-   "options": "State",
-   "reqd": 1
-  },
-  {
-   "fieldname": "district",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "District",
-   "options": "District",
-   "reqd": 1
-  },
-  {
-   "fieldname": "block",
-   "fieldtype": "Link",
-   "label": "Block",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
-   "fieldname": "grampanchayat_name",
-   "fieldtype": "Data",
-   "label": "Grampanchayat Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "grampanchayat_code",
-   "fieldtype": "Data",
-   "label": "Grampanchayat Code",
-   "reqd": 1,
-   "unique": 1
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-05-13 09:41:51.551041",
- "modified_by": "Administrator",
- "module": "Rt Bij Master",
- "name": "Grampanchayat",
- "naming_rule": "By fieldname",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "State User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "District User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Surveyor",
-   "share": 1
-  }
- ],
- "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "title_field": "grampanchayat_name"
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:grampanchayat_code",
+  "creation": "2024-05-12 12:21:00.497622",
+  "default_view": "List",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "state",
+    "district",
+    "block",
+    "grampanchayat_name",
+    "grampanchayat_code"
+  ],
+  "fields": [
+    {
+      "fieldname": "state",
+      "fieldtype": "Link",
+      "label": "State",
+      "options": "State",
+      "reqd": 1
+    },
+    {
+      "fieldname": "district",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "District",
+      "options": "District",
+      "reqd": 1
+    },
+    {
+      "fieldname": "block",
+      "fieldtype": "Link",
+      "label": "Block",
+      "options": "Block",
+      "reqd": 1
+    },
+    {
+      "fieldname": "grampanchayat_name",
+      "fieldtype": "Data",
+      "label": "Grampanchayat Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "grampanchayat_code",
+      "fieldtype": "Data",
+      "label": "Grampanchayat Code",
+      "reqd": 1,
+      "unique": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-05-13 09:41:51.551041",
+  "modified_by": "Administrator",
+  "module": "Rt Bij Master",
+  "name": "Grampanchayat",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "State User",
+      "share": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "District User",
+      "share": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Surveyor",
+      "share": 1
+    }
+  ],
+  "show_title_field_in_link": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "title_field": "grampanchayat_name"
 }

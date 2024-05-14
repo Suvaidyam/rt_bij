@@ -1,6 +1,5 @@
 // Copyright (c) 2024, suvaidyam and contributors
 // For license information, please see license.txt
-
 function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = false) {
     frm.fields_dict[field_name].get_query = () => {
         if (withoutFilter) {
@@ -17,16 +16,14 @@ function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = 
         };
     }
 };
-
-frappe.ui.form.on("Options", {
+frappe.ui.form.on("Activity", {
     refresh(frm) {
+
+        apply_filter("district", "state", frm, frm.doc.state)
     },
-    option_type: function (frm) {
-        let ot = frm.doc.option_type;
-        if (ot == "Activity") {
-            apply_filter('output', 'option_type', frm, "Output")
-        } else if (ot == "Activity ICVD") {
-            apply_filter('output', 'option_type', frm, "Output ICVD")
-        }
-    }
-});
+    state: function (frm) {
+        apply_filter("district", "state", frm, frm.doc.state)
+    },
+
+},
+);
