@@ -62,142 +62,142 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:52:41.535756",
+  "modified": "2024-05-14 18:55:47.382722",
   "name": "Activity-1",
   "option_code": 1,
   "option_name": "1.1.1 - Mass Awareness generation events on village level planning, display of planning process, Climate resilience; Campaign on Nation priority programs",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-1"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:52:55.030376",
+  "modified": "2024-05-14 18:55:39.323321",
   "name": "Activity-2",
   "option_code": 2,
   "option_name": "1.1.2 - Training/workshops of stakeholders on climate adaptation at village & GP level",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-1"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:53:14.957607",
+  "modified": "2024-05-14 18:55:30.075300",
   "name": "Activity-3",
   "option_code": 3,
   "option_name": "1.1.3 - Digital outreach programs",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-1"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:53:27.158034",
+  "modified": "2024-05-14 18:55:21.473422",
   "name": "Activity-4",
   "option_code": 4,
   "option_name": "2.1.1 - Hands on training and participatory exercises with community",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-2"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:53:39.142002",
+  "modified": "2024-05-14 18:55:12.119647",
   "name": "Activity-5",
   "option_code": 5,
   "option_name": "2.1.2 Display of Water resource management plan",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-2"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:53:52.421148",
+  "modified": "2024-05-14 18:54:59.671245",
   "name": "Activity-6",
   "option_code": 6,
   "option_name": "2.1.3 - Stakeholder Trainings/Workshops and other capacity building events",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-2"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:54:04.315213",
+  "modified": "2024-05-14 18:54:49.151030",
   "name": "Activity-7",
   "option_code": 7,
   "option_name": "2.2.1 Renovations & construction of water harvesting/recharge structures",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-3"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:54:15.836935",
+  "modified": "2024-05-14 18:54:40.602160",
   "name": "Activity-8",
   "option_code": 8,
   "option_name": "2.5.1 Critical activities for improving access to drinking water",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-4"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:54:29.598505",
+  "modified": "2024-05-14 18:54:31.240330",
   "name": "Activity-9",
   "option_code": 9,
   "option_name": "2.6.1 - Awareness programs on Drinking Water Quality and Grey Water Management",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-7"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:54:51.594332",
+  "modified": "2024-05-14 18:54:23.110712",
   "name": "Activity-10",
   "option_code": 10,
   "option_name": "2.6.2-Critical activities for promotion of grey water management",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-7"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:55:03.528935",
+  "modified": "2024-05-14 18:54:03.368011",
   "name": "Activity-11",
   "option_code": 11,
   "option_name": "3.1.1 - Awareness generation events on Nutrition management",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-5"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:55:15.989831",
+  "modified": "2024-05-14 18:53:55.273432",
   "name": "Activity-12",
   "option_code": 12,
   "option_name": "3.1.2 Hands on trainings on Diversify food baskets",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-5"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:55:26.702183",
+  "modified": "2024-05-14 18:53:44.412678",
   "name": "Activity-13",
   "option_code": 13,
   "option_name": "3.1.3 - Facilitating Propagation of nutrition initiatives at household level",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-5"
  },
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:55:48.161705",
+  "modified": "2024-05-14 18:52:50.110893",
   "name": "Activity-14",
   "option_code": 14,
   "option_name": "3.2.1 Demonstration support for promoting nutrition initiatives",
   "option_type": "Activity",
-  "output": null
+  "output": "Output-6"
  },
  {
   "docstatus": 0,
