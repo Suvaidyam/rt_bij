@@ -91,7 +91,6 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output IVCD\"]]",
    "options": "Options",
    "reqd": 1
   },
@@ -571,7 +570,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 19:15:26.010320",
+ "modified": "2024-05-14 09:08:05.549259",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",

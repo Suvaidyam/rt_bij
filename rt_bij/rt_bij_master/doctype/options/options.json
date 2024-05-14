@@ -17,7 +17,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Option Type",
-   "options": "Output\nActivity\nOutput IVCD",
+   "options": "Output\nActivity\nOutput IVCD\nOutput ICVD\nActivity ICVD",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -36,18 +36,18 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:doc.option_type == \"Activity\"",
+   "depends_on": "eval:[\"Activity\",\"Activity ICVD\"].includes(doc.option_type)",
    "fieldname": "output",
    "fieldtype": "Link",
    "label": "Output",
    "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
-   "mandatory_depends_on": "eval:doc.option_type == \"Activity\"",
+   "mandatory_depends_on": "eval:[\"Activity\",\"Activity ICVD\"].includes(doc.option_type)",
    "options": "Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 22:21:49.805978",
+ "modified": "2024-05-14 09:50:36.067226",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Options",

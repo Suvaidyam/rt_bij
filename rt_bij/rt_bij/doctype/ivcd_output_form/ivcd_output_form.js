@@ -35,6 +35,7 @@ frappe.ui.form.on("IVCD Output Form", {
         apply_filter("block", "district", frm, frm.doc.district)
         apply_filter("grampanchayat", "block", frm, frm.doc.block)
         apply_filter("village", "grampanchayat", frm, frm.doc.grampanchayat)
+        apply_filter("output", "option_type", frm, "Output IVCD")
     },
     state: function (frm) {
         reset_field_values(frm, ['district', 'block', 'grampanchayat', 'village']);
@@ -54,6 +55,17 @@ frappe.ui.form.on("IVCD Output Form", {
     before_save: function (frm) {
         if (frm.doc.phone_number === '+91-') {
             frm.doc.phone_number = '';
+        }
+    },
+    phone_number: function (frm) {
+        let arr;
+        if (frm.doc.phone) {
+            arr = frm.doc.phone_number.split('-')
+            if (arr && arr.length == 1) {
+                integer_length_validator(arr[0], 10, 'Phone');
+            } else if (arr && arr.length == 2) {
+                integer_length_validator(arr[1], 10, 'Phone');
+            }
         }
     },
     validate(frm) {

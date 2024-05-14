@@ -58,10 +58,10 @@
  "fields": [
   {
    "fieldname": "output",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Output",
-   "options": "\n4.1 - Area under improved production practices/new agriculture technologies\n4.2 - Farmers adopting and benefitting with improved practices and/or new agriculture technologies\n5.1 - Farmer collectives(FPOS/SHG Federations/Co- op/PACS/Informal group of farmers) provided techno- managerial support and/or linkages\n5.2 - Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives\n5.3 - Value of produce marketed and input/services sourced through farmer collectives",
+   "options": "Options",
    "reqd": 1
   },
   {
@@ -350,7 +350,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 19:16:41.134105",
+ "modified": "2024-05-14 09:27:08.939932",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity   ICVD",

@@ -1,18 +1,32 @@
 // Copyright (c) 2024, suvaidyam and contributors
 // For license information, please see license.txt
 
+function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = false) {
+    frm.fields_dict[field_name].get_query = () => {
+        if (withoutFilter) {
+            return {
+                filters: {},
+                page_length: 1000
+            };
+        }
+        return {
+            filters: {
+                [filter_on]: filter_value || frm.doc[filter_on] || `please select ${filter_on}`,
+            },
+            page_length: 1000
+        };
+    }
+};
+
 const integer_length_validator = (value, reqd_length, label) => {
     if (value && String(value).length > reqd_length) {
         frappe.throw(`Count of ${label} can't be more than ${reqd_length} digits!`)
     }
 }
 
-
-
-
 frappe.ui.form.on("Activity   ICVD", {
     refresh(frm) {
-
+        apply_filter("output", "option_type", frm, "Activity ICVD")
     },
     number_of_fposfarmer_collectives_participated: function (frm) {
         maximum_10_digits_validation(frm, 'number_of_fposfarmer_collectives_participated')
