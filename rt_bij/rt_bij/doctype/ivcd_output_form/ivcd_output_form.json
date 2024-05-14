@@ -116,13 +116,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "block",
-   "fieldtype": "Link",
-   "label": "Taluka/Tehsil",
-   "options": "Block",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_hmug",
    "fieldtype": "Column Break"
   },
@@ -549,13 +542,6 @@
    "label": "Remarks (Explain the impact created)"
   },
   {
-   "fieldname": "grampanchayat",
-   "fieldtype": "Link",
-   "label": "Gram Panchayat",
-   "options": "Grampanchayat",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_bwun",
    "fieldtype": "Column Break"
   },
@@ -566,11 +552,25 @@
   {
    "fieldname": "column_break_xssh",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Taluka/Tehsil",
+   "options": "Block",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grampanchayat",
+   "fieldtype": "Link",
+   "label": "Gram Panchayat",
+   "options": "Grampanchayat",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 09:08:05.549259",
+ "modified": "2024-05-14 13:17:41.566582",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",

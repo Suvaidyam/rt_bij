@@ -23,52 +23,95 @@ const integer_length_validator = (value, reqd_length, label) => {
         frappe.throw(`Count of ${label} can't be more than ${reqd_length} digits!`)
     }
 }
-
+const reset_field_values = (frm, fields) => {
+    fields.forEach(field => {
+        frm.set_value(field, '');
+    });
+}
 frappe.ui.form.on("Activity   ICVD", {
     refresh(frm) {
-        apply_filter("output", "option_type", frm, "Activity ICVD")
+        apply_filter("output", "option_type", frm, "Output ICVD")
+        apply_filter("activity", "option_type", frm, "Activity ICVD")
+        apply_filter("activity", "output", frm, frm.doc.output)
+        apply_filter("district", "state", frm, frm.doc.state)
+        apply_filter("talukatehsil", "district", frm, frm.doc.district)
+        apply_filter("gram_panchayat", "block", frm, frm.doc.talukatehsil)
+        apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
     },
-    number_of_fposfarmer_collectives_participated: function (frm) {
-        maximum_10_digits_validation(frm, 'number_of_fposfarmer_collectives_participated')
+
+    state: function (frm) {
+        apply_filter("district", "state", frm, frm.doc.state)
+        reset_field_values(frm, ['district', 'talukatehsil', 'gram_panchayat', 'village']);
     },
-    no_of_bodsfarmers_participated: function (frm) {
-        maximum_10_digits_validation(frm, 'no_of_bodsfarmers_participated')
+    district: function (frm) {
+        apply_filter("talukatehsil", "district", frm, frm.doc.district)
+        reset_field_values(frm, ['talukatehsil', 'gram_panchayat', 'village']);
     },
-    no_of_non_bodsfarmers_participated: function (frm) {
-        maximum_10_digits_validation(frm, 'no_of_non_bodsfarmers_participated')
+    talukatehsil: function (frm) {
+        apply_filter("gram_panchayat", "block", frm, frm.doc.talukatehsil)
+        reset_field_values(frm, ['gram_panchayat', 'village']);
     },
-    no_of_farmers: function (frm) {
-        maximum_10_digits_validation(frm, 'no_of_farmers')
-    },
-    value_of_transaction: function (frm) {
-        maximum_10_digits_validation(frm, 'value_of_transaction')
-    },
-    volumes: function (frm) {
-        maximum_10_digits_validation(frm, 'volumes')
-    },
-    price_offered_inrquintal: function (frm) {
-        maximum_10_digits_validation(frm, 'price_offered_inrquintal')
-    },
-    price_offered_in_the_local_market: function (frm) {
-        maximum_10_digits_validation(frm, 'price_offered_in_the_local_market')
-    },
-    savings_in_transport_inr_per_quintal: function (frm) {
-        maximum_10_digits_validation(frm, 'savings_in_transport_inr_per_quintal')
-    },
-    savings_in_arthiya_commission_inr_per_quintal: function (frm) {
-        maximum_10_digits_validation(frm, 'savings_in_arthiya_commission_inr_per_quintal')
-    },
-    total_incremental_income_benefit_to_farmer: function (frm) {
-        maximum_10_digits_validation(frm, 'total_incremental_income_benefit_to_farmer')
-    },
-    area_of_land_on_which_adopted: function (frm) {
-        maximum_10_digits_validation(frm, 'area_of_land_on_which_adopted')
-    },
-    no_of_farmers_adopting_the_techpractice: function (frm) {
-        maximum_10_digits_validation(frm, 'no_of_farmers_adopting_the_techpractice')
+    gram_panchayat: function (frm) {
+        apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
+        reset_field_values(frm, ['village']);
     },
 
     number_of_fposfarmer_collectives_participated: function (frm) {
-        integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of fposfarmer collectives participated');
+        integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/Farmer Collectives Participated');
     },
+    no_of_bodsfarmers_participated: function (frm) {
+        integer_length_validator(frm.doc.no_of_bodsfarmers_participated, 10, 'No. of BoDs/Farmers participated');
+    },
+    no_of_non_bodsfarmers_participated: function (frm) {
+        integer_length_validator(frm.doc.no_of_non_bodsfarmers_participated, 10, 'No. of non_BoDs/farmers participated');
+    },
+    no_of_farmers: function (frm) {
+        integer_length_validator(frm.doc.no_of_farmers, 10, 'No of farmers');
+    },
+    value_of_transaction: function (frm) {
+        integer_length_validator(frm.doc.value_of_transaction, 10, 'Value of transaction');
+    },
+    volumes: function (frm) {
+        integer_length_validator(frm.doc.volumes, 10, 'Volumes');
+    },
+    price_offered_inrquintal: function (frm) {
+        integer_length_validator(frm.doc.price_offered_inrquintal, 10, 'Price Offered (INR/Quintal)');
+    },
+    price_offered_in_the_local_market: function (frm) {
+        integer_length_validator(frm.doc.price_offered_in_the_local_market, 10, 'Price offered in the local market');
+    },
+    savings_in_transport_inr_per_quintal: function (frm) {
+        integer_length_validator(frm.doc.savings_in_transport_inr_per_quintal, 10, 'Savings in Transport (INR per quintal)');
+    },
+    savings_in_arthiya_commission_inr_per_quintal: function (frm) {
+        integer_length_validator(frm.doc.savings_in_arthiya_commission_inr_per_quintal, 10, 'Savings in Arthiya Commission (INR per quintal)');
+    },
+    total_incremental_income_benefit_to_farmer: function (frm) {
+        integer_length_validator(frm.doc.total_incremental_income_benefit_to_farmer, 10, 'Total Incremental Income Benefit to Farmer');
+    },
+    area_of_land_on_which_adopted: function (frm) {
+        integer_length_validator(frm.doc.area_of_land_on_which_adopted, 10, 'Area of land on which adopted');
+    },
+    no_of_farmers_adopting_the_techpractice: function (frm) {
+        integer_length_validator(frm.doc.no_of_farmers_adopting_the_techpractice, 10, 'No of farmers adopting the techpractice');
+    },
+    number_of_fposfarmer_collectives_participated: function (frm) {
+        integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/farmer collectives participated');
+    },
+    validate(frm) {
+        integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/Farmer Collectives Participated');
+        integer_length_validator(frm.doc.no_of_bodsfarmers_participated, 10, 'No. of BoDs/Farmers participated');
+        integer_length_validator(frm.doc.no_of_non_bodsfarmers_participated, 10, 'No. of non_BoDs/farmers participated');
+        integer_length_validator(frm.doc.no_of_farmers, 10, 'No of farmers');
+        integer_length_validator(frm.doc.value_of_transaction, 10, 'Value of transaction');
+        integer_length_validator(frm.doc.volumes, 10, 'Volumes');
+        integer_length_validator(frm.doc.price_offered_inrquintal, 10, 'Price Offered (INR/Quintal)');
+        integer_length_validator(frm.doc.price_offered_in_the_local_market, 10, 'Price offered in the local market');
+        integer_length_validator(frm.doc.savings_in_transport_inr_per_quintal, 10, 'Savings in Transport (INR per quintal)');
+        integer_length_validator(frm.doc.savings_in_arthiya_commission_inr_per_quintal, 10, 'Savings in Arthiya Commission (INR per quintal)');
+        integer_length_validator(frm.doc.total_incremental_income_benefit_to_farmer, 10, 'Total Incremental Income Benefit to Farmer');
+        integer_length_validator(frm.doc.area_of_land_on_which_adopted, 10, 'Area of land on which adopted');
+        integer_length_validator(frm.doc.no_of_farmers_adopting_the_techpractice, 10, 'No of farmers adopting the techpractice');
+        integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/farmer collectives participated');
+    }
 });
