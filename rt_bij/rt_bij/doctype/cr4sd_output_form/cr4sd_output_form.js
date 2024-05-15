@@ -34,18 +34,23 @@ frappe.ui.form.on("CR4SD Output Form", {
     },
     state: function (frm) {
         apply_filter("district", "state", frm, frm.doc.state)
+        frm.set_value('district', '')
     },
     district: function (frm) {
         apply_filter("block", "district", frm, frm.doc.district)
+        frm.set_value('block', '')
     },
     block: function (frm) {
         apply_filter("talukatehsil", "block", frm, frm.doc.block)
+        frm.set_value('talukatehsil', '')
     },
     talukatehsil: function (frm) {
         apply_filter("gram_panchayat", "grampanchayat", frm, frm.doc.talukatehsil)
+        frm.set_value('gram_panchayat', '')
     },
     gram_panchayat: function (frm) {
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
+        frm.set_value('village', '')
     },
     villages: function (frm) {
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
