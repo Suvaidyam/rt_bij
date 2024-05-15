@@ -63,7 +63,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         });
     },
     validate(frm) {
-        integer_length_validator(frm.doc.leverage_amount, 7, 'Leverage Amount');
+        integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage Amount');
         integer_length_validator(frm.doc.leverage_amount2, 7, 'Leverage Amount');
         integer_length_validator(frm.doc.extent_of_area_where_the_practices_adopted, 7, 'Extent of area where the practices adopted');
         integer_length_validator(frm.doc.leverage_amount_23, 10, 'Leverage Amount (2.3)');
@@ -76,7 +76,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         integer_length_validator(frm.doc.area, 10, 'Area');
     },
     leverage_amount: function (frm) {
-        integer_length_validator(frm.doc.leverage_amount, 7, 'Leverage Amount');
+        integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage Amount');
     },
     leverage_amount2: function (frm) {
         integer_length_validator(frm.doc.leverage_amount2, 7, 'Leverage Amount');
