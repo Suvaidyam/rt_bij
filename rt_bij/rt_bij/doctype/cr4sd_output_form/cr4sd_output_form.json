@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CR4SD-O-{####}",
  "creation": "2024-05-12 12:21:02.008598",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -259,7 +258,7 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:doc.type_of_measures == \"Check dam\"",
+   "depends_on": "eval:doc.type_of_measures == \"Other\"",
    "fieldname": "specify_others",
    "fieldtype": "Data",
    "label": "Specify Other's",
@@ -615,14 +614,12 @@
    "fieldtype": "Column Break"
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:17:46.523374",
+ "modified": "2024-05-15 15:46:36.285297",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
