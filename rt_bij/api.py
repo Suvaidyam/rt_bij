@@ -24,20 +24,12 @@ def get_meta():
     return doctypes
 
 @frappe.whitelist(allow_guest=True)
-def get_option_list(filter=None,fields=["*"]):
-    # filters = json.loads(filter)
-    return frappe.db.get_list('Options',
+def common_api(filter=None, fields=["*"], doctype_name=None):
+    if not doctype_name:
+        frappe.throw("doctype_name is required")
+    return frappe.db.get_list(doctype_name,
         filters=filter,
         fields=fields,
         page_length=10000,
         ignore_permissions=True
     )
-    
-@frappe.whitelist(allow_guest=True)
-def get_state_list():
-    return frappe.db.get_list('State',
-        fields = ["name","state_name"],
-        page_length=10000,
-        ignore_permissions=True
-    )
-
