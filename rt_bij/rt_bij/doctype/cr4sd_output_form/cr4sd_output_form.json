@@ -525,7 +525,7 @@
    "options": "\nCrop cover\nEnriched FYM through\nbiodecomposer\nGhanajeevamrutham/Drava\nJeevamrutham\nGreen menure\nIntercrop with legumes\nSheep penning\nSoil Testing\nTank silt application\nOther"
   },
   {
-   "depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Crop cover\" ",
+   "depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Other\" ",
    "fieldname": "specify_others3",
    "fieldtype": "Data",
    "label": "Specify Other's",
@@ -616,7 +616,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 16:23:27.652611",
+ "modified": "2024-05-15 17:43:26.905668",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
