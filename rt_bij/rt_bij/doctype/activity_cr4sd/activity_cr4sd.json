@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:CR4SD-A-{####}",
  "creation": "2024-05-12 12:23:31.832205",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -785,12 +786,14 @@
    "fieldtype": "Column Break"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 09:28:47.298571",
+ "modified": "2024-05-15 13:21:54.855237",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
