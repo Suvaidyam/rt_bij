@@ -570,7 +570,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 13:17:41.566582",
+ "modified": "2024-05-15 10:08:27.186633",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",
@@ -595,7 +595,8 @@
    "read": 1,
    "report": 1,
    "role": "State User",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "email": 1,
@@ -604,7 +605,8 @@
    "read": 1,
    "report": 1,
    "role": "District User",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,

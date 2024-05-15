@@ -358,7 +358,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 12:42:30.224196",
+ "modified": "2024-05-15 10:07:49.257004",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity   ICVD",
@@ -383,7 +383,8 @@
    "read": 1,
    "report": 1,
    "role": "State User",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "email": 1,
@@ -392,7 +393,8 @@
    "read": 1,
    "report": 1,
    "role": "District User",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,
