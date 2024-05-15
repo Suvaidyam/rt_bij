@@ -113,7 +113,6 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Output",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Output\"]]",
    "options": "Options",
    "reqd": 1
   },
@@ -122,7 +121,6 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Activity",
-   "link_filters": "[[\"Options\",\"option_type\",\"=\",\"Activity\"]]",
    "options": "Options",
    "reqd": 1
   },
@@ -791,7 +789,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 12:10:10.659615",
+ "modified": "2024-05-13 22:44:52.666998",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",

@@ -14,7 +14,13 @@ fixtures = [
 	"Block",
 	"Grampanchayat",
 	"Village",
-	"Hamlet"
+	"Hamlet",
+    "Workflow",
+    "Workflow State",
+    "Workflow Action",
+    "Role Profile"
+
+	
     ]
 
 # Includes in <head>
