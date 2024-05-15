@@ -17,7 +17,7 @@ function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = 
         };
     }
 };
- apply_multiple_filters = (field_name,frm,filter,withoutFilter=false) => {
+apply_multiple_filters = (field_name, frm, filter, withoutFilter = false) => {
     frm.fields_dict[field_name].get_query = () => {
         if (withoutFilter) {
             return {
@@ -26,7 +26,7 @@ function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = 
             };
         }
         return {
-            filters:filter,
+            filters: filter,
             page_length: 1000
         };
     }
@@ -51,8 +51,8 @@ frappe.ui.form.on("Activity CR4SD", {
         apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
         apply_filter("villages", "grampanchayat", frm, frm.doc.gram_panchayat)
         apply_filter("output", "option_type", frm, "Output")
-        apply_multiple_filters("activity", frm, {"option_type": "Activity", "output":frm.doc.output ?? "Select output"})
-        
+        apply_multiple_filters("activity", frm, { "option_type": "Activity", "output": frm.doc.output ?? "Select output" })
+
     },
     validate(frm) {
         let phone_arr;
@@ -85,7 +85,7 @@ frappe.ui.form.on("Activity CR4SD", {
         integer_length_validator(frm.doc.no_of_diversification_food_basketcommon, 10, 'No. of diversification food basketcommon');
     },
     output: function (frm) {
-        apply_multiple_filters("activity", frm, {"option_type": "Activity", "output":frm.doc.output ?? "Select output"})
+        apply_multiple_filters("activity", frm, { "option_type": "Activity", "output": frm.doc.output ?? "Select output" })
     },
     geographical_level_of_the_event_organised: function (frm) {
         truncate_field_values(frm, ['district', 'talukatehsil', 'gram_panchayat', 'activity_conducted_at', 'village', 'villages']);

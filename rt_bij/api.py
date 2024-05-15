@@ -1,6 +1,6 @@
 import frappe
- 
- 
+# import json
+
 @frappe.whitelist(allow_guest=True)
 def get_meta():
     print(frappe.get_roles())
@@ -23,4 +23,21 @@ def get_meta():
         doctype['fields'] = meta.fields
     return doctypes
 
+@frappe.whitelist(allow_guest=True)
+def get_option_list(filter=None,fields=["*"]):
+    # filters = json.loads(filter)
+    return frappe.db.get_list('Options',
+        filters=filter,
+        fields=fields,
+        page_length=10000,
+        ignore_permissions=True
+    )
+    
+@frappe.whitelist(allow_guest=True)
+def get_state_list():
+    return frappe.db.get_list('State',
+        fields = ["name","state_name"],
+        page_length=10000,
+        ignore_permissions=True
+    )
 

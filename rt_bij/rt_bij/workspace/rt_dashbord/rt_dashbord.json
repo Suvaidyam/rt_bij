@@ -1,19 +1,11 @@
 {
  "charts": [],
- "content": "[{\"id\":\"V8VFXBCpSa\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">RT-Dashbord</span>\",\"col\":12}},{\"id\":\"vpJzNoY-Zg\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Topbar\",\"col\":12}},{\"id\":\"5rcZBRjfap\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Beneficiary\",\"col\":4}},{\"id\":\"SIV05Fts18\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"State level approvals pending\",\"col\":4}},{\"id\":\"4QhlsZOEPR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"District level approvals pending\",\"col\":4}},{\"id\":\"fXn99En2HB\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Activity\",\"col\":12}},{\"id\":\"eKwQV1Tb8T\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"card\",\"col\":12}}]",
+ "content": "[{\"id\":\"V8VFXBCpSa\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">RT-Dashbord</span>\",\"col\":12}},{\"id\":\"KkK7dqoW4O\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Dashbord Block\",\"col\":12}}]",
  "creation": "2024-05-08 10:14:28.189697",
  "custom_blocks": [
   {
-   "custom_block_name": "Activity",
-   "label": "Activity"
-  },
-  {
-   "custom_block_name": "card",
-   "label": "card"
-  },
-  {
-   "custom_block_name": "Topbar",
-   "label": "Topbar"
+   "custom_block_name": "Dashbord Block",
+   "label": "Dashbord Block"
   }
  ],
  "docstatus": 0,
@@ -26,24 +18,11 @@
  "is_hidden": 0,
  "label": "RT-Dashbord",
  "links": [],
- "modified": "2024-05-11 17:51:55.986405",
+ "modified": "2024-05-15 09:48:25.474597",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "RT-Dashbord",
- "number_cards": [
-  {
-   "label": "Total Beneficiary",
-   "number_card_name": "Total Beneficiary"
-  },
-  {
-   "label": "State level approvals pending",
-   "number_card_name": "State level approvals pending"
-  },
-  {
-   "label": "District level approvals pending",
-   "number_card_name": "District level approvals pending"
-  }
- ],
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,

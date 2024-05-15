@@ -38,6 +38,7 @@ frappe.ui.form.on("IVCD Output Form", {
         apply_filter("output", "option_type", frm, "Output IVCD")
     },
     state: function (frm) {
+        apply_filter("district", "state", frm, frm.doc.state)
         reset_field_values(frm, ['district', 'block', 'grampanchayat', 'village']);
     },
     district: function (frm) {
