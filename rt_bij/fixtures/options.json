@@ -2,66 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:50:02.833716",
-  "name": "Output-2",
-  "option_code": 2,
-  "option_name": "2.1 - Villages conducted participatory assessment of common resources and creating management plan",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-12 14:50:12.848132",
-  "name": "Output-3",
-  "option_code": 3,
-  "option_name": "2.2 - Additional water harvesting capacity created",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-12 14:50:24.199314",
-  "name": "Output-4",
-  "option_code": 4,
-  "option_name": "2.5 - Villages with improved access to drinking water 2.6 Households engaged in grey water management",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-12 14:50:40.181842",
-  "name": "Output-5",
-  "option_code": 5,
-  "option_name": "3.1 - Households with diversified food production and consumption",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-12 14:50:51.722286",
-  "name": "Output-6",
-  "option_code": 6,
-  "option_name": "3.2 - Area covered under nutrition rich and bio fortified crops",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-12 14:51:03.709478",
-  "name": "Output-7",
-  "option_code": 7,
-  "option_name": "2.6 - Household engaged in grey water management",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-14 18:55:47.382722",
   "name": "Activity-1",
   "option_code": 1,
@@ -202,16 +142,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:49:49.491779",
-  "name": "Output-1",
-  "option_code": 1,
-  "option_name": "1.1 - Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-13 09:28:55.597037",
   "name": "Output IVCD-3",
   "option_code": 3,
@@ -342,10 +272,10 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-14 12:16:54.743343",
+  "modified": "2024-05-15 09:51:48.502338",
   "name": "Activity ICVD-7",
   "option_code": 7,
-  "option_name": "Re Create ",
+  "option_name": "value chain MIS",
   "option_type": "Activity ICVD",
   "output": "Output ICVD-4"
  },
@@ -377,6 +307,76 @@
   "option_code": 4,
   "option_name": "5.2 - Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives",
   "option_type": "Output ICVD",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:50:12.848132",
+  "name": "Output-3",
+  "option_code": 3,
+  "option_name": "2.2 - Additional water harvesting capacity created",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:50:24.199314",
+  "name": "Output-4",
+  "option_code": 4,
+  "option_name": "2.5 - Villages with improved access to drinking water 2.6 Households engaged in grey water management",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:50:51.722286",
+  "name": "Output-6",
+  "option_code": 6,
+  "option_name": "3.2 - Area covered under nutrition rich and bio fortified crops",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:51:03.709478",
+  "name": "Output-7",
+  "option_code": 7,
+  "option_name": "2.6 - Household engaged in grey water management",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:50:02.833716",
+  "name": "Output-2",
+  "option_code": 2,
+  "option_name": "2.1 - Villages conducted participatory assessment of common resources and creating management plan",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:50:40.181842",
+  "name": "Output-5",
+  "option_code": 5,
+  "option_name": "3.1 - Households with diversified food production and consumption",
+  "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:49:49.491779",
+  "name": "Output-1",
+  "option_code": 1,
+  "option_name": "1.1 - Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
+  "option_type": "Output",
   "output": null
  }
 ]
