@@ -237,8 +237,7 @@
    "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "training_details_section",
    "fieldtype": "Section Break",
-   "label": "Training Details",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
+   "label": "Training Details"
   },
   {
    "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
@@ -251,8 +250,7 @@
    "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
    "fieldname": "participations_section",
    "fieldtype": "Section Break",
-   "label": "Participations",
-   "mandatory_depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)"
+   "label": "Participations"
   },
   {
    "depends_on": "eval:['Output-1', 'Output-2', 'Output-5', 'Output-6', 'Output-7'].includes(doc.output) && ['Activity-1', 'Activity-2', 'Activity-3', 'Activity-4', 'Activity-6', 'Activity-9', 'Activity-11', 'Activity-12', 'Activity-14'].includes(doc.activity)",
@@ -789,7 +787,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-13 22:44:52.666998",
+ "modified": "2024-05-15 09:28:47.298571",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
