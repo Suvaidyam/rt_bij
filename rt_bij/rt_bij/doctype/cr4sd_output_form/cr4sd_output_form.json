@@ -263,7 +263,7 @@
    "fieldname": "specify_others",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "mandatory_depends_on": "eval:doc.type_of_measures == \"Check dam\""
+   "mandatory_depends_on": "eval:doc.type_of_measures == \"Other\""
   },
   {
    "fieldname": "name_of_the_departments_and_organizations",
@@ -617,7 +617,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 16:26:17.547574",
+ "modified": "2024-05-15 16:23:27.652611",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CR4SD Output Form",
