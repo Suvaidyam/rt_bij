@@ -77,6 +77,7 @@ frappe.ui.form.on("Activity CR4SD", {
         integer_length_validator(frm.doc.drinking_water_system_capacity_created, 10, 'Drinking water system capacity created');
         integer_length_validator(frm.doc.total_households_benefitted, 7, 'Total households benefitted');
         integer_length_validator(frm.doc.leverage_amount2, 10, 'Leverage amount');
+        integer_length_validator(frm.doc.area_brought_under_improved_access_to_critical_irrigation, 10, 'Area brought under improved access to critical irrigation');
         integer_length_validator(frm.doc.water_recycle_capacity, 10, 'Water recycle capacity');
         integer_length_validator(frm.doc.noof_households_taken_up_measures, 7, 'No. of households taken up measures');
         integer_length_validator(frm.doc.leverage_amount3, 10, 'Leverage amount');
@@ -173,5 +174,8 @@ frappe.ui.form.on("Activity CR4SD", {
     },
     no_of_diversification_food_basketcommon: function (frm) {
         integer_length_validator(frm.doc.no_of_diversification_food_basketcommon, 10, 'No. of diversification food basketcommon');
+    },
+    area_brought_under_improved_access_to_critical_irrigation: function (frm) {
+        integer_length_validator(frm.doc.area_brought_under_improved_access_to_critical_irrigation, 10, 'Area brought under improved access to critical irrigation');
     },
 });
