@@ -789,7 +789,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:21:54.855237",
+ "modified": "2024-05-15 16:48:23.863680",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity CR4SD",
@@ -808,7 +808,6 @@
    "write": 1
   },
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -819,7 +818,6 @@
    "write": 1
   },
   {
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
