@@ -4,7 +4,7 @@ app_publisher = "suvaidyam"
 app_description = "a project of reliance foundation"
 app_email = "tech@suvaidyam.com"
 app_license = "mit"
-# required_apps = []
+required_apps = ["Suvaidyam/frappe_mobile_service"]
 fixtures = [
 	"Custom HTML Block",
 	"Participant Type",
@@ -20,7 +20,7 @@ fixtures = [
     "Workflow Action",
     "Role Profile"
 
-	
+
     ]
 
 # Includes in <head>
