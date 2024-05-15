@@ -64,13 +64,13 @@ frappe.ui.form.on("CR4SD Output Form", {
     },
     validate(frm) {
         integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage Amount');
-        integer_length_validator(frm.doc.leverage_amount2, 7, 'Leverage Amount');
+        integer_length_validator(frm.doc.leverage_amount2, 10, 'Leverage Amount');
         integer_length_validator(frm.doc.extent_of_area_where_the_practices_adopted, 7, 'Extent of area where the practices adopted');
         integer_length_validator(frm.doc.leverage_amount_23, 10, 'Leverage Amount (2.3)');
         integer_length_validator(frm.doc.increased_area, 7, 'Increased area');
         integer_length_validator(frm.doc.leverage_amount_24, 7, 'Leverage Amount (2.4)');
         integer_length_validator(frm.doc.estimated_number_of_households_benefitted, 5, 'Estimated number of Households benefitted');
-        integer_length_validator(frm.doc.area_of_extent_climate_adaptive_farming_practices_taken_up, 5, 'Area of Extent climate adaptive farming practices taken up');
+        integer_length_validator(frm.doc.area_of_extent_climate_adaptive_farming_practices_taken_up, 7, 'Area of Extent climate adaptive farming practices taken up');
         integer_length_validator(frm.doc.no_of_initiatives, 7, 'No. of Initiatives');
         integer_length_validator(frm.doc.leverage_money, 10, 'Leverage Money');
         integer_length_validator(frm.doc.area, 10, 'Area');
@@ -79,7 +79,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage Amount');
     },
     leverage_amount2: function (frm) {
-        integer_length_validator(frm.doc.leverage_amount2, 7, 'Leverage Amount');
+        integer_length_validator(frm.doc.leverage_amount2, 10, 'Leverage Amount');
     },
     extent_of_area_where_the_practices_adopted: function (frm) {
         integer_length_validator(frm.doc.extent_of_area_where_the_practices_adopted, 7, 'Extent of area where the practices adopted');
@@ -97,7 +97,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         integer_length_validator(frm.doc.estimated_number_of_households_benefitted, 5, 'Estimated number of Households benefitted');
     },
     area_of_extent_climate_adaptive_farming_practices_taken_up: function (frm) {
-        integer_length_validator(frm.doc.area_of_extent_climate_adaptive_farming_practices_taken_up, 5, 'Area of Extent climate adaptive farming practices taken up');
+        integer_length_validator(frm.doc.area_of_extent_climate_adaptive_farming_practices_taken_up, 7, 'Area of Extent climate adaptive farming practices taken up');
     },
     no_of_initiatives: function (frm) {
         integer_length_validator(frm.doc.no_of_initiatives, 7, 'No. of Initiatives');
@@ -106,7 +106,7 @@ frappe.ui.form.on("CR4SD Output Form", {
         integer_length_validator(frm.doc.leverage_money, 10, 'Leverage Money');
     },
     area: function (frm) {
-        integer_length_validator(frm.doc.area, 10, 'Area');
+        integer_length_validator(frm.doc.area, 7, 'Area');
     },
 
 });
