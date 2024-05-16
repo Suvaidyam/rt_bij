@@ -29,15 +29,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "question-sign",
-  "modified": "2024-05-07 14:16:29.289848",
-  "name": "Pending",
-  "style": "",
-  "workflow_state_name": "Pending"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "ok-sign",
   "modified": "2024-05-07 14:16:29.291442",
   "name": "Approved",
@@ -52,5 +43,14 @@
   "name": "Approved By District Level",
   "style": "Primary",
   "workflow_state_name": "Approved By District Level"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2024-05-07 14:16:29.289848",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
  }
 ]
