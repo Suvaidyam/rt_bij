@@ -191,11 +191,11 @@
    "options": "\nBio Decomposers\nBio-fortified seed\nBoom Sprayers\nBroad bed furrow\nCrop Insurance\nDead furrow\nDeep Ploughing\nDrip & Sprinklers\nDrones for Spraying\nImproved Seed\nLine sowing/Transplanting\nLow cost cold storages\nNano Urea\nNipping\nPaddy Transplanters\nPheromone Traps\nPower Sprayers\nPower Tillers\nPulse magic\nSagarika\nSatellite based advisory\nSeed Dibblers\nSeed Drills\nSeed Treatment\nSound & Light sensor for animals\nUse of Gypsum\nUse of Sulphur\nOther"
   },
   {
-   "depends_on": "eval:(doc.technology_practice_demonstrated == 'Bio-fortified seed' || doc.technology_practice_demonstrated == 'Drip & Sprinklers');",
+   "depends_on": "eval:(doc.technology_practice_demonstrated == 'Other');",
    "fieldname": "specify_others",
    "fieldtype": "Data",
    "label": "Specify Others",
-   "mandatory_depends_on": "eval:(doc.technology_practice_demonstrated == 'Bio-fortified seed' || doc.technology_practice_demonstrated == 'Drip & Sprinklers');"
+   "mandatory_depends_on": "eval:(doc.technology_practice_demonstrated == 'Other');"
   },
   {
    "fieldname": "details_of_technology",
@@ -572,7 +572,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:21:27.619400",
+ "modified": "2024-05-16 13:15:24.844442",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD Output Form",
