@@ -23,6 +23,12 @@ const integer_length_validator = (value, reqd_length, label) => {
         frappe.throw(`Count of ${label} can't be more than ${reqd_length} digits!`)
     }
 }
+
+const reset_field_values = (frm, fields) => {
+    fields.forEach(field => {
+        frm.set_value(field, '');
+    });
+}
 frappe.ui.form.on("CR4SD Output Form", {
     refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
@@ -61,6 +67,15 @@ frappe.ui.form.on("CR4SD Output Form", {
                 frm.doc[field] = "";
             }
         });
+
+    },
+    output: function (frm) {
+        reset_field_values(frm, ["name_of_the_sarpanch", "phone_numbers_of_the_sarpanch", "name_of_the_sarpanch2", "phone_numbers_of_the_sarpanch2", 'water_budgeting_completed', "key_leader_details_count", 'data_uploaded_on_cwb_tool', 'key_leader_details_section2',]);
+
+    },
+    type_of_measures: function (frm) {
+        reset_field_values(frm, ["specify_others",]);
+
     },
     validate(frm) {
         integer_length_validator(frm.doc.leverage_amount, 10, 'Leverage Amount');

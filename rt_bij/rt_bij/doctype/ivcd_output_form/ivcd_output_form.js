@@ -69,6 +69,16 @@ frappe.ui.form.on("IVCD Output Form", {
             }
         }
     },
+    output: function (frm) {
+        reset_field_values(frm, ["name_of_cropcommodity", "remarks_explain_the_impact_created", "total_incremental_income_benefit_to_farmer", "savings_in_arthiya_commission_inr_per_quintal", "savings_in_transport_inr_per_quintal", "price_offered_in_the_local_market", "price_offered_inrquintal", "volumes", "value_of_transaction", "no_of_farmers", "name_of_the_commodity", "farmer_producer_organisation_3", "remarks_3", "total_incremental_income_benefit_to_farmer_2", "savings_in_arthiya_commission_2", "savings_in_transport_2", "price_offered_in_the_local_market_2", "price_offered", "volumes_2", "value_of_transaction_2", "no_of_farmers_2", "name_of_the_commodity_2", "farmer_producer_organisation_4", "type_2", "collaborating_agenciesdepartment_2", "remarks_2", "name_of_the_trainer", "no_of_nonbodsfarmers_participated", "no_of_bodsfarmers_participated", "farmer_producer_organisation_2", "number_of_fposfarmer_collectives_participated", "topic_of_the_training_conducted", "name_of_the_crop", "name_of_technology_practice_adopted", "area_of_land_on_which_adopted_in_hectares", "no_of_farmers_adopting_the_techpractice", "remarks", "phone_number", "name_of_cropcommodity", "name_of_the_farmers", "area_covered", "is_this_a_bij_1_or_bij_2_village", "subsidised_by_reliance_foundation", "who_provided_the_balance_funds", "farmer_producer_organisation_fpo", "collaborating_agenciesdepartment",]);
+
+    },
+    subsidised_by_reliance_foundation: function (frm) {
+        reset_field_values(frm, ["if_yes_what_age"])
+    },
+    technology_practice_demonstrated: function (frm) {
+        reset_field_values(frm, ["specify_others"])
+    },
     validate(frm) {
         // Outreach
         integer_length_validator(frm.doc.area_covered, 7, 'Area Covered');
