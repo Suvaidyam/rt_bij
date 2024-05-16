@@ -159,7 +159,7 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:([\"Output ICVD-2\",\"Output ICVD-3\",\"Output ICVD-4\"].includes(doc.output) || [\"Activity ICVD-1\",\"Activity ICVD-2\",\"Activity ICVD-3\",\"Activity ICVD-4\",\"Activity ICVD-5\"].includes(doc.activity))",
+   "depends_on": "eval:([\"Output ICVD-2\",\"Output ICVD-3\",\"Output ICVD-4\"].includes(doc.output) && [\"Activity ICVD-1\",\"Activity ICVD-2\",\"Activity ICVD-3\",\"Activity ICVD-4\",\"Activity ICVD-5\"].includes(doc.activity))",
    "fieldname": "capacity_building_of_collectives_section",
    "fieldtype": "Section Break",
    "label": "Capacity Building of Collectives"
@@ -360,7 +360,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:22:33.414185",
+ "modified": "2024-05-16 16:14:43.710103",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Activity   ICVD",

@@ -113,5 +113,8 @@ frappe.ui.form.on("Activity   ICVD", {
         integer_length_validator(frm.doc.area_of_land_on_which_adopted, 10, 'Area of land on which adopted');
         integer_length_validator(frm.doc.no_of_farmers_adopting_the_techpractice, 10, 'No of farmers adopting the techpractice');
         integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/farmer collectives participated');
-    }
+    },
+    output: function (frm) {
+        reset_field_values(frm, ["topic_of_the_training_conducted", "farmer_producer_organisation_fpo_1", "number_of_fposfarmer_collectives_participated", "no_of_bodsfarmers_participated", "no_of_non_bodsfarmers_participated", "name_of_the_trainer", "collaborating_agenciesdepartment", "remarks", "activity"])
+    },
 });
