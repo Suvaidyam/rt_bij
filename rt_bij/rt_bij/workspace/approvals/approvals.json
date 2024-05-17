@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"5AgARgbAPw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Approvals</span>\",\"col\":12}},{\"id\":\"ZW-eXbmnn1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Approvels\",\"col\":12}}]",
+ "content": "[{\"id\":\"ZW-eXbmnn1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Approvels\",\"col\":12}}]",
  "creation": "2024-05-08 10:53:40.108248",
  "custom_blocks": [
   {
@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-16 20:29:01.680680",
+ "modified": "2024-05-17 17:21:54.593221",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
@@ -27,7 +27,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 4.0,
+ "sequence_id": 3.0,
  "shortcuts": [],
  "title": "Approvals"
 }
