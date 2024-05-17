@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CR4SD-A-{####}",
+ "autoname": "format:Response{####}",
  "creation": "2024-05-12 12:23:31.832205",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -789,7 +789,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 16:48:23.863680",
+ "modified": "2024-05-17 17:24:49.917483",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D activity form",

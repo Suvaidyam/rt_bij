@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:ICVD-A-{####}",
+ "autoname": "format:Response{####}",
  "creation": "2024-05-12 12:31:17.015694",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -360,7 +360,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:22:33.414185",
+ "modified": "2024-05-17 17:25:30.343545",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD activity form",
