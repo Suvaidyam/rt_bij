@@ -87,6 +87,7 @@ frappe.ui.form.on("CRS4D activity form", {
     },
     output: function (frm) {
         apply_multiple_filters("activity", frm, { "option_type": "Activity", "output": frm.doc.output ?? "Select output" })
+        truncate_field_values(frm, ["activity", "gps_coordinates3", "grey_water_treatment_photo", "name_of_the_departments_and_organizations_converge", "leverage_amount3", "noof_households_taken_up_measures", "water_recycle_capacity", "site_condition", "structure_name", "diversification_of_food_basket_category", "type_of_water_harvesting_structure", "gps_coordinates2", "drinking_water_activity_photo", "department__organization_collaboratedleveraged_resources", "leverage_amount2", "total_households_benefitted", "drinking_water_system_capacity_created", "total_length_of_pipeline_provisions", "no_of_drinking_water_system", "type_of_initiative", "gps_coordinates", "upload_water_harvesting_structure_picture", "leverage_amount", "departmentorganisation_collaboratedleverage_resources", "no_of_farmers_benefitted", "area_brought_under_improved_access_to_critical_irrigation", "increased_underground_recharge_capacity", "condition", "increased_surface_water_storage_capacity", "present_surface_water_storage_capacity", "water_budgeting_completed", "crop_water_budgeting_report", "crop_water_budgeting_result", "data_uploaded_on_cwb_tool", "training_topic_purpose", "type_of_participants_involved_in_the_event", "image", "image_description",])
     },
     geographical_level_of_the_event_organised: function (frm) {
         truncate_field_values(frm, ['district', 'talukatehsil', 'gram_panchayat', 'activity_conducted_at', 'village', 'villages']);
@@ -178,4 +179,12 @@ frappe.ui.form.on("CRS4D activity form", {
     area_brought_under_improved_access_to_critical_irrigation: function (frm) {
         integer_length_validator(frm.doc.area_brought_under_improved_access_to_critical_irrigation, 10, 'Area brought under improved access to critical irrigation');
     },
+
+    activity: function (frm) {
+        truncate_field_values(frm, ["gps_coordinates3", "grey_water_treatment_photo", "name_of_the_departments_and_organizations_converge", "leverage_amount3", "noof_households_taken_up_measures", "water_recycle_capacity", "site_condition", "structure_name", "diversification_of_food_basket_category", "type_of_water_harvesting_structure", "gps_coordinates2", "drinking_water_activity_photo", "department__organization_collaboratedleveraged_resources", "leverage_amount2", "total_households_benefitted", "drinking_water_system_capacity_created", "total_length_of_pipeline_provisions", "no_of_drinking_water_system", "type_of_initiative", "gps_coordinates", "upload_water_harvesting_structure_picture", "leverage_amount", "departmentorganisation_collaboratedleverage_resources", "no_of_farmers_benefitted", "area_brought_under_improved_access_to_critical_irrigation", "increased_underground_recharge_capacity", "condition", "increased_surface_water_storage_capacity", "present_surface_water_storage_capacity", "water_budgeting_completed", "crop_water_budgeting_report", "crop_water_budgeting_result", "data_uploaded_on_cwb_tool", "training_topic_purpose", "type_of_participants_involved_in_the_event", "image", "image_description",])
+    },
+    diversification_of_food_basket_category: function (frm) {
+        truncate_field_values(frm, ["number_of_farmers", "no_of_hhs_diversified_food_basket_individual", "no_of_diversification_food_basketcommon", "total_diversification_of_food_basket",])
+    },
+
 });
