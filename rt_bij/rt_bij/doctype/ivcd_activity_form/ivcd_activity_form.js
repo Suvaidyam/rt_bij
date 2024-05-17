@@ -28,7 +28,7 @@ const reset_field_values = (frm, fields) => {
         frm.set_value(field, '');
     });
 }
-frappe.ui.form.on("ICVD activity form", {
+frappe.ui.form.on("IVCD activity form", {
     refresh(frm) {
         apply_filter("output", "option_type", frm, "Output ICVD")
         apply_filter("activity", "option_type", frm, "Activity ICVD")

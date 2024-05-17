@@ -29,7 +29,7 @@ const integer_length_validator = (value, reqd_length, label) => {
     }
 }
 
-frappe.ui.form.on("IVCD Output Form", {
+frappe.ui.form.on("IVCD output form", {
     refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("block", "district", frm, frm.doc.district)
