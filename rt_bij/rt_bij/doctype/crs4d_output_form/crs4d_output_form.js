@@ -70,7 +70,7 @@ frappe.ui.form.on("CRS4D output form", {
 
     },
     output: function (frm) {
-        reset_field_values(frm, ["name_of_the_sarpanch", "phone_numbers_of_the_sarpanch", "name_of_the_sarpanch2", "phone_numbers_of_the_sarpanch2", 'water_budgeting_completed', "key_leader_details_count", 'data_uploaded_on_cwb_tool', 'key_leader_details_section2',]);
+        reset_field_values(frm, ["name_of_the_sarpanch", "name_of_the_sarpanch2", "area", 'water_budgeting_completed', "key_leader_details_count", 'data_uploaded_on_cwb_tool', 'key_leader_details_section2',]);
 
     },
     type_of_measures: function (frm) {
