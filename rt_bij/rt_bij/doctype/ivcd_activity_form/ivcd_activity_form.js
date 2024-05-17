@@ -113,5 +113,12 @@ frappe.ui.form.on("IVCD activity form", {
         integer_length_validator(frm.doc.area_of_land_on_which_adopted, 10, 'Area of land on which adopted');
         integer_length_validator(frm.doc.no_of_farmers_adopting_the_techpractice, 10, 'No of farmers adopting the techpractice');
         integer_length_validator(frm.doc.number_of_fposfarmer_collectives_participated, 10, 'Number of FPOs/farmer collectives participated');
-    }
+    },
+    output: function (frm) {
+        reset_field_values(frm, ["activity", "remarks_explain_the_impact_created", "total_incremental_income_benefit_to_farmer", "savings_in_arthiya_commission_inr_per_quintal", "savings_in_transport_inr_per_quintal", "price_offered_in_the_local_market", "price_offered_inrquintal", "volumes", "value_of_transaction", "no_of_farmers", "name_of_the_commodity", "farmer_producer_organisation_fpo_2", "type", "remark", "no_of_farmers_adopting_the_techpractice", "area_of_land_on_which_adopted", "name_of_technology_practice_adopted", "name_of_technology_practice_adopted", "name_of_the_crop", "remarks", "collaborating_agenciesdepartment", "name_of_the_trainer", "no_of_non_bodsfarmers_participated", "no_of_bodsfarmers_participated", "number_of_fposfarmer_collectives_participated", "farmer_producer_organisation_fpo_1", 'topic_of_the_training_conducted']);
+
+    },
+    activity: function () {
+        reset_field_values(frm, ["remarks_explain_the_impact_created", "total_incremental_income_benefit_to_farmer", "savings_in_arthiya_commission_inr_per_quintal", "savings_in_transport_inr_per_quintal", "price_offered_in_the_local_market", "price_offered_inrquintal", "volumes", "value_of_transaction", "no_of_farmers", "name_of_the_commodity", "farmer_producer_organisation_fpo_2", "type",])
+    },
 });
