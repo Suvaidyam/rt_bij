@@ -9,13 +9,6 @@
  {
   "docstatus": 0,
   "doctype": "Participant Type",
-  "modified": "2024-05-12 13:37:43.857998",
-  "name": "Asha worker",
-  "participant_type_name": "Asha worker"
- },
- {
-  "docstatus": 0,
-  "doctype": "Participant Type",
   "modified": "2024-05-12 13:37:55.501765",
   "name": "Farmer collective",
   "participant_type_name": "Farmer collective"
@@ -75,5 +68,12 @@
   "modified": "2024-05-12 13:39:12.519667",
   "name": "Other",
   "participant_type_name": "Other"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Participant Type",
+  "modified": "2024-05-12 13:37:43.857998",
+  "name": "Asha worker",
+  "participant_type_name": "Asha worker"
  }
 ]

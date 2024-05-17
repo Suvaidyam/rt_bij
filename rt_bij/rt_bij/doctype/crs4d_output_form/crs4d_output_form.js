@@ -29,7 +29,7 @@ const reset_field_values = (frm, fields) => {
         frm.set_value(field, '');
     });
 }
-frappe.ui.form.on("CR4SD Output Form", {
+frappe.ui.form.on("CRS4D output form", {
     refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("block", "district", frm, frm.doc.district)

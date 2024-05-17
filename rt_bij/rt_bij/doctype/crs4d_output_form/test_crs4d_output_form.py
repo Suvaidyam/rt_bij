@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestActivityICVD(FrappeTestCase):
+class TestCRS4Doutputform(FrappeTestCase):
 	pass

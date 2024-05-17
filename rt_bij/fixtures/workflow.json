@@ -2,7 +2,7 @@
  {
   "docstatus": 0,
   "doctype": "Workflow",
-  "document_type": "CR4SD Output Form",
+  "document_type": "CRS4D output form",
   "is_active": 1,
   "modified": "2024-05-13 16:19:19.326682",
   "name": "Form Approvel",
@@ -222,7 +222,7 @@
  {
   "docstatus": 0,
   "doctype": "Workflow",
-  "document_type": "Activity   ICVD",
+  "document_type": "ICVD activity form",
   "is_active": 1,
   "modified": "2024-05-15 11:23:09.520900",
   "name": "Activity   ICVD",
@@ -332,7 +332,7 @@
  {
   "docstatus": 0,
   "doctype": "Workflow",
-  "document_type": "Activity CR4SD",
+  "document_type": "CRS4D activity form",
   "is_active": 1,
   "modified": "2024-05-15 11:23:29.751048",
   "name": "Activity CR4SD",
