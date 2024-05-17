@@ -1,14 +1,5 @@
 [
  {
-  "district_code": "S10219",
-  "district_name": "Saran",
-  "docstatus": 0,
-  "doctype": "District",
-  "modified": "2024-05-07 15:13:03.184247",
-  "name": "S10219",
-  "state": "S10"
- },
- {
   "district_code": "S06D01",
   "district_name": "Test District",
   "docstatus": 0,
@@ -16,5 +7,14 @@
   "modified": "2024-05-12 20:28:23.856618",
   "name": "S06D01",
   "state": "S06"
+ },
+ {
+  "district_code": "S10219",
+  "district_name": "Saran",
+  "docstatus": 0,
+  "doctype": "District",
+  "modified": "2024-05-07 15:13:03.184247",
+  "name": "S10219",
+  "state": "S10"
  }
 ]
