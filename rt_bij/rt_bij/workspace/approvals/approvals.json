@@ -1,8 +1,13 @@
 {
  "charts": [],
- "content": "[{\"id\":\"5AgARgbAPw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Approvals</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"5AgARgbAPw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Approvals</span>\",\"col\":12}},{\"id\":\"ZW-eXbmnn1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Approvels\",\"col\":12}}]",
  "creation": "2024-05-08 10:53:40.108248",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Approvels",
+   "label": "Approvels"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -12,7 +17,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-13 13:07:52.072493",
+ "modified": "2024-05-16 22:12:57.308004",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
