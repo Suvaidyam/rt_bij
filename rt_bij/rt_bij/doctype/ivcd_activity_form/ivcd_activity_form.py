@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ICVDactivityform(Document):
+class IVCDactivityform(Document):
 	pass
