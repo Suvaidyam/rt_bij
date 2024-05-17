@@ -47,6 +47,15 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-05-17 15:08:13.708093",
+  "name": "Pending at SPM",
+  "style": "Primary",
+  "workflow_state_name": "Pending at SPM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "remove",
   "modified": "2024-05-07 14:16:29.292749",
   "name": "Rejected",
@@ -61,14 +70,5 @@
   "name": "Pending at DPM",
   "style": "Warning",
   "workflow_state_name": "Pending at DPM"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-05-17 15:08:13.708093",
-  "name": "Pending at SPM",
-  "style": "Primary",
-  "workflow_state_name": "Pending at SPM"
  }
 ]
