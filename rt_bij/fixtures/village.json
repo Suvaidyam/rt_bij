@@ -1,17 +1,5 @@
 [
  {
-  "block": "BL001",
-  "district": "S10219",
-  "docstatus": 0,
-  "doctype": "Village",
-  "grampanchayat": "GP001",
-  "modified": "2024-05-13 12:28:03.308774",
-  "name": "VL001",
-  "state": "S10",
-  "village_code": "VL001",
-  "village_name": "Bansdih"
- },
- {
   "block": "S06D01B01",
   "district": "S06D01",
   "docstatus": 0,
@@ -22,5 +10,17 @@
   "state": "S06",
   "village_code": "S06D01B01G01V01",
   "village_name": "Test Village"
+ },
+ {
+  "block": "BL001",
+  "district": "S10219",
+  "docstatus": 0,
+  "doctype": "Village",
+  "grampanchayat": "GP001",
+  "modified": "2024-05-13 12:28:03.308774",
+  "name": "VL001",
+  "state": "S10",
+  "village_code": "VL001",
+  "village_name": "Bansdih"
  }
 ]

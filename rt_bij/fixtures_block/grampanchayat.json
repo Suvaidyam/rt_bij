@@ -1,0 +1,24 @@
+[
+ {
+  "block": "BL001",
+  "district": "S10219",
+  "docstatus": 0,
+  "doctype": "Grampanchayat",
+  "grampanchayat_code": "GP001",
+  "grampanchayat_name": "Madarpur",
+  "modified": "2024-05-13 12:27:19.421929",
+  "name": "GP001",
+  "state": "S10"
+ },
+ {
+  "block": "S06D01B01",
+  "district": "S06D01",
+  "docstatus": 0,
+  "doctype": "Grampanchayat",
+  "grampanchayat_code": "S06D01B01G01",
+  "grampanchayat_name": "Test Gram Panchayat",
+  "modified": "2024-05-12 20:29:14.699490",
+  "name": "S06D01B01G01",
+  "state": "S06"
+ }
+]

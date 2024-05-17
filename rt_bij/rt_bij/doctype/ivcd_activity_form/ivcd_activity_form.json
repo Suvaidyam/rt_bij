@@ -159,7 +159,7 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:([\"Output ICVD-2\",\"Output ICVD-3\",\"Output ICVD-4\"].includes(doc.output) || [\"Activity ICVD-1\",\"Activity ICVD-2\",\"Activity ICVD-3\",\"Activity ICVD-4\",\"Activity ICVD-5\"].includes(doc.activity))",
+   "depends_on": "eval:([\"Output ICVD-2\",\"Output ICVD-3\",\"Output ICVD-4\"].includes(doc.output) && [\"Activity ICVD-1\",\"Activity ICVD-2\",\"Activity ICVD-3\",\"Activity ICVD-4\",\"Activity ICVD-5\"].includes(doc.activity))",
    "fieldname": "capacity_building_of_collectives_section",
    "fieldtype": "Section Break",
    "label": "Capacity Building of Collectives"
@@ -207,7 +207,7 @@
    "label": "Remarks"
   },
   {
-   "depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")",
+   "depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")",
    "fieldname": "consolidated_ivcd_section",
    "fieldtype": "Section Break",
    "label": "Consolidated IVCD"
@@ -278,7 +278,7 @@
    "label": "Remarks (Explain the impact created)"
   },
   {
-   "depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-6\")",
+   "depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-6\")",
    "fieldname": "digital_and_technology_solutions_section",
    "fieldtype": "Section Break",
    "label": "Digital and technology solutions"
@@ -360,7 +360,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 13:22:33.414185",
+ "modified": "2024-05-17 11:13:11.215134",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD activity form",
