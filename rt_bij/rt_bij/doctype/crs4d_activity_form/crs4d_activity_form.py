@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class ActivityCR4SD(Document):
+class CRS4Dactivityform(Document):
     def before_save(self):
         # Details of
         self.total_participants = (self.total_male or 0) + (self.total_female or 0)

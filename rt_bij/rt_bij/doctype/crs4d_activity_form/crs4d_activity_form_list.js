@@ -1,4 +1,4 @@
-frappe.listview_settings['CR4SD Output Form'] = {
+frappe.listview_settings['CRS4D activity form'] = {
     onload: function (listview) {
         $('.layout-side-section').hide();
     }

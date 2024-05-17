@@ -2,16 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-14 18:55:47.382722",
-  "name": "Activity-1",
-  "option_code": 1,
-  "option_name": "1.1.1 - Mass Awareness generation events on village level planning, display of planning process, Climate resilience; Campaign on Nation priority programs",
-  "option_type": "Activity",
-  "output": "Output-1"
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-14 18:55:39.323321",
   "name": "Activity-2",
   "option_code": 2,
@@ -352,16 +342,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-12 14:49:49.491779",
-  "name": "Output-1",
-  "option_code": 1,
-  "option_name": "1.1 - Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
-  "option_type": "Output",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-13 09:28:41.690197",
   "name": "Output IVCD-2",
   "option_code": 2,
@@ -377,6 +357,26 @@
   "option_code": 1,
   "option_name": "4.1 Area under improved production practices/new agriculture technologies",
   "option_type": "Output IVCD",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-14 18:55:47.382722",
+  "name": "Activity-1",
+  "option_code": 1,
+  "option_name": "1.1.1 - Mass Awareness generation events on village level planning, display of planning process, Climate resilience; Campaign on Nation priority programs",
+  "option_type": "Activity",
+  "output": "Output-1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-12 14:49:49.491779",
+  "name": "Output-1",
+  "option_code": 1,
+  "option_name": "1.1 - Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
+  "option_type": "Output",
   "output": null
  }
 ]

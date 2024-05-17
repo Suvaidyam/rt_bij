@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ActivityICVD(Document):
+class CRS4Doutputform(Document):
 	pass
