@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestCR4SDOutputForm(FrappeTestCase):
+class TestCRS4Doutputform(FrappeTestCase):
 	pass

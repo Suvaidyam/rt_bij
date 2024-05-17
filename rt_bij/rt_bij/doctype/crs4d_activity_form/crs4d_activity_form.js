@@ -43,7 +43,7 @@ const integer_length_validator = (value, reqd_length, label) => {
         frappe.throw(`Count of ${label} can't be more than ${reqd_length} digits!`)
     }
 }
-frappe.ui.form.on("Activity CR4SD", {
+frappe.ui.form.on("CRS4D activity form", {
     refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("talukatehsil", "district", frm, frm.doc.district)

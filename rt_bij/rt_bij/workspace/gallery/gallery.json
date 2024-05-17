@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Gallery",
  "links": [],
- "modified": "2024-05-11 17:53:15.345298",
+ "modified": "2024-05-16 20:29:01.808731",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Gallery",
@@ -22,7 +22,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 5.0,
+ "sequence_id": 6.0,
  "shortcuts": [],
  "title": "Gallery"
 }

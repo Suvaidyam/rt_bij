@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class CR4SDOutputForm(Document):
+class IVCDactivityform(Document):
 	pass

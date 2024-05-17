@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-16 22:12:57.308004",
+ "modified": "2024-05-16 20:29:01.680680",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
@@ -27,7 +27,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 3.0,
+ "sequence_id": 4.0,
  "shortcuts": [],
  "title": "Approvals"
 }
