@@ -897,27 +897,6 @@
   "workflow_state": "Pending at SPM"
  },
  {
-  "completed_by": "district@gmail.com",
-  "completed_by_role": "District User",
-  "docstatus": 0,
-  "doctype": "Workflow Action",
-  "modified": "2024-05-17 17:20:42.453001",
-  "name": "hbdon4jqfo",
-  "permitted_roles": [
-   {
-    "parent": "hbdon4jqfo",
-    "parentfield": "permitted_roles",
-    "parenttype": "Workflow Action",
-    "role": "District User"
-   }
-  ],
-  "reference_doctype": "IVCD output form",
-  "reference_name": "ICVD-O-0012",
-  "status": "Completed",
-  "user": null,
-  "workflow_state": "Pending at DPM"
- },
- {
   "completed_by": null,
   "completed_by_role": null,
   "docstatus": 0,
@@ -937,26 +916,5 @@
   "status": "Open",
   "user": null,
   "workflow_state": "Pending at DPM"
- },
- {
-  "completed_by": null,
-  "completed_by_role": null,
-  "docstatus": 0,
-  "doctype": "Workflow Action",
-  "modified": "2024-05-17 17:22:10.660732",
-  "name": "hc9anglhq1",
-  "permitted_roles": [
-   {
-    "parent": "hc9anglhq1",
-    "parentfield": "permitted_roles",
-    "parenttype": "Workflow Action",
-    "role": "Surveyor"
-   }
-  ],
-  "reference_doctype": "IVCD output form",
-  "reference_name": "ICVD-O-0012",
-  "status": "Open",
-  "user": null,
-  "workflow_state": "Rejected"
  }
 ]
