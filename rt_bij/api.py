@@ -33,3 +33,73 @@ def common_api(filter=None, fields=["*"], doctype_name=None):
         page_length=10000,
         ignore_permissions=True
     )
+
+@frappe.whitelist(allow_guest=True)
+def get_crs4d_activity_count():
+    sql_query = """
+        SELECT 
+    COUNT(*) AS total_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Approved' THEN 1 ELSE 0 END), 0) AS approved_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at SPM' THEN 1 ELSE 0 END), 0) AS pending_spm_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Rejected' THEN 1 ELSE 0 END), 0) AS rejected_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at DPM' THEN 1 ELSE 0 END), 0) AS pending_dpm_count
+FROM 
+    `tabCRS4D activity form`
+    """
+    result = frappe.db.sql(sql_query, as_dict=True)
+    return result[0] if result else None
+
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_crs4d_output_count():
+    sql_query = """
+        SELECT 
+    COUNT(*) AS total_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Approved' THEN 1 ELSE 0 END), 0) AS approved_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at SPM' THEN 1 ELSE 0 END), 0) AS pending_spm_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Rejected' THEN 1 ELSE 0 END), 0) AS rejected_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at DPM' THEN 1 ELSE 0 END), 0) AS pending_dpm_count
+FROM 
+    `tabCRS4D output form`
+    """
+    result = frappe.db.sql(sql_query, as_dict=True)
+    return result[0] if result else None
+
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_ivcd_output_count():
+    sql_query = """
+       SELECT 
+    COUNT(*) AS total_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Approved' THEN 1 ELSE 0 END), 0) AS approved_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at SPM' THEN 1 ELSE 0 END), 0) AS pending_spm_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Rejected' THEN 1 ELSE 0 END), 0) AS rejected_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at DPM' THEN 1 ELSE 0 END), 0) AS pending_dpm_count
+FROM 
+    `tabIVCD output form`
+    """
+    result = frappe.db.sql(sql_query, as_dict=True)
+    return result[0] if result else None
+
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_ivcd_activity_count():
+    sql_query = """
+       SELECT 
+    COUNT(*) AS total_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Approved' THEN 1 ELSE 0 END), 0) AS approved_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at SPM' THEN 1 ELSE 0 END), 0) AS pending_spm_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Rejected' THEN 1 ELSE 0 END), 0) AS rejected_count,
+    COALESCE(SUM(CASE WHEN workflow_state = 'Pending at DPM' THEN 1 ELSE 0 END), 0) AS pending_dpm_count
+FROM 
+    `tabIVCD activity form`
+    """
+    result = frappe.db.sql(sql_query, as_dict=True)
+    return result[0] if result else None
+
