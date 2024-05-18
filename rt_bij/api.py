@@ -36,16 +36,11 @@ def common_api(filter=None, fields=["*"], doctype_name=None):
 
 
 @frappe.whitelist(allow_guest=True)
-def common_api(filter=None, fields=["*"], doctype_name=None):
-    if not doctype_name:
-        frappe.throw("doctype_name is required")
-    return frappe.db.get_list(doctype_name,
-        filters=filter,
-        fields=fields,
-        page_length=10000,
-        ignore_permissions=True
-    )
-    
+def get_activities_count():
+    pass
+    count1 = frappe.db.count("IVCD activity form")
+    count2 = frappe.db.count("CRS4D activity form")
+    return count1 + count2
 
 @frappe.whitelist(allow_guest=True)
 def get_pending_count():
