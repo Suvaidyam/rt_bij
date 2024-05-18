@@ -786,10 +786,9 @@
    "fieldtype": "Column Break"
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-17 17:24:49.917483",
+ "modified": "2024-05-18 17:56:46.421754",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D activity form",

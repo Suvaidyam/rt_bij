@@ -95,6 +95,9 @@ frappe.ui.form.on("CRS4D activity form", {
         apply_multiple_filters("activity", frm, { "option_type": "Activity", "output": frm.doc.output ?? "Select output" })
 
     },
+    onload(frm) {
+        frm.page.sidebar.hide();
+    },
     validate(frm) {
         let phone_arr;
         if (frm.doc.phone) {

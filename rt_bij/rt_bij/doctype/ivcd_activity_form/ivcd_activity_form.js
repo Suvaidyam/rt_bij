@@ -78,6 +78,9 @@ frappe.ui.form.on("IVCD activity form", {
         apply_filter("gram_panchayat", "block", frm, frm.doc.talukatehsil)
         apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
     },
+    onload(frm) {
+        frm.page.sidebar.hide();
+    },
 
     state: function (frm) {
         apply_filter("district", "state", frm, frm.doc.state)

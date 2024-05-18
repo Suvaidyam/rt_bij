@@ -2,66 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-18 11:46:40.918787",
-  "name": "Output CRS4D-1",
-  "option_code": 1,
-  "option_name": "1.1 Villages initiated climate resilience measures and integrated into village/Gram Panchayat Development Plan",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-18 12:00:47.095993",
-  "name": "Output CRS4D-2",
-  "option_code": 2,
-  "option_name": "2.1 Villages conducted participatory assessment of common resources and creating management plan",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-18 12:06:47.970346",
-  "name": "Output CRS4D-3",
-  "option_code": 3,
-  "option_name": "2.3 Area brought under efficient management of water",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-18 12:16:57.969783",
-  "name": "Output CRS4D-4",
-  "option_code": 4,
-  "option_name": "2.4 Area covered with conservation and restoration of common resources",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-18 12:24:53.581851",
-  "name": "Output CRS4D-5",
-  "option_code": 5,
-  "option_name": "2.7 Area brought under climate adaptive farming practices",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-18 12:36:00.219132",
-  "name": "Output CRS4D-6",
-  "option_code": 6,
-  "option_name": "3.2 Area covered under nutrition rich and bio fortified crops",
-  "option_type": "Output CRS4D",
-  "output": null
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-14 18:55:47.382722",
   "name": "Activity-1",
   "option_code": 1,
