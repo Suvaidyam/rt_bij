@@ -17,7 +17,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Option Type",
-   "options": "Output\nActivity\nOutput IVCD\nOutput ICVD\nActivity ICVD",
+   "options": "Output\nOutput CRS4D\nActivity\nOutput IVCD\nOutput ICVD\nActivity ICVD",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -46,7 +46,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 10:21:23.109711",
+ "modified": "2024-05-18 11:44:39.303669",
  "modified_by": "Administrator",
  "module": "Rt Bij Master",
  "name": "Options",
