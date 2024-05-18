@@ -916,5 +916,26 @@
   "status": "Open",
   "user": null,
   "workflow_state": "Pending at DPM"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-05-18 12:21:19.064922",
+  "name": "67o66sf6u0",
+  "permitted_roles": [
+   {
+    "parent": "67o66sf6u0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "District User"
+   }
+  ],
+  "reference_doctype": "CRS4D activity form",
+  "reference_name": "CR4SD-A-0014",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Pending at DPM"
  }
 ]
