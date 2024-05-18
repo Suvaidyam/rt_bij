@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-17 17:21:54.593221",
+ "modified": "2024-05-18 17:49:56.275483",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
@@ -26,8 +26,15 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
- "sequence_id": 3.0,
+ "roles": [
+  {
+   "role": "State User"
+  },
+  {
+   "role": "District User"
+  }
+ ],
+ "sequence_id": 2.0,
  "shortcuts": [],
  "title": "Approvals"
 }

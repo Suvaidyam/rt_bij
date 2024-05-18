@@ -7,6 +7,9 @@ from frappe.model.document import Document
 
 class CRS4Dactivityform(Document):
     def before_save(self):
+        state = self.workflow_state
+        if state == "Rejected":
+            frappe.publish_realtime('before_save_event',state)
         # Details of
         self.total_participants = (self.total_male or 0) + (self.total_female or 0)
         self.grand_total_of_participants = (self.total_male or 0) + (self.total_female or 0)
