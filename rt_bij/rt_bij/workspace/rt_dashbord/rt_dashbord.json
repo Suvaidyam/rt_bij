@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"V8VFXBCpSa\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">RT-Dashbord</span>\",\"col\":12}},{\"id\":\"KkK7dqoW4O\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Dashbord Block\",\"col\":12}}]",
+ "content": "[{\"id\":\"KkK7dqoW4O\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Dashbord Block\",\"col\":12}}]",
  "creation": "2024-05-08 10:14:28.189697",
  "custom_blocks": [
   {
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "RT-Dashbord",
  "links": [],
- "modified": "2024-05-16 20:29:01.467809",
+ "modified": "2024-05-17 17:58:30.133023",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "RT-Dashbord",

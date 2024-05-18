@@ -610,10 +610,9 @@
    "mandatory_depends_on": "eval:doc.output == \"Output-6\""
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-17 17:26:54.727421",
+ "modified": "2024-05-18 09:51:55.408099",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
