@@ -1,6 +1,46 @@
 // Copyright (c) 2024, suvaidyam and contributors
 // For license information, please see license.txt
-
+function callAPI(options) {
+    return new Promise((resolve, reject) => {
+        frappe.call({
+            ...options,
+            callback: async function (response) {
+                resolve(response?.message || response?.value)
+            }
+        });
+    })
+}
+function show_comment_popup() {
+    let d = new frappe.ui.Dialog({
+        title: 'Add Comment',
+        fields: [
+            {
+                label: 'Comment',
+                fieldname: 'comment',
+                fieldtype: 'Small Text',
+                reqd: 1
+            }
+        ],
+        primary_action_label: 'Submit',
+        async primary_action(values) {
+            if (values.comment) {
+            await callAPI({
+                method: 'frappe.desk.form.utils.add_comment',
+                args:{
+                    reference_doctype: 'CRS4D output form',
+                    reference_name: cur_frm.doc.name,
+                    content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
+                    comment_email: frappe.session.user,
+                    comment_by: frappe.session.user
+                    }
+                })
+            }
+            d.hide();
+            cur_frm.refresh();
+        }
+    });
+    d.show();
+}
 function apply_filter(field_name, filter_on, frm, filter_value, withoutFilter = false) {
     frm.fields_dict[field_name].get_query = () => {
         if (withoutFilter) {
@@ -121,4 +161,11 @@ frappe.ui.form.on("IVCD activity form", {
     activity: function () {
         reset_field_values(frm, ["remarks_explain_the_impact_created", "total_incremental_income_benefit_to_farmer", "savings_in_arthiya_commission_inr_per_quintal", "savings_in_transport_inr_per_quintal", "price_offered_in_the_local_market", "price_offered_inrquintal", "volumes", "value_of_transaction", "no_of_farmers", "name_of_the_commodity", "farmer_producer_organisation_fpo_2", "type",])
     },
+});
+
+frappe.realtime.on("before_save_event", function(data) {
+    if(data === "Rejected"){
+        show_comment_popup();
+        // cur_frm.footer.make_comment_box();
+    }
 });
