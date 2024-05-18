@@ -610,7 +610,6 @@
    "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-6\""
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
  "modified": "2024-05-18 12:37:31.322315",
