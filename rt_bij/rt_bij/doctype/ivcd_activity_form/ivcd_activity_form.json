@@ -54,7 +54,9 @@
   "area_of_land_on_which_adopted",
   "column_break_gucb",
   "no_of_farmers_adopting_the_techpractice",
-  "remark"
+  "remark",
+  "section_break_mmqm",
+  "html_wpao"
  ],
  "fields": [
   {
@@ -355,11 +357,20 @@
    "label": "Taluka/Tehsil",
    "mandatory_depends_on": "eval:[\"Taluka/Tehsil Level\",\"Gram Panchayat Level\",\"Village Level\"].includes(doc.geographical_level_of_the_event_organised)",
    "options": "Block"
+  },
+  {
+   "fieldname": "section_break_mmqm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_wpao",
+   "fieldtype": "HTML",
+   "options": "<div id=\"workflow-table\"></div>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 11:54:21.088159",
+ "modified": "2024-05-19 12:04:53.003371",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD activity form",

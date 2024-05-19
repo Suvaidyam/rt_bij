@@ -5,10 +5,22 @@ function callAPI(options) {
         frappe.call({
             ...options,
             callback: async function (response) {
-                resolve(response?.message || response?.value)
+                resolve(response?.message || response)
             }
         });
     })
+}
+function renderRelativeTime(timestamp) {
+    const date = moment(timestamp);
+    const now = moment();
+
+    if (date.isSame(now, 'day')) {
+        return "today";
+    } else if (date.isSame(now.clone().subtract(1, 'days'), 'day')) {
+        return "yesterday";
+    } else {
+        return date.format('MMMM Do YYYY');
+    }
 }
 function show_comment_popup() {
     let d = new frappe.ui.Dialog({
@@ -24,14 +36,14 @@ function show_comment_popup() {
         primary_action_label: 'Submit',
         async primary_action(values) {
             if (values.comment) {
-            await callAPI({
-                method: 'frappe.desk.form.utils.add_comment',
-                args:{
-                    reference_doctype: 'IVCD activity form',
-                    reference_name: cur_frm.doc.name,
-                    content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
-                    comment_email: frappe.session.user,
-                    comment_by: frappe.session.user
+                await callAPI({
+                    method: 'frappe.desk.form.utils.add_comment',
+                    args: {
+                        reference_doctype: 'IVCD activity form',
+                        reference_name: cur_frm.doc.name,
+                        content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
+                        comment_email: frappe.session.user,
+                        comment_by: frappe.session.user
                     }
                 })
             }
@@ -69,7 +81,7 @@ const reset_field_values = (frm, fields) => {
     });
 }
 frappe.ui.form.on("IVCD activity form", {
-    refresh(frm) {
+    async refresh(frm) {
         apply_filter("output", "option_type", frm, "Output ICVD")
         apply_filter("activity", "option_type", frm, "Activity ICVD")
         apply_filter("activity", "output", frm, frm.doc.output)
@@ -77,9 +89,47 @@ frappe.ui.form.on("IVCD activity form", {
         apply_filter("talukatehsil", "district", frm, frm.doc.district)
         apply_filter("gram_panchayat", "block", frm, frm.doc.talukatehsil)
         apply_filter("village", "grampanchayat", frm, frm.doc.gram_panchayat)
+        let ws = await callAPI({
+            method: `frappe.desk.form.load.getdoc?doctype=IVCD%20activity%20form&name=${frm.doc.name}`,
+
+        })
+
+        let workflow_logs = ws?.docinfo?.workflow_logs?.map((e) => {
+            const timestamp = e.creation;
+            const relativeTime = renderRelativeTime(timestamp);
+            return {
+                ...e,
+                creation_stamp: relativeTime,
+                html: `
+                <div class="timeline" style="position: relative;">
+                    <div class="timeline-item" data-timestamp="2023-01-01T12:00:00Z" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+                        <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+                            <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                                <use href="#icon-branch"></use>
+                            </svg>
+                        </div>
+                        <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); max-width: 600px;">
+                        ${e?.owner} · ${e?.content}
+                        <span> · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+                    </div>
+                <div style="content: ''; position: absolute; left: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+                </div>
+                </div>
+
+                    `
+            };
+        }) || [];
+
+        // console.log(workflow_logs, 'workflow_logs');
+        if (workflow_logs.length > 0) {
+            document.getElementById('workflow-table').innerHTML = workflow_logs.map(e => e.html).join('');
+        }
+
     },
     onload(frm) {
         frm.page.sidebar.hide();
+        console.log(frm, 'frm');
+        $('div.form-footer').hide();
     },
 
     state: function (frm) {
@@ -166,8 +216,8 @@ frappe.ui.form.on("IVCD activity form", {
     },
 });
 
-frappe.realtime.on("before_save_event", function(data) {
-    if(data === "Rejected"){
+frappe.realtime.on("before_save_event", function (data) {
+    if (data === "Rejected") {
         show_comment_popup();
         // cur_frm.footer.make_comment_box();
     }
