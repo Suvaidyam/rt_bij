@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Response{####}",
+ "autoname": "format:Response {####}",
  "creation": "2024-05-12 12:21:02.008598",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -612,7 +612,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-18 12:37:31.322315",
+ "modified": "2024-05-19 11:59:18.497421",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
