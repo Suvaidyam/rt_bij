@@ -94,36 +94,78 @@ frappe.ui.form.on("IVCD activity form", {
 
         })
 
-        let workflow_logs = ws?.docinfo?.workflow_logs?.map((e) => {
-            const timestamp = e.creation;
-            const relativeTime = renderRelativeTime(timestamp);
-            return {
-                ...e,
-                creation_stamp: relativeTime,
-                html: `
-                <div class="timeline" style="position: relative;">
-                    <div class="timeline-item" data-timestamp="2023-01-01T12:00:00Z" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
-                        <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
-                            <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
-                                <use href="#icon-branch"></use>
-                            </svg>
-                        </div>
-                        <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); max-width: 600px;">
-                        ${e?.owner} · ${e?.content}
-                        <span> · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
-                    </div>
-                <div style="content: ''; position: absolute; left: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+        // Mapping workflow_logs
+const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
+    const timestamp = e.creation;
+    const relativeTime = renderRelativeTime(timestamp);
+    return {
+        ...e,
+        creation_stamp: relativeTime,
+        html: `
+        <div class="timeline" style="position: relative;">
+            <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+                <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                        <use href="#icon-branch"></use>
+                    </svg>
                 </div>
+                <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); max-width: 600px;">
+                    ${e?.owner} · ${e?.content}
+                    <span> · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
                 </div>
+                <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+            </div>
+        </div>`
+    };
+}) || [];
 
-                    `
-            };
-        }) || [];
+// Mapping comments
+const comments = ws?.docinfo?.comments?.map((e) => {
+    const timestamp = e.creation;
+    const relativeTime = renderRelativeTime(timestamp);
+    return {
+        ...e,
+        creation_stamp: relativeTime,
+        html: `
+        <div class="timeline" style="position: relative;">
+    <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+        <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+            <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                <use href="#icon-comment"></use>
+            </svg>
+        </div>
+        <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 600px; position: relative;">
+            <span>${e?.owner} · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start;">
+                <div style="position: relative; top: -5px; background-color: #FCF0F0; padding: 5px; border-radius: 20px; color: #B5342D;">Rejection </div> 
+                <div style="margin-left: 8px; max-width: 500px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${e?.content}</div>
+            </div>
+        </div>
+        <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+    </div>
+</div>
 
-        // console.log(workflow_logs, 'workflow_logs');
-        if (workflow_logs.length > 0) {
-            document.getElementById('workflow-table').innerHTML = workflow_logs.map(e => e.html).join('');
-        }
+    
+    
+
+    
+`
+    
+    };
+}) || [];
+
+// Combining both workflowLogs and comments
+const combinedData = [...workflowLogs, ...comments];
+
+// Sorting combined data by timestamp in descending order
+combinedData.sort((a, b) => new Date(b.creation) - new Date(a.creation));
+
+// Rendering combined data
+if (combinedData.length > 0) {
+    document.getElementById('workflow-table').innerHTML = combinedData.map(e => e.html).join('');
+}
+
+
 
     },
     onload(frm) {
