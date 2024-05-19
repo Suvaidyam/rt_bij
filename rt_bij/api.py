@@ -20,7 +20,7 @@ def get_meta():
     doctypes = frappe.db.sql(sql, as_dict=True)
     for doctype in doctypes:
         meta = frappe.get_meta(doctype.name)
-        doctype['fields'] = meta.fields
+        doctype['fields'] = [field for field in meta.fields if not field.hidden]
     return doctypes
 
 @frappe.whitelist(allow_guest=True)
