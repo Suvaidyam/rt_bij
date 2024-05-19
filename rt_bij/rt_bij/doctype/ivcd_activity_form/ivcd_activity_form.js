@@ -27,7 +27,7 @@ function show_comment_popup() {
             await callAPI({
                 method: 'frappe.desk.form.utils.add_comment',
                 args:{
-                    reference_doctype: 'CRS4D output form',
+                    reference_doctype: 'IVCD activity form',
                     reference_name: cur_frm.doc.name,
                     content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
                     comment_email: frappe.session.user,
