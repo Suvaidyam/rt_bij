@@ -18,9 +18,8 @@ fixtures = [
     "Workflow",
     "Workflow State",
     "Workflow Action",
-    "Role Profile"
-
-
+    "Role Profile",
+    {"dt":"Property Setter",  "filters": [["is_system_generated", "=", 0]]}
     ]
 
 # Includes in <head>
