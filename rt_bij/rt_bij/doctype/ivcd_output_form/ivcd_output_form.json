@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Response {####}",
+ "autoname": "format:Response{####}",
  "creation": "2024-05-12 12:22:36.288121",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -191,7 +191,7 @@
    "options": "\nBio Decomposers\nBio-fortified seed\nBoom Sprayers\nBroad bed furrow\nCrop Insurance\nDead furrow\nDeep Ploughing\nDrip & Sprinklers\nDrones for Spraying\nImproved Seed\nLine sowing/Transplanting\nLow cost cold storages\nNano Urea\nNipping\nPaddy Transplanters\nPheromone Traps\nPower Sprayers\nPower Tillers\nPulse magic\nSagarika\nSatellite based advisory\nSeed Dibblers\nSeed Drills\nSeed Treatment\nSound & Light sensor for animals\nUse of Gypsum\nUse of Sulphur\nOther"
   },
   {
-   "depends_on": "eval:(doc.technology_practice_demonstrated == 'Other');",
+   "depends_on": "eval:doc.technology_practice_demonstrated == 'Other';",
    "fieldname": "specify_others",
    "fieldtype": "Data",
    "label": "Specify Others",
@@ -571,7 +571,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 11:59:06.342135",
+ "modified": "2024-05-19 14:17:32.334031",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD output form",
