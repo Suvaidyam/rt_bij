@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Response{####}",
+ "autoname": "format:Response {####}",
  "creation": "2024-05-12 12:22:36.288121",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -571,7 +571,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-18 17:58:36.471111",
+ "modified": "2024-05-19 11:59:06.342135",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD output form",
