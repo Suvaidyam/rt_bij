@@ -1,30 +1,38 @@
-function addColumn() {
-    // Create a new div element
-    const newDiv = document.createElement('div');
-    newDiv.className = 'list-row-col ellipsis hidden-xs';
+function convertTimestampToPassedTime(timestamp) {
+    const currentTime = moment();
+    const timestampMoment = moment(timestamp);
+    const duration = moment.duration(currentTime.diff(timestampMoment));
 
-    // Create a new span element
-    const newSpan = document.createElement('span');
-    newSpan.setAttribute('data-sort-by', 'priority');
-    newSpan.setAttribute('title', 'Click to sort by Priority');
-    newSpan.textContent = 'Priority';
-
-    // Append the span to the div
-    newDiv.appendChild(newSpan);
-
-    // Append the new div to the parent container
-    const parent = document.querySelector('.level-left.list-header-subject');
-    parent.appendChild(newDiv);
-    console.log(parent)
+    if (duration.asSeconds() < 60) {
+        return `${Math.floor(duration.asSeconds())} s`;
+    } else if (duration.asMinutes() < 60) {
+        return `${Math.floor(duration.asMinutes())} m`;
+    } else if (duration.asHours() < 24) {
+        return `${Math.floor(duration.asHours())} h`;
+    } else if (duration.asDays() < 30) {
+        return `${Math.floor(duration.asDays())} d`;
+    } else {
+        const months = Math.floor(duration.asMonths());
+        return months === 1 ? '1 month ago' : `${months} months ago`;
+    }
 }
-
 frappe.listview_settings['CRS4D activity form'] = {
     onload: function (listview) {
+        console.log(listview)
         $('.layout-side-section').hide();
-        // const parentElement = document.querySelector(".level-left.list-header-subject");
-        // parentElement.innerHTML = `<div class="list-row-col ellipsis "><span>Test</span></div>`
-        // parentElement.appendChild(parentElement)
-        // addColumn();
+        listview.after_render = function () {
+            // $('.like-icon').hide();
+            let icon = $('[title="Liked by me"]')
+            console.log(icon)
+            let new_data = listview.data.map((item) => {
+                return {
+                    ...item, date_of_visit: frappe.datetime.str_to_user(item.creation).split(" ")[0],
+                    pending_since: convertTimestampToPassedTime(item.creation)
+                }
+            })
+            listview.data = new_data;
+            listview.render_list();
+            console.log(listview);
+        }
     }
-
 };

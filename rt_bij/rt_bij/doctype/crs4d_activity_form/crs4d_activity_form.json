@@ -106,7 +106,10 @@
   "rng_photos_section",
   "image2",
   "column_break_xcic",
-  "image_description2"
+  "image_description2",
+  "section_break_gxws",
+  "date_of_visit",
+  "pending_since"
  ],
  "fields": [
   {
@@ -784,11 +787,26 @@
   {
    "fieldname": "column_break_izmg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gxws",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Data",
+   "label": "Date of Visit"
+  },
+  {
+   "fieldname": "pending_since",
+   "fieldtype": "Data",
+   "label": "Pending Since"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 11:58:51.754593",
+ "modified": "2024-05-19 18:28:26.460929",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D activity form",
