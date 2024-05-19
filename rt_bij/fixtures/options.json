@@ -242,16 +242,6 @@
  {
   "docstatus": 0,
   "doctype": "Options",
-  "modified": "2024-05-14 10:39:47.763779",
-  "name": "Activity ICVD-1",
-  "option_code": 1,
-  "option_name": "4.2.1 - Awareness generation program on Good agriculture practices",
-  "option_type": "Activity ICVD",
-  "output": "Output ICVD-2"
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
   "modified": "2024-05-14 10:40:29.398285",
   "name": "Activity ICVD-2",
   "option_code": 2,
@@ -308,16 +298,6 @@
   "option_name": "value chain MIS",
   "option_type": "Activity ICVD",
   "output": "Output ICVD-4"
- },
- {
-  "docstatus": 0,
-  "doctype": "Options",
-  "modified": "2024-05-14 10:14:38.334340",
-  "name": "Output ICVD-2",
-  "option_code": 2,
-  "option_name": "4.2 - Farmers adopting and benefitting with improved practices and/or new agriculture technologies",
-  "option_type": "Output ICVD",
-  "output": null
  },
  {
   "docstatus": 0,
@@ -437,6 +417,26 @@
   "option_code": 5,
   "option_name": "3.1 - Households with diversified food production and consumption",
   "option_type": "Output",
+  "output": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-14 10:39:47.763779",
+  "name": "Activity ICVD-1",
+  "option_code": 1,
+  "option_name": "4.2.1 - Awareness generation program on Good agriculture practices",
+  "option_type": "Activity ICVD",
+  "output": "Output ICVD-2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Options",
+  "modified": "2024-05-14 10:14:38.334340",
+  "name": "Output ICVD-2",
+  "option_code": 2,
+  "option_name": "4.2 - Farmers adopting and benefitting with improved practices and/or new agriculture technologies",
+  "option_type": "Output ICVD",
   "output": null
  }
 ]
