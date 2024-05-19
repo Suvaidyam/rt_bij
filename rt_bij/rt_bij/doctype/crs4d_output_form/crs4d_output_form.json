@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Response {####}",
+ "autoname": "format:Response{####}",
  "creation": "2024-05-12 12:21:02.008598",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -431,7 +431,7 @@
   },
   {
    "fieldname": "gps_coordinate",
-   "fieldtype": "Geolocation",
+   "fieldtype": "Data",
    "label": "GPS Coordinate",
    "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-3\""
   },
@@ -483,7 +483,7 @@
   },
   {
    "fieldname": "gps_coordinate_2",
-   "fieldtype": "Geolocation",
+   "fieldtype": "Data",
    "label": "GPS Coordinate ",
    "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-4\""
   },
@@ -612,7 +612,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 11:59:18.497421",
+ "modified": "2024-05-19 15:40:34.060352",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
