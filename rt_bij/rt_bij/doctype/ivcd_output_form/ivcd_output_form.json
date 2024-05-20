@@ -84,7 +84,9 @@
   "savings_in_transport_2",
   "savings_in_arthiya_commission_2",
   "total_incremental_income_benefit_to_farmer_2",
-  "remarks_3"
+  "remarks_3",
+  "section_break_ariq",
+  "html_pldw"
  ],
  "fields": [
   {
@@ -567,11 +569,20 @@
    "label": "Gram Panchayat",
    "options": "Grampanchayat",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ariq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_pldw",
+   "fieldtype": "HTML",
+   "options": "<div id=\"workflow-table\"></div>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 14:17:32.334031",
+ "modified": "2024-05-20 10:42:48.963696",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD output form",

@@ -5,10 +5,22 @@ function callAPI(options) {
         frappe.call({
             ...options,
             callback: async function (response) {
-                resolve(response?.message || response?.value)
+                resolve(response?.message || response)
             }
         });
     })
+}
+function renderRelativeTime(timestamp) {
+    const date = moment(timestamp);
+    const now = moment();
+
+    if (date.isSame(now, 'day')) {
+        return "today";
+    } else if (date.isSame(now.clone().subtract(1, 'days'), 'day')) {
+        return "yesterday";
+    } else {
+        return date.format('MMMM Do YYYY');
+    }
 }
 function show_comment_popup() {
     let d = new frappe.ui.Dialog({
@@ -24,14 +36,14 @@ function show_comment_popup() {
         primary_action_label: 'Submit',
         async primary_action(values) {
             if (values.comment) {
-            await callAPI({
-                method: 'frappe.desk.form.utils.add_comment',
-                args:{
-                    reference_doctype: 'IVCD output form',
-                    reference_name: cur_frm.doc.name,
-                    content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
-                    comment_email: frappe.session.user,
-                    comment_by: frappe.session.user
+                await callAPI({
+                    method: 'frappe.desk.form.utils.add_comment',
+                    args: {
+                        reference_doctype: 'IVCD output form',
+                        reference_name: cur_frm.doc.name,
+                        content: `<div class="ql-editor read-mode"><p>${values.comment}</p></div>`,
+                        comment_email: frappe.session.user,
+                        comment_by: frappe.session.user
                     }
                 })
             }
@@ -71,15 +83,76 @@ const integer_length_validator = (value, reqd_length, label) => {
 }
 
 frappe.ui.form.on("IVCD output form", {
-    refresh(frm) {
+    async refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("block", "district", frm, frm.doc.district)
         apply_filter("grampanchayat", "block", frm, frm.doc.block)
         apply_filter("village", "grampanchayat", frm, frm.doc.grampanchayat)
         apply_filter("output", "option_type", frm, "Output IVCD")
+
+
+        let ws = await callAPI({
+            method: `frappe.desk.form.load.getdoc?doctype=IVCD%20output%20form&name=${frm.doc.name}`,
+
+        })
+        const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
+            const timestamp = e.creation;
+            const relativeTime = renderRelativeTime(timestamp);
+            return {
+                ...e,
+                creation_stamp: relativeTime,
+                html: `
+        <div class="timeline" style="position: relative;">
+            <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+                <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                        <use href="#icon-branch"></use>
+                    </svg>
+                </div>
+                <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); max-width: 600px;">
+                    ${e?.owner} · ${e?.content}
+                    <span> · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+                </div>
+                <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+            </div>
+        </div>`
+            };
+        }) || [];
+        const comments = ws?.docinfo?.comments?.map((e) => {
+            const timestamp = e.creation;
+            const relativeTime = renderRelativeTime(timestamp);
+            return {
+                ...e,
+                creation_stamp: relativeTime,
+                html: `
+        <div class="timeline" style="position: relative;">
+    <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+        <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+            <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                <use href="#icon-comment"></use>
+            </svg>
+        </div>
+        <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 600px; position: relative;">
+            <span>${e?.owner} · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start;">
+                <div style="position: relative; top: -5px; background-color: #FCF0F0; padding: 5px; border-radius: 20px; color: #B5342D;">Rejection </div> 
+                <div style="margin-left: 8px; max-width: 500px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${e?.content}</div>
+            </div>
+        </div>
+        <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+    </div>
+</div>
+`};
+        }) || [];
+        const combinedData = [...workflowLogs, ...comments];
+        combinedData.sort((a, b) => new Date(b.creation) - new Date(a.creation));
+        if (combinedData.length > 0) {
+            document.getElementById('workflow-table').innerHTML = combinedData.map(e => e.html).join('');
+        }
     },
     onload(frm) {
         frm.page.sidebar.hide();
+        $('div.form-footer').hide();
     },
     state: function (frm) {
         apply_filter("district", "state", frm, frm.doc.state)
@@ -230,8 +303,8 @@ frappe.ui.form.on("IVCD output form", {
 });
 
 
-frappe.realtime.on("before_save_event", function(data) {
-    if(data === "Rejected"){
+frappe.realtime.on("before_save_event", function (data) {
+    if (data === "Rejected") {
         show_comment_popup();
         // cur_frm.footer.make_comment_box();
     }

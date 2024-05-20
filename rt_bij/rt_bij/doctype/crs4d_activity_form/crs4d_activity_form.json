@@ -109,7 +109,9 @@
   "image_description2",
   "section_break_gxws",
   "date_of_visit",
-  "pending_since"
+  "pending_since",
+  "section_break_nkwt",
+  "html_qrap"
  ],
  "fields": [
   {
@@ -778,11 +780,20 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Pending Since"
+  },
+  {
+   "fieldname": "section_break_nkwt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_qrap",
+   "fieldtype": "HTML",
+   "options": "<div id=\"workflow-table\"></div>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 10:17:46.808185",
+ "modified": "2024-05-20 11:04:15.419851",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D activity form",

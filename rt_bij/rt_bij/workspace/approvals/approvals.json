@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Approvals",
  "links": [],
- "modified": "2024-05-18 17:49:56.275483",
+ "modified": "2024-05-20 10:59:30.636877",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "Approvals",
@@ -32,6 +32,9 @@
   },
   {
    "role": "District User"
+  },
+  {
+   "role": "Administrator"
   }
  ],
  "sequence_id": 2.0,
