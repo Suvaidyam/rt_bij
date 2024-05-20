@@ -98,6 +98,7 @@
   {
    "fieldname": "output",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Output",
    "options": "Options",
    "reqd": 1
@@ -643,7 +644,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 11:53:26.893030",
+ "modified": "2024-05-20 17:54:55.637962",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
