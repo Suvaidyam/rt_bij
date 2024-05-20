@@ -27,6 +27,10 @@ frappe.listview_settings['CRS4D output form'] = {
     },
     onload: function (listview) {
         $('.layout-side-section').hide();
+        $("use.like-icon").hide();
+        $(".comment-count").hide();
+        $(".frappe-timestamp").hide();
+        $(".avatar-small").hide();
         listview.after_render = function () {
             let new_data = listview.data.map((item) => {
                 return {
@@ -37,5 +41,6 @@ frappe.listview_settings['CRS4D output form'] = {
             listview.data = new_data;
             listview.render_list();
         }
+        
     }
 };
