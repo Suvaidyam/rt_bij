@@ -7,19 +7,19 @@ app_license = "mit"
 required_apps = ["Suvaidyam/frappe_mobile_service"]
 fixtures = [
 	"Custom HTML Block",
-	# "Participant Type",
-	# "Options",
-	# "State",
-	# "District",
-	# "Block",
-	# "Grampanchayat",
-	# "Village",
-	# "Hamlet",
-    # "Workflow",
-    # "Workflow State",
-    # "Workflow Action",
-    # "Role Profile",
-    # {"dt":"Property Setter",  "filters": [["is_system_generated", "=", 0]]}
+	"Participant Type",
+	"Options",
+	"State",
+	"District",
+	"Block",
+	"Grampanchayat",
+	"Village",
+	"Hamlet",
+    "Workflow",
+    "Workflow State",
+    "Workflow Action",
+    "Role Profile",
+    {"dt":"Property Setter",  "filters": [["is_system_generated", "=", 0]]}
     ]
 
 # Includes in <head>
