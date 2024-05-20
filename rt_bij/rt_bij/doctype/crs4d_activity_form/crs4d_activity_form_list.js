@@ -27,9 +27,10 @@ frappe.listview_settings['CRS4D activity form'] = {
             let new_data = listview.data.map((item) => {
                 return {
                     ...item, date_of_visit: frappe.datetime.str_to_user(item.creation).split(" ")[0],
-                    pending_since: convertTimestampToPassedTime(item.creation)
+                    pending_since: ["Pending at DPM","Pending at SPM"].includes(item.workflow_state) ? convertTimestampToPassedTime(item.modified) : "-"
                 }
             })
+            console.log(new_data);
             listview.data = new_data;
             listview.render_list();
             console.log(listview);
