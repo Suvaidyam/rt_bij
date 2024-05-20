@@ -4,13 +4,13 @@ function convertTimestampToPassedTime(timestamp) {
     const duration = moment.duration(currentTime.diff(timestampMoment));
 
     if (duration.asSeconds() < 60) {
-        return `${Math.floor(duration.asSeconds())} s`;
+        return `${Math.floor(duration.asSeconds())} seconds`;
     } else if (duration.asMinutes() < 60) {
-        return `${Math.floor(duration.asMinutes())} m`;
+        return `${Math.floor(duration.asMinutes())} minutes`;
     } else if (duration.asHours() < 24) {
-        return `${Math.floor(duration.asHours())} h`;
+        return `${Math.floor(duration.asHours())} hours`;
     } else if (duration.asDays() < 30) {
-        return `${Math.floor(duration.asDays())} d`;
+        return `${Math.floor(duration.asDays())} days`;
     } else {
         const months = Math.floor(duration.asMonths());
         return months === 1 ? '1 month ago' : `${months} months ago`;
@@ -18,22 +18,16 @@ function convertTimestampToPassedTime(timestamp) {
 }
 frappe.listview_settings['CRS4D activity form'] = {
     onload: function (listview) {
-        console.log(listview)
         $('.layout-side-section').hide();
         listview.after_render = function () {
-            // $('.like-icon').hide();
-            let icon = $('[title="Liked by me"]')
-            console.log(icon)
             let new_data = listview.data.map((item) => {
                 return {
                     ...item, date_of_visit: frappe.datetime.str_to_user(item.creation).split(" ")[0],
                     pending_since: ["Pending at DPM","Pending at SPM"].includes(item.workflow_state) ? convertTimestampToPassedTime(item.modified) : "-"
                 }
             })
-            console.log(new_data);
             listview.data = new_data;
             listview.render_list();
-            console.log(listview);
         }
     }
 };
