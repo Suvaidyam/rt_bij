@@ -222,33 +222,33 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")",
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")",
    "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services"
   },
   {
    "fieldname": "name_of_the_commodity",
    "fieldtype": "Select",
    "label": "Name of the Commodity",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")",
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")",
    "options": "\nCommodity 1\nCommodity 2"
   },
   {
    "fieldname": "no_of_farmers",
    "fieldtype": "Int",
    "label": "No of Farmers",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "value_of_transaction",
    "fieldtype": "Int",
    "label": "Value of Transaction",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "volumes",
    "fieldtype": "Int",
    "label": "Volumes",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "price_offered_inrquintal",
@@ -259,13 +259,13 @@
    "fieldname": "price_offered_in_the_local_market",
    "fieldtype": "Int",
    "label": "Price offered in the local market",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "savings_in_transport_inr_per_quintal",
    "fieldtype": "Int",
    "label": "Savings in Transport (INR per quintal)",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "savings_in_arthiya_commission_inr_per_quintal",
@@ -276,7 +276,7 @@
    "fieldname": "total_incremental_income_benefit_to_farmer",
    "fieldtype": "Int",
    "label": "Total Incremental Income Benefit to Farmer",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")"
   },
   {
    "fieldname": "remarks_explain_the_impact_created",
@@ -293,27 +293,27 @@
    "fieldname": "name_of_the_crop",
    "fieldtype": "Select",
    "label": "Name of the Crop",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-6\")",
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-6\")",
    "options": "\nCrop 1\nCrop 2"
   },
   {
    "fieldname": "name_of_technology_practice_adopted",
    "fieldtype": "Select",
    "label": "Name of Technology/ Practice Adopted",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-6\")",
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-6\")",
    "options": "\nTechnology 1\nTechnology 2"
   },
   {
    "fieldname": "area_of_land_on_which_adopted",
    "fieldtype": "Int",
    "label": "Area of land on which adopted",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-6\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-6\")"
   },
   {
    "fieldname": "no_of_farmers_adopting_the_techpractice",
    "fieldtype": "Int",
    "label": "No. of Farmers adopting the tech/practice",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-6\")"
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-6\")"
   },
   {
    "fieldname": "column_break_iras",
@@ -346,7 +346,7 @@
    "fieldname": "farmer_producer_organisation_fpo_2",
    "fieldtype": "Select",
    "label": "Farmer Producer Organisation (FPO)",
-   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" && doc.activity == \"Activity ICVD-7\")",
+   "mandatory_depends_on": "eval:(doc.output == \"Output ICVD-4\" || doc.activity == \"Activity ICVD-7\")",
    "options": "\nFPO 1\nFPO 2"
   },
   {
@@ -399,7 +399,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 15:28:38.504641",
+ "modified": "2024-05-20 11:53:39.483680",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD activity form",
