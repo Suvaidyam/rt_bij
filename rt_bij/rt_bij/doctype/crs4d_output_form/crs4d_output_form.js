@@ -6,10 +6,22 @@ function callAPI(options) {
         frappe.call({
             ...options,
             callback: async function (response) {
-                resolve(response?.message || response?.value)
+                resolve(response?.message || response)
             }
         });
     })
+}
+function renderRelativeTime(timestamp) {
+    const date = moment(timestamp);
+    const now = moment();
+
+    if (date.isSame(now, 'day')) {
+        return "today";
+    } else if (date.isSame(now.clone().subtract(1, 'days'), 'day')) {
+        return "yesterday";
+    } else {
+        return date.format('MMMM Do YYYY');
+    }
 }
 function show_comment_popup() {
     let d = new frappe.ui.Dialog({
@@ -72,14 +84,74 @@ const reset_field_values = (frm, fields) => {
 frappe.ui.form.on("CRS4D output form", {
     onload(frm) {
         frm.page.sidebar.hide();
+        $('div.form-footer').hide();
     },
-    refresh(frm) {
+  async  refresh(frm) {
         apply_filter("district", "state", frm, frm.doc.state)
         apply_filter("block", "district", frm, frm.doc.district)
         apply_filter("talukatehsil", "block", frm, frm.doc.block)
         apply_filter("gram_panchayat", "grampanchayat", frm, frm.doc.talukatehsil)
         apply_filter("village", "village", frm, frm.doc.gram_panchayat)
         apply_filter("output", "option_type", frm, "Output CRS4D")
+
+        let ws = await callAPI({
+            method: `frappe.desk.form.load.getdoc?doctype=CRS4D%20output%20form&name=${frm.doc.name}`,
+
+        })
+const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
+    const timestamp = e.creation;
+    const relativeTime = renderRelativeTime(timestamp);
+    return {
+        ...e,
+        creation_stamp: relativeTime,
+        html: `
+        <div class="timeline" style="position: relative;">
+            <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+                <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                        <use href="#icon-branch"></use>
+                    </svg>
+                </div>
+                <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); max-width: 600px;">
+                    ${e?.owner} · ${e?.content}
+                    <span> · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+                </div>
+                <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+            </div>
+        </div>`
+    };
+}) || [];
+const comments = ws?.docinfo?.comments?.map((e) => {
+    const timestamp = e.creation;
+    const relativeTime = renderRelativeTime(timestamp);
+    return {
+        ...e,
+        creation_stamp: relativeTime,
+        html: `
+        <div class="timeline" style="position: relative;">
+    <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
+        <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+            <svg class="icon icon-lg" aria-hidden="true" style="width: 20px; height: 20px;">
+                <use href="#icon-comment"></use>
+            </svg>
+        </div>
+        <div class="timeline-content" style="background: #fff; padding: 5px 15px; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 600px; position: relative;">
+            <span>${e?.owner} · <span class="frappe-timestamp" data-timestamp="${timestamp}" title="${new Date(timestamp).toLocaleString()}">${relativeTime}</span></span>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start;">
+                <div style="position: relative; top: -5px; background-color: #FCF0F0; padding: 5px; border-radius: 20px; color: #B5342D;">Rejection </div> 
+                <div style="margin-left: 8px; max-width: 500px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${e?.content}</div>
+            </div>
+        </div>
+        <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
+    </div>
+</div>
+`};
+}) || [];
+const combinedData = [...workflowLogs, ...comments];
+combinedData.sort((a, b) => new Date(b.creation) - new Date(a.creation));
+if (combinedData.length > 0) {
+    document.getElementById('workflow-table').innerHTML = combinedData.map(e => e.html).join('');
+}
     },
     before_save(frm) {
         ["phone_numbers_of_the_sarpanch", "phone_numbers_of_the_sarpanch2", "phone", "phone2", "phone3", "phone4"].forEach(field => {

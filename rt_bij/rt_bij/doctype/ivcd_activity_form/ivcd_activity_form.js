@@ -93,15 +93,13 @@ frappe.ui.form.on("IVCD activity form", {
             method: `frappe.desk.form.load.getdoc?doctype=IVCD%20activity%20form&name=${frm.doc.name}`,
 
         })
-
-        // Mapping workflow_logs
-const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
-    const timestamp = e.creation;
-    const relativeTime = renderRelativeTime(timestamp);
-    return {
-        ...e,
-        creation_stamp: relativeTime,
-        html: `
+        const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
+            const timestamp = e.creation;
+            const relativeTime = renderRelativeTime(timestamp);
+            return {
+                ...e,
+                creation_stamp: relativeTime,
+                html: `
         <div class="timeline" style="position: relative;">
             <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
                 <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
@@ -116,17 +114,15 @@ const workflowLogs = ws?.docinfo?.workflow_logs?.map((e) => {
                 <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
             </div>
         </div>`
-    };
-}) || [];
-
-// Mapping comments
-const comments = ws?.docinfo?.comments?.map((e) => {
-    const timestamp = e.creation;
-    const relativeTime = renderRelativeTime(timestamp);
-    return {
-        ...e,
-        creation_stamp: relativeTime,
-        html: `
+            };
+        }) || [];
+        const comments = ws?.docinfo?.comments?.map((e) => {
+            const timestamp = e.creation;
+            const relativeTime = renderRelativeTime(timestamp);
+            return {
+                ...e,
+                creation_stamp: relativeTime,
+                html: `
         <div class="timeline" style="position: relative;">
     <div class="timeline-item" data-timestamp="${timestamp}" style="display: flex; align-items: flex-start; position: relative; margin-bottom: 10px;">
         <div class="timeline-icon" style="position: relative; z-index: 1; background-color: #F3F3F3; border-radius: 50%; padding: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
@@ -144,33 +140,20 @@ const comments = ws?.docinfo?.comments?.map((e) => {
         <div style="content: ''; position: absolute; right: 25px; top: 50%; bottom: 0; width: 2px; background-color: #ddd; z-index: -1;"></div>
     </div>
 </div>
-
-    
-    
-
-    
-`
-    
-    };
-}) || [];
-
-// Combining both workflowLogs and comments
-const combinedData = [...workflowLogs, ...comments];
-
-// Sorting combined data by timestamp in descending order
-combinedData.sort((a, b) => new Date(b.creation) - new Date(a.creation));
-
-// Rendering combined data
-if (combinedData.length > 0) {
-    document.getElementById('workflow-table').innerHTML = combinedData.map(e => e.html).join('');
-}
+`};
+        }) || [];
+        const combinedData = [...workflowLogs, ...comments];
+        combinedData.sort((a, b) => new Date(b.creation) - new Date(a.creation));
+        if (combinedData.length > 0) {
+            document.getElementById('workflow-table').innerHTML = combinedData.map(e => e.html).join('');
+        }
 
 
 
     },
     onload(frm) {
         frm.page.sidebar.hide();
-        console.log(frm, 'frm');
+        // console.log(frm, 'frm');
         $('div.form-footer').hide();
     },
 

@@ -87,7 +87,9 @@
   "leverage_money",
   "name_of_the_departments_and_organizations_converge_27",
   "nutrition_rich_and_bio_fortified_crops_section",
-  "area"
+  "area",
+  "section_break_pqwh",
+  "html_bpug"
  ],
  "fields": [
   {
@@ -608,11 +610,20 @@
    "fieldtype": "Int",
    "label": "Area",
    "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-6\""
+  },
+  {
+   "fieldname": "section_break_pqwh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_bpug",
+   "fieldtype": "HTML",
+   "options": "<div id=\"workflow-table\"></div>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 15:40:34.060352",
+ "modified": "2024-05-20 10:57:06.474533",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
