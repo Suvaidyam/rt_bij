@@ -25,6 +25,10 @@ frappe.listview_settings['CRS4D activity form'] = {
     },
     onload: function (listview) {
         $('.layout-side-section').hide();
+        $("use.like-icon").hide();
+        $(".comment-count").hide();
+        $(".frappe-timestamp").hide();
+        $(".avatar-small").hide();
         listview.after_render = function () {
             let new_data = listview.data.map((item) => {
                 return {
