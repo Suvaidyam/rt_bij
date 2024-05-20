@@ -57,7 +57,10 @@
   "no_of_farmers_adopting_the_techpractice",
   "remark",
   "section_break_azql",
-  "html_awyg"
+  "html_awyg",
+  "section_break_eynt",
+  "date_of_visit",
+  "pending_since"
  ],
  "fields": [
   {
@@ -375,11 +378,28 @@
    "fieldname": "html_awyg",
    "fieldtype": "HTML",
    "options": "<div id=\"workflow-table\"></div>"
+  },
+  {
+   "fieldname": "section_break_eynt",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Visit"
+  },
+  {
+   "fieldname": "pending_since",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pending Since"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 10:27:30.427940",
+ "modified": "2024-05-20 11:53:39.483680",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD activity form",

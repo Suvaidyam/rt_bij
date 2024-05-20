@@ -86,7 +86,10 @@
   "total_incremental_income_benefit_to_farmer_2",
   "remarks_3",
   "section_break_ariq",
-  "html_pldw"
+  "html_pldw",
+  "section_break_xyor",
+  "date_of_visit",
+  "pending_since"
  ],
  "fields": [
   {
@@ -578,11 +581,28 @@
    "fieldname": "html_pldw",
    "fieldtype": "HTML",
    "options": "<div id=\"workflow-table\"></div>"
+  },
+  {
+   "fieldname": "section_break_xyor",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Visit"
+  },
+  {
+   "fieldname": "pending_since",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pending Since"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 10:42:48.963696",
+ "modified": "2024-05-20 11:54:53.112259",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD output form",

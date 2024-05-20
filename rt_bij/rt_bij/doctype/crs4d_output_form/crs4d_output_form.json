@@ -89,7 +89,10 @@
   "nutrition_rich_and_bio_fortified_crops_section",
   "area",
   "section_break_pqwh",
-  "html_bpug"
+  "html_bpug",
+  "section_break_kkfy",
+  "date_of_visit",
+  "pending_since"
  ],
  "fields": [
   {
@@ -619,11 +622,28 @@
    "fieldname": "html_bpug",
    "fieldtype": "HTML",
    "options": "<div id=\"workflow-table\"></div>"
+  },
+  {
+   "fieldname": "section_break_kkfy",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Visit"
+  },
+  {
+   "fieldname": "pending_since",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pending Since"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 10:57:06.474533",
+ "modified": "2024-05-20 11:53:26.893030",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",

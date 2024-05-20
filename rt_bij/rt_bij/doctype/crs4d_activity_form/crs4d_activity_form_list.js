@@ -17,13 +17,19 @@ function convertTimestampToPassedTime(timestamp) {
     }
 }
 frappe.listview_settings['CRS4D activity form'] = {
+    refresh: function (listview) {
+        $("use.like-icon").hide();
+        $(".comment-count").hide();
+        $(".frappe-timestamp").hide();
+        $(".avatar-small").hide();
+    },
     onload: function (listview) {
         $('.layout-side-section').hide();
         listview.after_render = function () {
             let new_data = listview.data.map((item) => {
                 return {
                     ...item, date_of_visit: frappe.datetime.str_to_user(item.creation).split(" ")[0],
-                    pending_since: ["Pending at DPM","Pending at SPM"].includes(item.workflow_state) ? convertTimestampToPassedTime(item.modified) : "-"
+                    pending_since: ["Pending at DPM", "Pending at SPM"].includes(item.workflow_state) ? convertTimestampToPassedTime(item.modified) : "-"
                 }
             })
             listview.data = new_data;
