@@ -21,7 +21,7 @@ function formatDate(timestamp) {
     const date = moment(timestamp);
     return date.format('DD MMMM, YYYY');
 }
-frappe.listview_settings['CRS4D activity form'] = {
+frappe.listview_settings['IVCD output form'] = {
     refresh: function (listview) {
         $("use.like-icon").hide();
         $(".comment-count").hide();
