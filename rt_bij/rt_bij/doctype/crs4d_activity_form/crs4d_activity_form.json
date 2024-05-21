@@ -151,20 +151,20 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'District Level' || doc.geographical_level_of_the_event_organised == 'Taluka/Tehsil Level' || doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"District Level\" || doc.geographical_level_of_the_event_organised == \"Taluka/Tehsil Level\" || doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "fieldname": "district",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "District",
-   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'District Level' || doc.geographical_level_of_the_event_organised == 'Taluka/Tehsil Level' || doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "mandatory_depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"District Level\" || doc.geographical_level_of_the_event_organised == \"Taluka/Tehsil Level\" || doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "options": "District"
   },
   {
-   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Taluka/Tehsil Level' || doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Taluka/Tehsil Level\" || doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "fieldname": "talukatehsil",
    "fieldtype": "Link",
    "label": "Taluka/Tehsil",
-   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Taluka/Tehsil Level' || doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "mandatory_depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Taluka/Tehsil Level\" || doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "options": "Block"
   },
   {
@@ -172,35 +172,35 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "fieldname": "gram_panchayat",
    "fieldtype": "Link",
    "label": "Gram Panchayat",
-   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Gram Panchayat Level' || doc.geographical_level_of_the_event_organised == 'Village Level')",
+   "mandatory_depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Gram Panchayat Level\" || doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "options": "Grampanchayat"
   },
   {
-   "depends_on": "eval:doc.geographical_level_of_the_event_organised == 'Village Level'",
+   "depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "fieldname": "activity_conducted_at",
    "fieldtype": "Select",
    "label": "Activity Conducted at",
-   "mandatory_depends_on": "eval:doc.geographical_level_of_the_event_organised == 'Village Level'",
+   "mandatory_depends_on": "eval: (doc.geographical_level_of_the_event_organised == \"Village Level\")",
    "options": "\nSingle Village\nMultiple Villages"
   },
   {
-   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Village Level' && doc.activity_conducted_at === \"Single Village\" )",
+   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == \"Village Level\" && doc.activity_conducted_at === \"Single Village\" )",
    "fieldname": "village",
    "fieldtype": "Link",
    "label": "Village",
-   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Village Level' && doc.activity_conducted_at === \"Single Village\" )",
+   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == \"Village Level\" && doc.activity_conducted_at === \"Single Village\" )",
    "options": "Village"
   },
   {
-   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Village Level' && doc.activity_conducted_at === \"Multiple Villages\" )",
+   "depends_on": "eval:(doc.geographical_level_of_the_event_organised == \"Village Level\" && doc.activity_conducted_at === \"Multiple Villages\" )",
    "fieldname": "villages",
    "fieldtype": "Table MultiSelect",
    "label": "Villages",
-   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == 'Village Level' && doc.activity_conducted_at === \"Multiple Villages\" )",
+   "mandatory_depends_on": "eval:(doc.geographical_level_of_the_event_organised == \"Village Level\" && doc.activity_conducted_at === \"Multiple Villages\" )",
    "options": "Village Child"
   },
   {
@@ -791,7 +791,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-21 17:17:38.267888",
+ "modified": "2024-05-21 18:37:50.959327",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D activity form",

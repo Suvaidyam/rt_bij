@@ -378,7 +378,7 @@
    "label": "Remarks"
   },
   {
-   "depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");",
+   "depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");",
    "description": "5.2 Producers benefitting from marketing of their produce / accessing products and services from Farmer Collectives",
    "fieldname": "services_from_farmer_collectives_section",
    "fieldtype": "Section Break",
@@ -388,40 +388,40 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");",
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");",
    "options": "\nProcurement of agri produce\nProcurement of Non-Agri Products\nSale of inputs\nSale of Non-Agri Products\nSale of Processed Products\nFarm Mechanization Services"
   },
   {
    "fieldname": "farmer_producer_organisation_3",
    "fieldtype": "Select",
    "label": "Farmer Producer Organisation (FPO)",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");",
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");",
    "options": "\nFPO 1\nFPO 2"
   },
   {
    "fieldname": "name_of_the_commodity",
    "fieldtype": "Select",
    "label": "Name of the Commodity",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");",
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");",
    "options": "\nCommodity 1\nCommodity 2"
   },
   {
    "fieldname": "no_of_farmers",
    "fieldtype": "Int",
    "label": "No of Farmers",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "value_of_transaction",
    "fieldtype": "Int",
    "label": "Value of Transaction",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "volumes",
    "fieldtype": "Int",
    "label": "Volumes",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "column_break_hogr",
@@ -431,31 +431,31 @@
    "fieldname": "price_offered_inrquintal",
    "fieldtype": "Int",
    "label": "Price Offered (INR/Quintal)",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "price_offered_in_the_local_market",
    "fieldtype": "Int",
    "label": "Price offered in the local market",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "savings_in_transport_inr_per_quintal",
    "fieldtype": "Int",
    "label": "Savings in Transport (INR per quintal)",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "savings_in_arthiya_commission_inr_per_quintal",
    "fieldtype": "Int",
    "label": "Savings in Arthiya Commission (INR per quintal)",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "total_incremental_income_benefit_to_farmer",
    "fieldtype": "Int",
    "label": "Total Incremental Income Benefit to Farmer",
-   "mandatory_depends_on": "eval:(doc.output == 'Output IVCD-4' || doc.output == \"Output IVCD-5\");"
+   "mandatory_depends_on": "eval:(doc.output == \"Output IVCD-4\" || doc.output == \"Output IVCD-5\");"
   },
   {
    "fieldname": "remarks_explain_the_impact_created",
@@ -602,7 +602,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-21 16:36:22.584418",
+ "modified": "2024-05-21 18:30:14.249537",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "IVCD output form",
