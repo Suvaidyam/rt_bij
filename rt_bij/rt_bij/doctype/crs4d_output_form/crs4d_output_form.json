@@ -460,7 +460,7 @@
    "fieldname": "specify_others2",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-4\""
+   "mandatory_depends_on": "eval:(doc.measures_taken_for_common_resources_development == \"Other\")"
   },
   {
    "fieldname": "increased_area",
@@ -535,7 +535,7 @@
    "fieldname": "specify_others3",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-5\""
+   "mandatory_depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Other\" "
   },
   {
    "fieldname": "details_of_the_climate_adaptive_farming_taken_up",
@@ -549,7 +549,7 @@
    "fieldname": "specify_others4",
    "fieldtype": "Data",
    "label": "Specify Other's",
-   "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-5\""
+   "mandatory_depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Other\" "
   },
   {
    "fieldname": "no_of_initiatives",
@@ -596,7 +596,7 @@
    "fieldname": "specify_others_5",
    "fieldtype": "Data",
    "label": "Specify Other's ",
-   "mandatory_depends_on": "eval:doc.output == \"Output CRS4D-5\""
+   "mandatory_depends_on": "eval:doc.details_of_the_climate_adaptive_farming_taken_up__soil_health == \"Other\" "
   },
   {
    "fieldname": "column_break_dxkq",
@@ -644,7 +644,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 17:54:55.637962",
+ "modified": "2024-05-21 19:23:03.187205",
  "modified_by": "Administrator",
  "module": "Rt Bij",
  "name": "CRS4D output form",
