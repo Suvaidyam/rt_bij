@@ -55,15 +55,3 @@ frappe.listview_settings['IVCD activity form'] = {
         }
     }
 };
-
-eval: (doc.output == 'Output-1' || doc.output == 'Output-2' || doc.output == 'Output-5' || doc.output == 'Output-6' || doc.output == 'Output-7' && doc.activity == 'Activity-1' || doc.activity == 'Activity-2' || doc.activity == 'Activity-3' || doc.activity == 'Activity-4' || doc.activity == 'Activity-6' || doc.activity == 'Activity-9' || doc.activity == 'Activity-11' || doc.activity == 'Activity-12' || doc.activity == 'Activity-14')
-eval: (doc.output == "Output-1" || doc.output == "Output-2" || doc.output == "Output-5" || doc.output == "Output-6" || doc.output == "Output-7" && doc.activity == "Activity-1" || doc.activity == "Activity-2" || doc.activity == "Activity-3" || doc.activity == "Activity-4" || doc.activity == "Activity-6" || doc.activity == "Activity-9" || doc.activity == "Activity-11" || doc.activity == "Activity-12" || doc.activity == "Activity-14")
-eval: (doc.output == "Output-5" && doc.activity == "Activity-13")
-
-eval: (doc.output == 'Output-5' && doc.activity == 'Activity-13')
-eval: (doc.output == 'Output-7' && doc.activity == 'Activity-10')
-eval: (doc.output == 'Output-4' && doc.activity == 'Activity-8')
-eval: (doc.output == 'Output-3' && doc.activity == 'Activity-7')
-
-eval: (doc.diversification_of_food_basket_category == "Individual" || doc.diversification_of_food_basket_category == "Common" || doc.diversification_of_food_basket_category == "Both")
-eval: (doc.diversification_of_food_basket_category == 'Individual' || doc.diversification_of_food_basket_category == 'Common' || doc.diversification_of_food_basket_category == 'Both')
