@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Rtbij User {####}",
+ "creation": "2024-05-26 09:58:25.117917",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "email",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "user_image",
+  "column_break_dpbu",
+  "role_profile",
+  "password",
+  "confirm_password",
+  "section_break_pvhi",
+  "add_permission",
+  "html_ojrc",
+  "section_break_bimi",
+  "state",
+  "select_district",
+  "select_block",
+  "select_grampanchayat",
+  "select_village"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name"
+  },
+  {
+   "fieldname": "role_profile",
+   "fieldtype": "Link",
+   "label": "Role Profile",
+   "options": "Role Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "User Image",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_dpbu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Data",
+   "label": "Confirm Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pvhi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_permission",
+   "fieldtype": "Button",
+   "label": "Add Permission"
+  },
+  {
+   "fieldname": "section_break_bimi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Select State",
+   "options": "State Child"
+  },
+  {
+   "fieldname": "select_district",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Select District",
+   "options": "District Child"
+  },
+  {
+   "fieldname": "select_block",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Select Block",
+   "options": "Block Child"
+  },
+  {
+   "fieldname": "select_grampanchayat",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Select Grampanchayat",
+   "options": "Grampanchayat Child"
+  },
+  {
+   "fieldname": "select_village",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Select Village",
+   "options": "Village Child"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "html_ojrc",
+   "fieldtype": "HTML",
+   "options": "<div id=\"datatable\"></div>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-26 17:25:46.170332",
+ "modified_by": "Administrator",
+ "module": "Rt Bij Master",
+ "name": "Rtbij User",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
